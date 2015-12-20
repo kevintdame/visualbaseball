@@ -1,0 +1,10 @@
+var players = [
+  {
+    "value": "Willie Wilson",
+    "icon": "Willie-Wilson.png"
+  },
+  {
+    "value": "Willie Randolph",
+    "icon": "Willie-Randolph.png"
+  }
+];
