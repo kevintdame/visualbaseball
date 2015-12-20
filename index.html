@@ -5,17 +5,8 @@
   <title>A Baseball Website</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <style>
-    .chart rect {
-    fill: steelblue;
-    }
-
-    .chart text {
-    fill: white;
-    font: 10px sans-serif;
-    text-anchor: end;
-    }
-
     .navbar {
         background-color: black;
     }
@@ -35,6 +26,11 @@
 
     footer {
       margin-top: 30px;
+    }
+
+    .my-paragraph {
+      font-size: 16px;
+      font-family: 'Roboto';
     }
   </style>
   <link rel="stylesheet" href="style.css">
@@ -85,13 +81,19 @@
     <div class="row">
       <div class="col-sm-3">
         <div class="input-group" id="player-names-group">
-        <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
-        <span class="input-group-btn" id="player-names-search-button">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
-        </span>
+          <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
+          <span class="input-group-btn" id="player-names-search-button">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
         </div>
+        <p class="my-paragraph">Rankometer is a tool that helps you get a quick visual snapshot of a
+          team (in this case the pitching staff) by ranking each of its 5
+          starting pitchers and 2 best relievers. Rankometer is based on the
+          philosophy of comparing players relative to their peer group and
+          ranking them accordingly.</p>
+
       </div>
       <div class="col-sm-9">
         <a id="player-rankometer-link" href="" target="_blank">
