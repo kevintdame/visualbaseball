@@ -5,6 +5,7 @@
   <title>A Baseball Website</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto-Thin' rel='stylesheet' type='text/css'>
   <style>
     .navbar {
@@ -12,6 +13,8 @@
     }
     .navbar .my-navbar-brand {
       color: white;
+      font-size: 24px;
+      font-family: 'Roboto';
     }
 
     #player-names {
@@ -29,7 +32,7 @@
     }
 
     .my-paragraph {
-      font-size: 18px;
+      font-size: 16px;
       font-family: 'Roboto';
     }
 
@@ -59,7 +62,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand my-navbar-brand" href="#">visualbaseball</a>
+        <a class="navbar-brand my-navbar-brand" href="#">visual<strong>baseball</strong></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -86,31 +89,42 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-        <div class="input-group" id="player-names-group">
-          <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
-          <span class="input-group-btn" id="player-names-search-button">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            </button>
-          </span>
-        </div>
-  <p class="my-paragraph"></p>
-        <!--p class="my-paragraph">Rankometer is a tool that helps you get a quick visual snapshot of a
-          team (in this case the pitching staff) by ranking each of its 5
-          starting pitchers and 2 best relievers. Rankometer is based on the
-          philosophy of comparing players relative to their peer group and
-          ranking them accordingly.-->
+
+
+
+  <div class="row">
+  <div class="col-sm-1"></div>
+    <div class="col-sm-2">
+      <div class="input-group" id="player-names-group">
+        <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
+        <span class="input-group-btn" id="player-names-search-button">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </span>
       </div>
+    </div>
+  <div class="col-sm-8">
+    <p class="my-paragraph"></p>
+          <p class="my-paragraph">Choose a player and see how they ranked compared to their top 30 peers each season.
+      </div>
+      <div class="col-sm-1"></div>
+  </div>
+
+
+    <div class="row">
+  <div class="col-sm-1"></div>
       <div class="col-sm-10">
         <a id="player-rankometer-link" href="" target="_blank">
           <image  class="img-responsive" id="player-rankometer">
               <p class="my-subtext"></p>
-              <p class="my-subtext">XXX Rankings based on fangraphs Wins Above Replacement (WAR) stat. Copyright Kevin Dame, 2016.</p>
                    </a>
       </div>
+        <div class="col-sm-1"></div>
+
     </div>
+
+
 
 
 
@@ -126,7 +140,8 @@
     $(function() {
 
       var players = [
-        {value:"Aaron Rowand",icon:"Aaron-Rowand.png"},
+{value:"Ken Griffey Jr.",icon:"Ken-Griffey-Jr..png"},
+{value:"Aaron Rowand",icon:"Aaron-Rowand.png"},
 {value:"Adam Dunn",icon:"Adam-Dunn.png"},
 {value:"Adam Jones",icon:"Adam-Jones.png"},
 {value:"Adrian Beltre",icon:"Adrian-Beltre.png"},
@@ -736,7 +751,7 @@
 {value:"Ken Caminiti",icon:"Ken-Caminiti.png"},
 {value:"Ken Chase",icon:"Ken-Chase.png"},
 {value:"Ken Forsch",icon:"Ken-Forsch.png"},
-{value:"Ken Griffey Jr.",icon:"Ken-Griffey.png"},
+{value:"Ken Griffey Jr.",icon:"Ken-Griffey-Jr..png"},
 {value:"Ken Griffey",icon:"Ken-Griffey.png"},
 {value:"Ken Henderson",icon:"Ken-Henderson.png"},
 {value:"Ken Hill",icon:"Ken-Hill.png"},
