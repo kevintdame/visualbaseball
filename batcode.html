@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
+    <title>jQuery UI Tooltip - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+    $(function() {
+      $( document ).tooltip();
+    });
+    </script>
+    <style>
+    label {
+      display: inline-block;
+      width: 5em;
+    }
+    </style>
+
   <title>A Baseball Website</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -104,6 +122,7 @@
 
 
   <div class="row">
+
     <div class="col-sm-3">
       <div class="input-group" id="player-names-group">
         <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
@@ -115,11 +134,19 @@
       </div>
     </div>
 
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     <p class="my-paragraph"></p>
           <p class="my-paragraph">Batcode is not yet operational but coming soon!
-      </div>
       <div class="col-sm-1"></div>
+  </div>
+
+
+    <div class="col-sm-1">
+    <a ><image class="img-responsive" src="images/icons/infoicon.jpg" height="30px" width="30px" title=
+    "Rankometer visualizes a player's greatness by comparing their performance to his peers.
+    For every season in a player's career, it ranks the top 30 performers by Wins Above Replacement (WAR)
+    and highlights where that player ranks. Simply put, the more color the greater the player." align="right" ></a>
+    </div>
   </div>
 
 
