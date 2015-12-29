@@ -1,69 +1,1555 @@
-A.J. Burnett
-A. J. Pollock
-Aaron Cook
-Aaron Harang
-Aaron Heilman
+A.J. Burnett (SP)
+Aaron Cook (SP)
+Aaron Harang (SP)
+Aaron Sele (SP)
+Ad Brennan (SP)
+Adam Wainwright (SP)
+Addie Joss (SP)
+Al Benton (SP)
+Al Brazle (SP)
+Al Demaree (SP)
+Al Downing (SP)
+Al Fitzmorris (SP)
+Al Hollingsworth (SP)
+Al Jackson (SP)
+Al Javery (SP)
+Al Leiter (SP)
+Al Mattern (SP)
+Al McBean (SP)
+Al Orth (SP)
+Al Smith (SP)
+Al Widmar (SP)
+Alejandro Pena (SP)
+Alex Ferguson (SP)
+Alex Fernandez (SP)
+Alex Kellner (SP)
+Allan Anderson (SP)
+Allan Russell (SP)
+Allen Sothoron (SP)
+Allie Reynolds (SP)
+Alvin Crowder (SP)
+Andy Ashby (SP)
+Andy Benes (SP)
+Andy Coakley (SP)
+Andy Messersmith (SP)
+Andy Pettitte (SP)
+Anibal Sanchez (SP)
+Anthony DeSclafani (SP)
+Arnie Portocarrero (SP)
+Art Fowler (SP)
+Art Fromme (SP)
+Art Houtteman (SP)
+Art Nehf (SP)
+Atlee Hammaker (SP)
+Babe Adams (SP)
+Babe Ruth (SP)
+Barry Zito (SP)
+Bartolo Colon (SP)
+Ben McDonald (SP)
+Ben Sheets (SP)
+Bennie Daniels (SP)
+Benny Frey (SP)
+Bernie Boland (SP)
+Bert Blyleven (SP)
+Bert Gallia (SP)
+Big Jeff Pfeffer (SP)
+Bill Bernhard (SP)
+Bill Bevens (SP)
+Bill Bonham (SP)
+Bill Carrick (SP)
+Bill Dietrich (SP)
+Bill Dineen (SP)
+Bill Doak (SP)
+Bill Donovan (SP)
+Bill Duggleby (SP)
+Bill Fischer (SP)
+Bill Gullickson (SP)
+Bill Hallahan (SP)
+Bill Hands (SP)
+Bill James (SP)
+Bill Lee (SP)
+Bill Lohrman (SP)
+Bill McGee (SP)
+Bill Monbouquette (SP)
+Bill Phillips (SP)
+Bill Sherdel (SP)
+Bill Singer (SP)
+Bill Stafford (SP)
+Bill Stoneman (SP)
+Bill Swift (SP)
+Bill Voiselle (SP)
+Bill Walker (SP)
+Bill Werle (SP)
+Bill Wight (SP)
+Billy Campbell (SP)
+Billy Hoeft (SP)
+Billy Loes (SP)
+Billy O'Dell (SP)
+Billy Pierce (SP)
+Bob Anderson (SP)
+Bob Bowman (SP)
+Bob Bruce (SP)
+Bob Buhl (SP)
+Bob Ewing (SP)
+Bob Feller (SP)
+Bob Forsch (SP)
+Bob Friend (SP)
+Bob Gibson (SP)
+Bob Grim (SP)
+Bob Groom (SP)
+Bob Hasty (SP)
+Bob Hooper (SP)
+Bob Johnson (SP)
+Bob Klinger (SP)
+Bob Knepper (SP)
+Bob Kuzava (SP)
+Bob Lemon (SP)
+Bob Logan (SP)
+Bob Miller (SP)
+Bob Moose (SP)
+Bob Muncrief (SP)
+Bob Ojeda (SP)
+Bob Porterfield (SP)
+Bob Purkey (SP)
+Bob Rush (SP)
+Bob Sebra (SP)
+Bob Shaw (SP)
+Bob Shawkey (SP)
+Bob Stanley (SP)
+Bob Steele (SP)
+Bob Tewksbury (SP)
+Bob Turley (SP)
+Bob Veale (SP)
+Bob Weiland (SP)
+Bob Welch (SP)
+Bob Wicker (SP)
+Bobby Keefe (SP)
+Bobby Shantz (SP)
+Bobby Witt (SP)
+Bobo Newsom (SP)
+Boom-Boom Beck (SP)
+Brad Hogg (SP)
+Brad Penny (SP)
+Brad Radke (SP)
+Brandon McCarthy (SP)
+Brandon Webb (SP)
+Bret Saberhagen (SP)
+Brett Anderson (SP)
+Brett Myers (SP)
+Brett Tomko (SP)
+Brian Lawrence (SP)
+Brickyard Kennedy (SP)
+Britt Burns (SP)
+Bronson Arroyo (SP)
+Brooks Lawrence (SP)
+Bruce Berenyi (SP)
+Bruce Hurst (SP)
+Bryn Smith (SP)
+Bubba Church (SP)
+Bucky Walters (SP)
+Bud Black (SP)
+Bud Daley (SP)
+Bugs Raymond (SP)
+Bump Hadley (SP)
+Burleigh Grimes (SP)
+Burt Hooton (SP)
+Buster Brown (SP)
+Butch Wensloff (SP)
+Buttons Briggs (SP)
+Buzz Capra (SP)
+C.J. Wilson (SP)
+Camilo Pascual (SP)
+Carl Erskine (SP)
+Carl Fischer (SP)
+Carl Hubbell (SP)
+Carl Mays (SP)
+Carl Morton (SP)
+Carl Pavano (SP)
+Carl Weilman (SP)
+Carlos Carrasco (SP)
+Carlos Martinez (SP)
+Carlos Perez (SP)
+Carlos Zambrano (SP)
+Carmen Hill (SP)
+Case Patten (SP)
+Catfish Hunter (SP)
+CC Sabathia (SP)
+Chad Billingsley (SP)
+Chan Ho Park (SP)
+Chappie McFarland (SP)
+Charles Nagy (SP)
+Charley Root (SP)
+Charlie Chech (SP)
+Charlie Hough (SP)
+Charlie Leibrandt (SP)
+Charlie Robertson (SP)
+Charlie Smith (SP)
+Chick Fraser (SP)
+Chief Bender (SP)
+Chief Johnson (SP)
+Chien-Ming Wang (SP)
+Chris Archer (SP)
+Chris Bosio (SP)
+Chris Capuano (SP)
+Chris Carpenter (SP)
+Chris Haney (SP)
+Chris Sale (SP)
+Chris Short (SP)
+Chris Young (SP)
+Christy Mathewson (SP)
+Chuck Dobson (SP)
+Chuck Finley (SP)
+Chuck Stobbs (SP)
+Clarence Mitchell (SP)
+Clark Griffith (SP)
+Claude Hendrix (SP)
+Claude Osteen (SP)
+Claude Passeau (SP)
+Claude Willoughby (SP)
+Clay Bryant (SP)
+Clay Kirby (SP)
+Clayton Kershaw (SP)
+Cliff Chambers (SP)
+Cliff Fannin (SP)
+Cliff Lee (SP)
+Cliff Melton (SP)
+Clint Brown (SP)
+Clyde Shoun (SP)
+Colby Lewis (SP)
+Cole Hamels (SP)
+Collin McHugh (SP)
+Connie Johnson (SP)
+Connie Marrero (SP)
+Corey Kluber (SP)
+Cory Lidle (SP)
+Cowboy Jones (SP)
+Craig Swan (SP)
+Curt Davis (SP)
+Curt Schilling (SP)
+Curt Simmons (SP)
+Cy Blanton (SP)
+Cy Falkenberg (SP)
+Cy Young (SP)
+Dallas Keuchel (SP)
+Dan Haren (SP)
+Dan Petry (SP)
+Daniel Hudson (SP)
+Danny Darwin (SP)
+Danny Jackson (SP)
+Danny MacFayden (SP)
+Darren Dreifort (SP)
+Darryl Kile (SP)
+Dave Boswell (SP)
+Dave Burba (SP)
+Dave Bush (SP)
+Dave Danforth (SP)
+Dave Davenport (SP)
+Dave Ferriss (SP)
+Dave Fleming (SP)
+Dave Frost (SP)
+Dave Giusti (SP)
+Dave Goltz (SP)
+Dave Hillman (SP)
+Dave Koslo (SP)
+Dave Lemanczyk (SP)
+Dave McNally (SP)
+Dave Righetti (SP)
+Dave Roberts (SP)
+Dave Stewart (SP)
+Dave Stieb (SP)
+Dave Wickersham (SP)
+David Cone (SP)
+David Price (SP)
+David Wells (SP)
+Dazzy Vance (SP)
+Deacon Phillippe (SP)
+Dean Chance (SP)
+Dean Stone (SP)
+Dennis Eckersley (SP)
+Dennis Lamp (SP)
+Dennis Leonard (SP)
+Dennis Martinez (SP)
+Denny Galehouse (SP)
+Denny McLain (SP)
+Denny Neagle (SP)
+Derek Holland (SP)
+Derek Lowe (SP)
+Dick Bosman (SP)
+Dick Donovan (SP)
+Dick Drago (SP)
+Dick Ellsworth (SP)
+Dick Fowler (SP)
+Dick Newsome (SP)
+Dick Rudolph (SP)
+Dick Ruthven (SP)
+Dick Stigman (SP)
+Dickie Kerr (SP)
+Dizzy Dean (SP)
+Dizzy Trout (SP)
+Doc Ayers (SP)
+Doc Crandall (SP)
+Doc Medich (SP)
+Doc Newton (SP)
+Doc White (SP)
+Dock Ellis (SP)
+Dolf Luque (SP)
+Dolly Gray (SP)
+Don Cardwell (SP)
+Don Drysdale (SP)
+Don Gullett (SP)
+Don Larsen (SP)
+Don Mossi (SP)
+Don Newcombe (SP)
+Don Nottebart (SP)
+Don Sutton (SP)
+Don Wilson (SP)
+Dontrelle Willis (SP)
+Doug Davis (SP)
+Doug Drabek (SP)
+Doug Fister (SP)
+Doug McWeeny (SP)
+Doug Rau (SP)
+Doyle Alexander (SP)
+Duane Pillette (SP)
+Duke Maas (SP)
+Dummy Taylor (SP)
+Duster Mails (SP)
+Dustin Hermanson (SP)
+Dutch Leonard (SP)
+Dutch Ruether (SP)
+Dutch Ulrich (SP)
+Dwight Gooden (SP)
+Earl Hamilton (SP)
+Earl Moore (SP)
+Earl Moseley (SP)
+Earl Whitehill (SP)
+Earl Wilson (SP)
+Early Wynn (SP)
+Ed Brandt (SP)
+Ed Correa (SP)
+Ed Figueroa (SP)
+Ed Halicki (SP)
+Ed Heusser (SP)
+Ed Holley (SP)
+Ed Karger (SP)
+Ed Klepfer (SP)
+Ed Lopat (SP)
+Ed Morris (SP)
+Ed Reulbach (SP)
+Ed Scott (SP)
+Ed Siever (SP)
+Ed Summers (SP)
+Ed Walsh (SP)
+Ed Wells (SP)
+Ed Whitson (SP)
+Ed Willett (SP)
+Eddie Cicotte (SP)
+Eddie Plank (SP)
+Eddie Rommel (SP)
+Eddie Smith (SP)
+Edinson Volquez (SP)
+Edwin Jackson (SP)
+Elam Vangilder (SP)
+Elden Auker (SP)
+Ellis Kinder (SP)
+Elmer Ponder (SP)
+Elmer Riddle (SP)
+Elmer Steele (SP)
+Emil Yde (SP)
+Eppa Rixey (SP)
+Eric Milton (SP)
+Erik Bedard (SP)
+Erik Hanson (SP)
+Ernie Broglio (SP)
+Ernie Shore (SP)
+Ernie White (SP)
+Erskine Mayer (SP)
+Erv Brame (SP)
+Erv Palica (SP)
+Ervin Santana (SP)
+Esteban Loaiza (SP)
+Ewell Blackwell (SP)
+Felix Hernandez (SP)
+Ferdie Schupp (SP)
+Fergie Jenkins (SP)
+Fernando Valenzuela (SP)
+Firpo Marberry (SP)
+Flint Rhem (SP)
+Floyd Bannister (SP)
+Floyd Youmans (SP)
+Francisco Liriano (SP)
+Frank Baumann (SP)
+Frank Corridon (SP)
+Frank Kitson (SP)
+Frank Lary (SP)
+Frank Miller (SP)
+Frank Owen (SP)
+Frank Pastore (SP)
+Frank Smith (SP)
+Frank Sullivan (SP)
+Frank Tanana (SP)
+Frank Viola (SP)
+Fred Anderson (SP)
+Fred Fussell (SP)
+Fred Glade (SP)
+Fred Heimach (SP)
+Fred Hutchinson (SP)
+Fred Newman (SP)
+Fred Sanford (SP)
+Fred Toney (SP)
+Freddie Fitzsimmons (SP)
+Freddy Garcia (SP)
+Fritz Ostermueller (SP)
+Fritz Peterson (SP)
+Garland Braxton (SP)
+Garrett Richards (SP)
+Gary Bell (SP)
+Gary Nolan (SP)
+Gary Peters (SP)
+Gavin Floyd (SP)
+Gaylord Perry (SP)
+Gene Bearden (SP)
+Gene Conley (SP)
+Gene Packard (SP)
+Geoff Zahn (SP)
+George Bell (SP)
+George Blaeholder (SP)
+George Brunet (SP)
+George Caster (SP)
+George Earnshaw (SP)
+George McConnell (SP)
+George McQuillan (SP)
+George Mogridge (SP)
+George Mullin (SP)
+George Pipgras (SP)
+George Smith (SP)
+George Suggs (SP)
+George Uhle (SP)
+George Winter (SP)
+Gerrit Cole (SP)
+Gerry Staley (SP)
+Gil Heredia (SP)
+Gil Meche (SP)
+Gio Gonzalez (SP)
+Glen Hobbie (SP)
+Glendon Rusch (SP)
+Glenn Liebhardt (SP)
+Gordon Rhodes (SP)
+Grant Jackson (SP)
+Greg Hibbard (SP)
+Greg Maddux (SP)
+Greg Swindell (SP)
+Guy Bush (SP)
+Guy Morton (SP)
+Hal Brown (SP)
+Hal Carlson (SP)
+Hal Gregg (SP)
+Hal Newhouser (SP)
+Hal Schumacher (SP)
+Hal White (SP)
+Ham Iburg (SP)
+Hank Aguirre (SP)
+Hank Borowy (SP)
+Hank Robinson (SP)
+Hank Wyse (SP)
+Harry Brecheen (SP)
+Harry Byrd (SP)
+Harry Coveleski (SP)
+Harry Feldman (SP)
+Harry Gaspar (SP)
+Harry Gumbert (SP)
+Harry Harper (SP)
+Harry Howell (SP)
+Harry Kelley (SP)
+Harry Krause (SP)
+Harvey Haddix (SP)
+Heinie Berger (SP)
+Herb Pennock (SP)
+Herb Score (SP)
+Herman Pillette (SP)
+Hi Bithorn (SP)
+Hideo Nomo (SP)
+Hippo Vaughn (SP)
+Hiroki Kuroda (SP)
+Hisashi Iwakuma (SP)
+Hod Eller (SP)
+Hod Lisenbee (SP)
+Homer Bailey (SP)
+Hooks Dauss (SP)
+Hooks Wiltse (SP)
+Howard Ehmke (SP)
+Howie Camnitz (SP)
+Howie Fox (SP)
+Howie Pollet (SP)
+Hoyt Wilhelm (SP)
+Hub Perdue (SP)
+Hugh Bedient (SP)
+Hugh Casey (SP)
+Hugh Mulcahy (SP)
+Hyun-Jin Ryu (SP)
+Ian Kennedy (SP)
+Ike Delock (SP)
+Irv Young (SP)
+Ismael Valdez (SP)
+Ivy Andrews (SP)
+J.A. Happ (SP)
+J.R. Richard (SP)
+Jack Armstrong (SP)
+Jack Billingham (SP)
+Jack Chesbro (SP)
+Jack Coombs (SP)
+Jack Harper (SP)
+Jack Harshman (SP)
+Jack Kralick (SP)
+Jack Kramer (SP)
+Jack McDowell (SP)
+Jack Morris (SP)
+Jack Pfiester (SP)
+Jack Powell (SP)
+Jack Quinn (SP)
+Jack Russell (SP)
+Jack Sanford (SP)
+Jack Scott (SP)
+Jack Sutthoff (SP)
+Jack Taylor (SP)
+Jack Warhop (SP)
+Jack Wilson (SP)
+Jacob deGrom (SP)
+Jaime Garcia (SP)
+Jaime Navarro (SP)
+Jair Jurrjens (SP)
+Jake Arrieta (SP)
+Jake Miller (SP)
+Jake Peavy (SP)
+Jake Weimer (SP)
+Jakie May (SP)
+James Shields (SP)
+Jamie Moyer (SP)
+Jaret Wright (SP)
+Jarrod Parker (SP)
+Jarrod Washburn (SP)
+Jason Hammel (SP)
+Jason Jennings (SP)
+Jason Schmidt (SP)
+Javier Vazquez (SP)
+Jay Hughes (SP)
+Jeff Fassero (SP)
+Jeff Francis (SP)
+Jeff Pfeffer (SP)
+Jeff Samardzija (SP)
+Jeff Tesreau (SP)
+Jeff Weaver (SP)
+Jered Weaver (SP)
+Jeremy Bonderman (SP)
+Jerry Koosman (SP)
+Jerry Reuss (SP)
+Jerry Walker (SP)
+Jesse Barnes (SP)
+Jesse Flores (SP)
+Jesse Haines (SP)
+Jesse Petty (SP)
+Jesse Tannehill (SP)
+Jhoulys Chacin (SP)
+Jim Abbott (SP)
+Jim Archer (SP)
+Jim Bagby (SP)
+Jim Barr (SP)
+Jim Beattie (SP)
+Jim Bibby (SP)
+Jim Bouton (SP)
+Jim Bunning (SP)
+Jim Clancy (SP)
+Jim Colborn (SP)
+Jim Hearn (SP)
+Jim Kaat (SP)
+Jim Lonborg (SP)
+Jim Maloney (SP)
+Jim Merritt (SP)
+Jim Nash (SP)
+Jim O'Toole (SP)
+Jim Owens (SP)
+Jim Palmer (SP)
+Jim Perry (SP)
+Jim Rooker (SP)
+Jim Scott (SP)
+Jim Shaw (SP)
+Jim Slaton (SP)
+Jim Tobin (SP)
+Jim Turner (SP)
+Jim Weaver (SP)
+Jim Wilson (SP)
+Jimmy Dygert (SP)
+Jimmy Key (SP)
+Jimmy Ring (SP)
+Joaquin Andujar (SP)
+Joe Benz (SP)
+Joe Blanton (SP)
+Joe Bowman (SP)
+Joe Bush (SP)
+Joe Coleman (SP)
+Joe Dobson (SP)
+Joe Gibbon (SP)
+Joe Hatten (SP)
+Joe Haynes (SP)
+Joe Horlen (SP)
+Joe Lake (SP)
+Joe Magrane (SP)
+Joe McGinnity (SP)
+Joe Niekro (SP)
+Joe Nuxhall (SP)
+Joe Oeschger (SP)
+Joe Shaute (SP)
+Joe Wood (SP)
+Joel Pineiro (SP)
+Joey Jay (SP)
+Johan Santana (SP)
+John Burkett (SP)
+John Butcher (SP)
+John Candelaria (SP)
+John Danks (SP)
+John Denny (SP)
+John Farrell (SP)
+John Lackey (SP)
+John Montefusco (SP)
+John Patterson (SP)
+John Smiley (SP)
+John Smoltz (SP)
+John Thomson (SP)
+John Tudor (SP)
+John Whitehead (SP)
+Johnny Allen (SP)
+Johnny Antonelli (SP)
+Johnny Babich (SP)
+Johnny Beazley (SP)
+Johnny Cueto (SP)
+Johnny Gorsica (SP)
+Johnny Humphries (SP)
+Johnny Lanning (SP)
+Johnny Marcum (SP)
+Johnny Morrison (SP)
+Johnny Niggeling (SP)
+Johnny Podres (SP)
+Johnny Rigney (SP)
+Johnny Sain (SP)
+Johnny Schmitz (SP)
+Johnny Vander Meer (SP)
+Jon Lester (SP)
+Jon Lieber (SP)
+Jon Matlack (SP)
+Jordan Zimmermann (SP)
+Jose Contreras (SP)
+Jose DeLeon (SP)
+Jose Fernandez (SP)
+Jose Guzman (SP)
+Jose Lima (SP)
+Jose Quintana (SP)
+Jose Rijo (SP)
+Jose Rosado (SP)
+Josh Beckett (SP)
+Josh Johnson (SP)
+Josh Towers (SP)
+Juan Guzman (SP)
+Juan Marichal (SP)
+Juan Pizarro (SP)
+Julio Teheran (SP)
+Jumbo Elliott (SP)
+Junior Thompson (SP)
+Justin Masterson (SP)
+Justin Thompson (SP)
+Justin Verlander (SP)
+Kaiser Wilhelm (SP)
+Karl Drews (SP)
+Kelly Downs (SP)
+Kelvim Escobar (SP)
+Ken Burkhart (SP)
+Ken Chase (SP)
+Ken Forsch (SP)
+Ken Hill (SP)
+Ken Holtzman (SP)
+Ken Howell (SP)
+Ken Johnson (SP)
+Ken Kravec (SP)
+Ken McBride (SP)
+Ken Raffensberger (SP)
+Kenny Rogers (SP)
+Kerry Wood (SP)
+Kevin Appier (SP)
+Kevin Brown (SP)
+Kevin Gross (SP)
+Kevin Millwood (SP)
+Kevin Tapani (SP)
+Kid Nichols (SP)
+Kirby Higbe (SP)
+Kirk McCaskill (SP)
+Kris Benson (SP)
+Kyle Hendricks (SP)
+Kyle Lohse (SP)
+La Marr Hoyt (SP)
+Lance Lynn (SP)
+Larry Benton (SP)
+Larry Cheney (SP)
+Larry Christenson (SP)
+Larry Dierker (SP)
+Larry French (SP)
+Larry Gura (SP)
+Larry Jackson (SP)
+Larry Jansen (SP)
+Larry McWilliams (SP)
+Lary Sorensen (SP)
+Lee Grissom (SP)
+Lee Meadows (SP)
+Lee Stange (SP)
+Lefty Gomez (SP)
+Lefty Grove (SP)
+Lefty Leifield (SP)
+Lefty Mills (SP)
+Lefty Stewart (SP)
+Lefty Tyler (SP)
+Lefty Williams (SP)
+Len Barker (SP)
+Leon Cadore (SP)
+Lew Burdette (SP)
+Lindy McDaniel (SP)
+Livan Hernandez (SP)
+Lloyd Brown (SP)
+Lon Warneke (SP)
+Lou Brissie (SP)
+Lou Fette (SP)
+Louis Drucke (SP)
+Luis Leal (SP)
+Luis Tiant (SP)
+Luke Hamlin (SP)
+Mace Brown (SP)
+Madison Bumgarner (SP)
+Mario Soto (SP)
+Marius Russo (SP)
+Mark Buehrle (SP)
+Mark Clark (SP)
+Mark Fidrych (SP)
+Mark Gubicza (SP)
+Mark Langston (SP)
+Mark Mulder (SP)
+Mark Portugal (SP)
+Mark Prior (SP)
+Mark Redman (SP)
+Marty Pattin (SP)
+Mat Latos (SP)
+Matt Cain (SP)
+Matt Clement (SP)
+Matt Garza (SP)
+Matt Harrison (SP)
+Matt Harvey (SP)
+Matt Morris (SP)
+Matt Young (SP)
+Max Butcher (SP)
+Max Lanier (SP)
+Max Scherzer (SP)
+Mel Harder (SP)
+Mel Parnell (SP)
+Mel Queen (SP)
+Mel Stottlemyre (SP)
+Melido Perez (SP)
+Mickey Haefner (SP)
+Mickey Harris (SP)
+Mickey Lolich (SP)
+Mickey McDermott (SP)
+Miguel Batista (SP)
+Mike Boddicker (SP)
+Mike Caldwell (SP)
+Mike Cuellar (SP)
+Mike Flanagan (SP)
+Mike Fornieles (SP)
+Mike Garcia (SP)
+Mike Hampton (SP)
+Mike Krukow (SP)
+Mike Marshall (SP)
+Mike McCormick (SP)
+Mike Minor (SP)
+Mike Moore (SP)
+Mike Morgan (SP)
+Mike Mussina (SP)
+Mike Norris (SP)
+Mike Parrott (SP)
+Mike Prendergast (SP)
+Mike Scott (SP)
+Mike Sirotka (SP)
+Mike Smithson (SP)
+Mike Torrez (SP)
+Mike Witt (SP)
+Milt Gaston (SP)
+Milt Pappas (SP)
+Milt Wilcox (SP)
+Moe Drabowsky (SP)
+Monte Kennedy (SP)
+Monte Pearson (SP)
+Monty Stratton (SP)
+Moose Haas (SP)
+Mordecai Brown (SP)
+Mort Cooper (SP)
+Mudcat Grant (SP)
+Murry Dickson (SP)
+Nap Rucker (SP)
+Nate Andrews (SP)
+Ned Garver (SP)
+Ned Garvin (SP)
+Nels Potter (SP)
+Nelson Briles (SP)
+Nick Altrock (SP)
+Nick Cullop (SP)
+Nick Strincevich (SP)
+Nixey Callahan (SP)
+Noah Lowry (SP)
+Nolan Ryan (SP)
+Noodles Hahn (SP)
+Odalis Perez (SP)
+Oil Can Boyd (SP)
+Oliver Perez (SP)
+Omar Daal (SP)
+Oral Hildebrand (SP)
+Orel Hershiser (SP)
+Orlando Hernandez (SP)
+Orlando Pena (SP)
+Orval Grove (SP)
+Orval Overall (SP)
+Oscar Jones (SP)
+Otto Hess (SP)
+Pascual Perez (SP)
+Pat Dobson (SP)
+Pat Hentgen (SP)
+Pat Jarvis (SP)
+Pat Malone (SP)
+Pat Ragan (SP)
+Pat Zachry (SP)
+Paul Dean (SP)
+Paul Derringer (SP)
+Paul Foytack (SP)
+Paul LaPalme (SP)
+Paul Minner (SP)
+Paul Splittorff (SP)
+Peaches Davis (SP)
+Pedro Astacio (SP)
+Pedro Martinez (SP)
+Pedro Ramos (SP)
+Pete Alexander (SP)
+Pete Appleton (SP)
+Pete Donohue (SP)
+Pete Dowling (SP)
+Pete Schneider (SP)
+Pete Schourek (SP)
+Pete Vuckovich (SP)
+Phil Collins (SP)
+Phil Douglas (SP)
+Phil Hughes (SP)
+Phil Marchildon (SP)
+Phil Niekro (SP)
+Pink Hawley (SP)
+Pol Perritt (SP)
+Preacher Roe (SP)
+R.A. Dickey (SP)
+Ralph Branca (SP)
+Ralph Terry (SP)
+Ramon Martinez (SP)
+Randy Johnson (SP)
+Randy Jones (SP)
+Randy Wolf (SP)
+Ray Benge (SP)
+Ray Caldwell (SP)
+Ray Collins (SP)
+Ray Culp (SP)
+Ray Fisher (SP)
+Ray Herbert (SP)
+Ray Kremer (SP)
+Ray Prim (SP)
+Ray Sadecki (SP)
+Ray Scarborough (SP)
+Ray Washburn (SP)
+Reb Russell (SP)
+Red Ames (SP)
+Red Barrett (SP)
+Red Donahue (SP)
+Red Faber (SP)
+Red Lucas (SP)
+Red Munger (SP)
+Red Ruffing (SP)
+Reggie Cleveland (SP)
+Rex Barney (SP)
+Rich Harden (SP)
+Rick Langford (SP)
+Rick Mahler (SP)
+Rick Reed (SP)
+Rick Reuschel (SP)
+Rick Rhoden (SP)
+Rick Sutcliffe (SP)
+Rick Wise (SP)
+Ricky Nolasco (SP)
+Rip Collins (SP)
+Rip Sewell (SP)
+Robert Person (SP)
+Robin Roberts (SP)
+Roger Clemens (SP)
+Roger Erickson (SP)
+Roger Wolff (SP)
+Rollie Naylor (SP)
+Ron Darling (SP)
+Ron Guidry (SP)
+Ron Kline (SP)
+Ron Reed (SP)
+Roscoe Miller (SP)
+Roy Halladay (SP)
+Roy Oswalt (SP)
+Roy Patterson (SP)
+Rube Benton (SP)
+Rube Marquard (SP)
+Rube Melton (SP)
+Rube Vickers (SP)
+Rube Waddell (SP)
+Rube Walberg (SP)
+Ruben Gomez (SP)
+Rudy May (SP)
+Russ Bauers (SP)
+Russ Christopher (SP)
+Russ Ford (SP)
+Russ Meyer (SP)
+Russ Ortiz (SP)
+Ryan Dempster (SP)
+Ryan Drese (SP)
+Sal Maglie (SP)
+Sam Frock (SP)
+Sam Jones (SP)
+Sam Leever (SP)
+Sam McDowell (SP)
+Sammy Ellis (SP)
+Sandy Koufax (SP)
+Saul Rogovin (SP)
+Schoolboy Rowe (SP)
+Scott Baker (SP)
+Scott Bankhead (SP)
+Scott Erickson (SP)
+Scott Garrelts (SP)
+Scott Kazmir (SP)
+Scott McGregor (SP)
+Scott Perry (SP)
+Scott Sanderson (SP)
+Shane Reynolds (SP)
+Shaun Marcum (SP)
+Shawn Estes (SP)
+Shelby Miller (SP)
+Sheriff Blake (SP)
+Sherry Smith (SP)
+Si Johnson (SP)
+Sid Fernandez (SP)
+Sid Hudson (SP)
+Sidney Ponson (SP)
+Slim Harriss (SP)
+Slim Sallee (SP)
+Snake Wiltse (SP)
+Sonny Gray (SP)
+Sonny Siebert (SP)
+Spud Chandler (SP)
+Stan Bahnsen (SP)
+Stan Coveleski (SP)
+Stan Williams (SP)
+Stephen Strasburg (SP)
+Steve Avery (SP)
+Steve Barber (SP)
+Steve Busby (SP)
+Steve Carlton (SP)
+Steve Gromek (SP)
+Steve Hargan (SP)
+Steve McCatty (SP)
+Steve Rogers (SP)
+Steve Trout (SP)
+Stoney McGlynn (SP)
+Storm Davis (SP)
+Stu Miller (SP)
+Stubby Overmire (SP)
+Syl Johnson (SP)
+Tanner Roark (SP)
+Ted Blankenship (SP)
+Ted Gray (SP)
+Ted Lewis (SP)
+Ted Lilly (SP)
+Ted Lyons (SP)
+Teddy Higuera (SP)
+Terry Adams (SP)
+Terry Mulholland (SP)
+Tex Carleton (SP)
+Tex Hughson (SP)
+Thornton Lee (SP)
+Tim Belcher (SP)
+Tim Hudson (SP)
+Tim Leary (SP)
+Tim Lincecum (SP)
+Tim Wakefield (SP)
+Tiny Bonham (SP)
+Todd Stottlemyre (SP)
+Togie Pittinger (SP)
+Tom Bradley (SP)
+Tom Brewer (SP)
+Tom Candiotti (SP)
+Tom Glavine (SP)
+Tom Gordon (SP)
+Tom Hughes (SP)
+Tom Phoebus (SP)
+Tom Seaton (SP)
+Tom Seaver (SP)
+Tom Sturdivant (SP)
+Tom Zachary (SP)
+Tommy Bridges (SP)
+Tommy Greene (SP)
+Tommy Hanson (SP)
+Tommy Hughes (SP)
+Tommy John (SP)
+Tommy Thomas (SP)
+Tony Armas Jr. (SP)
+Tony Cloninger (SP)
+Tully Sparks (SP)
+Turk Farrell (SP)
+Tyson Ross (SP)
+Ubaldo Jimenez (SP)
+Urban Shocker (SP)
+Van Mungo (SP)
+Vean Gregg (SP)
+Vern Bickford (SP)
+Vern Kennedy (SP)
+Vern Law (SP)
+Vern Olsen (SP)
+Vic Aldridge (SP)
+Vic Raschi (SP)
+Vic Sorrell (SP)
+Vic Willis (SP)
+Vida Blue (SP)
+Vinegar Bend Mizell (SP)
+Virgil Barnes (SP)
+Virgil Trucks (SP)
+Vive Lindaman (SP)
+Wade Miley (SP)
+Waite Hoyt (SP)
+Wally Hebert (SP)
+Walt Masterson (SP)
+Walt Terrell (SP)
+Walter Johnson (SP)
+Wandy Rodriguez (SP)
+Warren Hacker (SP)
+Warren Spahn (SP)
+Watty Clark (SP)
+Wayne Garland (SP)
+Wayne LaMaster (SP)
+Weldon Henley (SP)
+Wes Ferrell (SP)
+Whit Wyatt (SP)
+Whitey Ford (SP)
+Whitey Glazner (SP)
+Wilbur Cooper (SP)
+Wilbur Wood (SP)
+Wilcy Moore (SP)
+Wiley Piatt (SP)
+Willard Nixon (SP)
+Willie Mitchell (SP)
+Willis Hudlin (SP)
+Wilson Alvarez (SP)
+Win Kellum (SP)
+Win Mercer (SP)
+Woodie Fryman (SP)
+Woody Williams (SP)
+Yovani Gallardo (SP)
+Yu Darvish (SP)
+Zack Greinke (SP)
+Zane Smith (SP)
+Aaron Heilman (RP)
+Adam Ottavino (RP)
+Adam Wainwright (RP)
+Adam Warren (RP)
+Addison Reed (RP)
+Akinori Otsuka (RP)
+Al Holland (RP)
+Al Reyes (RP)
+Alan Embree (RP)
+Alejandro Pena (RP)
+Alex Torres (RP)
+Alfredo Aceves (RP)
+Andrew Bailey (RP)
+Andrew Miller (RP)
+Andy McGaffigan (RP)
+Anthony Telford (RP)
+Antonio Osuna (RP)
+Armando Benitez (RP)
+Aroldis Chapman (RP)
+Arthur Rhodes (RP)
+Aurelio Lopez (RP)
+B.J. Ryan (RP)
+Barry Jones (RP)
+Bill Campbell (RP)
+Bill Castro (RP)
+Bill Caudill (RP)
+Bill Dawley (RP)
+Bill Landrum (RP)
+Bill Risley (RP)
+Bill Swift (RP)
+Bill Wilkinson (RP)
+Billy Koch (RP)
+Billy Taylor (RP)
+Billy Wagner (RP)
+Blas Minor (RP)
+Bob Howry (RP)
+Bob James (RP)
+Bob McClure (RP)
+Bob Shirley (RP)
+Bob Stanley (RP)
+Bob Wickman (RP)
+Bobby Ayala (RP)
+Bobby Jenks (RP)
+Bobby Parnell (RP)
+Bobby Thigpen (RP)
+Brad Lidge (RP)
+Braden Looper (RP)
+Brandon Kintzler (RP)
+Brandon League (RP)
+Brandon Lyon (RP)
+Brendan Donnelly (RP)
+Brett Cecil (RP)
+Brett Myers (RP)
+Brian Fisher (RP)
+Brian Fuentes (RP)
+Brian Shouse (RP)
+Brian Wilson (RP)
+Bruce Ruffin (RP)
+Bruce Sutter (RP)
+Bryan Harvey (RP)
+Buddy Groom (RP)
+Byung-Hyun Kim (RP)
+C.J. Wilson (RP)
+Calvin Schiraldi (RP)
+Carl Willis (RP)
+Carlos Diaz (RP)
+Carlos Marmol (RP)
+Carson Smith (RP)
+Casey Janssen (RP)
+Cecilio Guante (RP)
+Chad Bradford (RP)
+Chad Durbin (RP)
+Chad Fox (RP)
+Chad Qualls (RP)
+Chan Ho Park (RP)
+Chris Hammond (RP)
+Chris Reitsma (RP)
+Chuck McElroy (RP)
+Clay Hensley (RP)
+Cody Allen (RP)
+Craig Kimbrel (RP)
+Craig Lefferts (RP)
+Curtis Leskanic (RP)
+D.J. Carrasco (RP)
+Dale Mohorcic (RP)
+Dale Murray (RP)
+Damaso Marte (RP)
+Dan Miceli (RP)
+Dan Plesac (RP)
+Dan Quisenberry (RP)
+Dan Spillner (RP)
+Dan Wheeler (RP)
+Daniel Bard (RP)
+Danny Boone (RP)
+Danny Cox (RP)
+Danny Darwin (RP)
+Danny Farquhar (RP)
+Danny Graves (RP)
+Danny Patterson (RP)
+Darren Holmes (RP)
+Darren O'Day (RP)
+Darren Oliver (RP)
+Dave Beard (RP)
+Dave Righetti (RP)
+Dave Rozema (RP)
+Dave Schmidt (RP)
+Dave Smith (RP)
+Dave Tobik (RP)
+Dave Veres (RP)
+David Aardsma (RP)
+David Hernandez (RP)
+David Riske (RP)
+David Robertson (RP)
+David Weathers (RP)
+David Wells (RP)
+De Wayne Buice (RP)
+Dellin Betances (RP)
+Dennis Cook (RP)
+Dennis Eckersley (RP)
+Dennis Lamp (RP)
+Dennys Reyes (RP)
+Derek Lilliquist (RP)
+Derek Lowe (RP)
+Derrick Turnbow (RP)
+Dick Drago (RP)
+Don Aase (RP)
+Don Carman (RP)
+Don Robinson (RP)
+Donnie Moore (RP)
+Doug Brocail (RP)
+Doug Corbett (RP)
+Doug Jones (RP)
+Drew Smyly (RP)
+Drew Storen (RP)
+Duane Ward (RP)
+Dustin Hermanson (RP)
+Ed Vande Berg (RP)
+Eddie Guardado (RP)
+Edwin Nunez (RP)
+Elias Sosa (RP)
+Enrique Romo (RP)
+Eric Gagne (RP)
+Eric O'Flaherty (RP)
+Eric Plunk (RP)
+Ernie Camacho (RP)
+Felix Rodriguez (RP)
+Fernando Rodney (RP)
+Francisco Cordero (RP)
+Francisco Rodriguez (RP)
+Frank DiPino (RP)
+Frank Francisco (RP)
+Frank LaCorte (RP)
+Frank Williams (RP)
+Gabe White (RP)
+Gary Lavelle (RP)
+Gary Lucas (RP)
+Gene Garber (RP)
+Gene Nelson (RP)
+Geoff Geary (RP)
+George Frazier (RP)
+George Sherrill (RP)
+Giovanni Carrara (RP)
+Glen Perkins (RP)
+Grant Balfour (RP)
+Greg Cadaret (RP)
+Greg Harris (RP)
+Greg Holland (RP)
+Greg McMichael (RP)
+Greg Minton (RP)
+Greg Swindell (RP)
+Gregg Olson (RP)
+Guillermo Mota (RP)
+Heath Bell (RP)
+Heathcliff Slocumb (RP)
+Hector Carrasco (RP)
+Hector Rondon (RP)
+Hipolito Pichardo (RP)
+Hisanori Takahashi (RP)
+Hong-Chih Kuo (RP)
+Huston Street (RP)
+J.C. Romero (RP)
+J.J. Putz (RP)
+J.P. Howell (RP)
+Jake Diekman (RP)
+Jake McGee (RP)
+Jamie Easterly (RP)
+Jason Christiansen (RP)
+Jason Frasor (RP)
+Jason Grilli (RP)
+Jason Isringhausen (RP)
+Jason Motte (RP)
+Jay Howell (RP)
+Jay Powell (RP)
+Jay Witasick (RP)
+Jeff Brantley (RP)
+Jeff Fassero (RP)
+Jeff Gray (RP)
+Jeff Montgomery (RP)
+Jeff Nelson (RP)
+Jeff Parrett (RP)
+Jeff Reardon (RP)
+Jeff Robinson (RP)
+Jeff Russell (RP)
+Jeff Shaw (RP)
+Jeff Tam (RP)
+Jeff Zimmerman (RP)
+Jerry Dipoto (RP)
+Jerry Don Gleaton (RP)
+Jerry Garvin (RP)
+Jerry Koosman (RP)
+Jerry Reed (RP)
+Jesse Orosco (RP)
+Jeurys Familia (RP)
+Jim Acker (RP)
+Jim Corsi (RP)
+Jim Gott (RP)
+Jim Johnson (RP)
+Jim Mecir (RP)
+Joakim Soria (RP)
+Joaquin Benoit (RP)
+Joba Chamberlain (RP)
+Joe Beckwith (RP)
+Joe Borowski (RP)
+Joe Hesketh (RP)
+Joe Nathan (RP)
+Joe Price (RP)
+Joe Sambito (RP)
+Joel Hanrahan (RP)
+Joel Zumaya (RP)
+Joey McLaughlin (RP)
+John Axford (RP)
+John Franco (RP)
+John Habyan (RP)
+John Rocker (RP)
+John Smoltz (RP)
+John Wetteland (RP)
+Jon Rauch (RP)
+Jonathan Broxton (RP)
+Jonathan Papelbon (RP)
+Jonny Venters (RP)
+Jordan Walden (RP)
+Jose Arredondo (RP)
+Jose DeLeon (RP)
+Jose Jimenez (RP)
+Jose Melendez (RP)
+Jose Mesa (RP)
+Jose Santiago (RP)
+Jose Valverde (RP)
+Josh Fields (RP)
+Josias Manzanillo (RP)
+Juan Berenguer (RP)
+Juan Gutierrez (RP)
+Juan Oviedo (RP)
+Juan Rincon (RP)
+Julian Tavarez (RP)
+Justin Duchscherer (RP)
+Justin Wilson (RP)
+Kameron Loe (RP)
+Kazuhiro Sasaki (RP)
+Keith Foulke (RP)
+Kelly Wunsch (RP)
+Kelvin Herrera (RP)
+Ken Dayley (RP)
+Ken Giles (RP)
+Ken Ryan (RP)
+Kenley Jansen (RP)
+Kenny Rogers (RP)
+Kent Tekulve (RP)
+Keone Kela (RP)
+Kerry Ligtenberg (RP)
+Kerry Wood (RP)
+Kevin Gregg (RP)
+Kevin Rogers (RP)
+Kevin Siegrist (RP)
+Kiko Calero (RP)
+Koji Uehara (RP)
+Kyle Farnsworth (RP)
+Lance McCullers (RP)
+Larry Andersen (RP)
+Larry Casian (RP)
+LaTroy Hawkins (RP)
+Lee Gardner (RP)
+Lee Guetterman (RP)
+Lee Smith (RP)
+Les Lancaster (RP)
+Liam Hendriks (RP)
+Luis Ayala (RP)
+Luis DeLeon (RP)
+Luis Sanchez (RP)
+Luis Vizcaino (RP)
+Luke Gregerson (RP)
+Mariano Rivera (RP)
+Mark Clear (RP)
+Mark Davis (RP)
+Mark Eichhorn (RP)
+Mark Gubicza (RP)
+Mark Guthrie (RP)
+Mark Lowe (RP)
+Mark Melancon (RP)
+Mark Petkovsek (RP)
+Mark Williamson (RP)
+Mark Wohlers (RP)
+Matt Anderson (RP)
+Matt Belisle (RP)
+Matt Capps (RP)
+Matt Herges (RP)
+Matt Lindstrom (RP)
+Matt Mantei (RP)
+Matt Thornton (RP)
+Matt Young (RP)
+Mel Rojas (RP)
+Melido Perez (RP)
+Michael Gonzalez (RP)
+Michael Wuertz (RP)
+Mike Adams (RP)
+Mike Fetters (RP)
+Mike Flanagan (RP)
+Mike Henneman (RP)
+Mike Jackson (RP)
+Mike James (RP)
+Mike MacDougal (RP)
+Mike Maddux (RP)
+Mike Magnante (RP)
+Mike Perez (RP)
+Mike Remlinger (RP)
+Mike Schooler (RP)
+Mike Stanton (RP)
+Mike Timlin (RP)
+Mike Trombley (RP)
+Nate Jones (RP)
+Nate Snell (RP)
+Neal Cotts (RP)
+Neftali Feliz (RP)
+Neil Allen (RP)
+Nick Masset (RP)
+Norm Charlton (RP)
+Octavio Dotel (RP)
+Odell Jones (RP)
+Pat Neshek (RP)
+Paul Assenmacher (RP)
+Paul Quantrill (RP)
+Paul Shuey (RP)
+Paul Spoljaric (RP)
+Pedro Martinez (RP)
+Pete Ladd (RP)
+Peter Moylan (RP)
+Phil Hughes (RP)
+Rafael Betancourt (RP)
+Rafael Perez (RP)
+Rafael Soriano (RP)
+Ramiro Mendoza (RP)
+Ramon Ramirez (RP)
+Randy Myers (RP)
+Rheal Cormier (RP)
+Ricardo Rincon (RP)
+Rich Bordi (RP)
+Rich Garces (RP)
+Rich Gossage (RP)
+Rich Monteleone (RP)
+Rich Rodriguez (RP)
+Rick Aguilera (RP)
+Rick Camp (RP)
+Rick Lysander (RP)
+Rick White (RP)
+Ricky Bottalico (RP)
+Rob Dibble (RP)
+Rob Murphy (RP)
+Robb Nen (RP)
+Roberto Hernandez (RP)
+Roberto Osuna (RP)
+Rod Beck (RP)
+Roger McDowell (RP)
+Rollie Fingers (RP)
+Ron Davis (RP)
+Ron Reed (RP)
+Ron Robinson (RP)
+Roy Lee Jackson (RP)
+Roy Thomas (RP)
+Rudy May (RP)
+Rudy Seanez (RP)
+Russ Springer (RP)
+Rusty Meacham (RP)
+Ryan Cook (RP)
+Ryan Dempster (RP)
+Ryan Madson (RP)
+Salome Barojas (RP)
+Salomon Torres (RP)
+Sam Dyson (RP)
+Sammy Stewart (RP)
+Saul Rivera (RP)
+Scot Shields (RP)
+Scott Downs (RP)
+Scott Eyre (RP)
+Scott Garrelts (RP)
+Scott Linebrink (RP)
+Scott Proctor (RP)
+Scott Radinsky (RP)
+Scott Service (RP)
+Scott Stewart (RP)
+Scott Terry (RP)
+Scott Williamson (RP)
+Sean Doolittle (RP)
+Sean Marshall (RP)
+Sergio Romo (RP)
+Sergio Santos (RP)
+Shane Rawley (RP)
+Stan Belinda (RP)
+Steve Bedrosian (RP)
+Steve Cishek (RP)
+Steve Comer (RP)
+Steve Crawford (RP)
+Steve Delabar (RP)
+Steve Farr (RP)
+Steve Howe (RP)
+Steve Karsay (RP)
+Steve Olin (RP)
+Steve Ontiveros (RP)
+Steve Reed (RP)
+Stew Cliburn (RP)
+Storm Davis (RP)
+Takashi Saito (RP)
+Taylor Buchholz (RP)
+Ted Power (RP)
+Terry Adams (RP)
+Terry Forster (RP)
+Terry Leach (RP)
+Terry Mathews (RP)
+Tim Burke (RP)
+Tim Crabtree (RP)
+Tim Scott (RP)
+Tim Stoddard (RP)
+Tim Worrell (RP)
+Tippy Martinez (RP)
+Todd Frohwirth (RP)
+Todd Jones (RP)
+Todd Worrell (RP)
+Tom Burgmeier (RP)
+Tom Edens (RP)
+Tom Gordon (RP)
+Tom Henke (RP)
+Tom Hume (RP)
+Tom Niedenfuer (RP)
+Tom Wilhelmsen (RP)
+Tony Castillo (RP)
+Tony Watson (RP)
+Travis Miller (RP)
+Trevor Hoffman (RP)
+Trevor Rosenthal (RP)
+Troy Percival (RP)
+Tug McGraw (RP)
+Tyler Clippard (RP)
+Ugueth Urbina (RP)
+Vic Darensbourg (RP)
+Victor Cruz (RP)
+Vinnie Pestano (RP)
+Wade Davis (RP)
+Will Smith (RP)
+Willie Hernandez (RP)
+Wilton Lopez (RP)
+Woodie Fryman (RP)
+Xavier Hernandez (RP)
+Zach Britton (RP)
+Zach Duke (RP)
+Zack Greinke (RP)
+A.J. Pollock
 Aaron Hill
 Aaron Rowand
-Aaron Sele
 Aaron Ward
-Ad Brennan
 Adam Dunn
 Adam Jones
-Adam Ottavino
-Adam Wainwright
-Adam Warren
-Addie Joss
-Addison Reed
 Adolfo Phillips
 Adrian Beltre
 Adrian Gonzalez
-Akinori Otsuka
-Al Benton
-Al Brazle
 Al Bridwell
 Al Bumbry
 Al Cowens
-Al Dark
-Al Demaree
-Al Downing
-Al Fitzmorris
-Al Holland
-Al Hollingsworth
-Al Jackson
-Al Javery
 Al Kaline
-Al Leiter
-Al Mattern
-Al McBean
 Al Oliver
-Al Orth
 Al Rosen
 Al Simmons
 Al Smith
 Al Wickland
-Al Widmar
 Al Wingo
-Alan Embree
 Alan Trammell
 Albert Belle
 Albert Pujols
-Alberto Reyes
 Albie Pearson
-Alejandro Pena
 Alex Avila
-Alex Ferguson
-Alex Fernandez
 Alex Gordon
-Alex Kellner
 Alex Metzler
 Alex Rios
 Alex Rodriguez
-Alex Torres
 Alfonso Soriano
-Alfredo Aceves
-Allan Anderson
-Allie Reynolds
+Alvin Dark
 Alvin Davis
 Amos Otis
 Amos Strunk
@@ -72,726 +1558,303 @@ Andre Thornton
 Andrelton Simmons
 Andres Galarraga
 Andres Torres
-Andrew Bailey
 Andrew McCutchen
-Andrew Miller
 Andruw Jones
-Andy Ashby
-Andy Benes
-Andy Coakley
 Andy High
-Andy McGaffigan
-Andy Messersmith
 Andy Pafko
-Andy Pettitte
 Andy Van Slyke
 Angel Pagan
-Anibal Sanchez
-Anthony DeSclafani
 Anthony Rendon
 Anthony Rizzo
-Anthony Telford
-Antonio Osuna
 Aramis Ramirez
 Arky Vaughan
-Armando Benitez
-Arnie Portocarrero
-Aroldis Chapman
 Art Devlin
 Art Fletcher
-Art Fowler
-Art Fromme
-Art Houtteman
 Art Howe
-Art Nehf
 Art Wilson
-Arthur Rhodes
-Atlee Hammaker
 Aubrey Huff
 Augie Galan
-Aurelio Lopez
 Aurelio Rodriguez
 Austin Jackson
 Austin McHenry
-B. J. Ryan
-Babe Adams
 Babe Herman
 Babe Ruth
 Baby Doll Jacobson
 Barney McCosky
 Barry Bonds
-Barry Jones
 Barry Larkin
-Barry Zito
-Bartolo Colon
 Ben Chapman
-Ben McDonald
 Ben Oglivie
-Ben Sheets
 Ben Zobrist
-Bennie Daniels
-Benny Frey
 Benny Kauff
 Bernard Gilkey
-Bernie Boland
 Bernie Friberg
 Bernie Williams
-Bert Blyleven
 Bert Campaneris
-Bert Gallia
 Bibb Falk
-Big Jeff Pfeffer
-Bill Bernhard
-Bill Bevens
-Bill Bonham
 Bill Bradley
-Bill Campbell
-Bill Carrick
-Bill Castro
-Bill Caudill
 Bill Dahlen
-Bill Dawley
 Bill Dickey
-Bill Dietrich
-Bill Doak
-Bill Donovan
 Bill Doran
-Bill Duggleby
-Bill Fischer
 Bill Freehan
-Bill Gullickson
 Bill Hall
-Bill Hallahan
-Bill Hands
 Bill Hinchman
-Bill James
 Bill Keister
-Bill Landrum
-Bill Lee
-Bill Lohrman
+Bill Kenworthy
 Bill Madlock
 Bill Mazeroski
-Bill McGee
 Bill McKechnie
 Bill Melton
-Bill Monbouquette
 Bill Mueller
 Bill Nicholson
-Bill Phillips
-Bill Risley
-Bill Sherdel
-Bill Singer
 Bill Skowron
-Bill Stafford
-Bill Stoneman
 Bill Sweeney
-Bill Swift
 Bill Terry
 Bill Tuttle
-Bill Voiselle
-Bill Walker
-Bill Werle
 Bill White
-Bill Wight
-Bill Wilkinson
-Billy Campbell
 Billy Gardner
 Billy Gilbert
 Billy Goodman
 Billy Grabarkewitz
 Billy Hamilton
 Billy Herman
-Billy Hoeft
 Billy Johnson
 Billy Jurges
-Billy Koch
-Billy Loes
 Billy Lush
 Billy Myers
 Billy North
-Billy O'Dell
-Billy Pierce
 Billy Rogell
 Billy Southworth
-Billy Taylor
-Billy Wagner
 Billy Werber
 Billy Williams
 Bing Miller
 Bip Roberts
 Birdie Cree
-Blas Minor
 Bob Allison
-Bob Anderson
 Bob Bailey
 Bob Bescher
-Bob Bowman
-Bob Bruce
-Bob Buhl
 Bob Cerv
 Bob Elliott
-Bob Ewing
-Bob Feller
-Bob Forsch
 Bob Fothergill
-Bob Friend
-Bob Gibson
-Bob Grim
-Bob Groom
-Bob Hasty
-Bob Hooper
-Bob Howry
-Bob James
 Bob Johnson
-Bob Klinger
-Bob Knepper
-Bob Kuzava
-Bob Lemon
-Bob Logan
-Bob McClure
 Bob Meusel
-Bob Miller
-Bob Moose
-Bob Muncrief
 Bob Nieman
 Bob O'Farrell
-Bob Ojeda
-Bob Porterfield
-Bob Purkey
-Bob Rush
-Bob Sebra
-Bob Shaw
-Bob Shawkey
-Bob Shirley
 Bob Skinner
-Bob Stanley
-Bob Steele
-Bob Tewksbury
-Bob Turley
-Bob Veale
 Bob Watson
-Bob Weiland
-Bob Welch
-Bob Wicker
-Bob Wickman
 Bobby Abreu
 Bobby Avila
-Bobby Ayala
 Bobby Bonds
 Bobby Bonilla
 Bobby Byrne
 Bobby Doerr
 Bobby Estalella
 Bobby Grich
-Bobby Jenks
-Bobby Keefe
 Bobby Murcer
-Bobby Parnell
-Bobby Shantz
-Bobby Thigpen
 Bobby Thomson
 Bobby Tolan
 Bobby Veach
 Bobby Wallace
-Bobby Witt
-Bobo Newsom
 Boog Powell
-Boom-Boom Beck
-Brad Hogg
-Brad Lidge
-Brad Penny
-Brad Radke
 Brad Wilkerson
-Braden Looper
 Brady Anderson
 Braggo Roth
 Brandon Crawford
-Brandon Kintzler
-Brandon League
-Brandon Lyon
-Brandon McCarthy
 Brandon Phillips
-Brandon Webb
-Brendan Donnelly
 Bret Boone
-Bret Saberhagen
-Brett Anderson
 Brett Butler
-Brett Cecil
 Brett Gardner
-Brett Myers
-Brett Tomko
 Brian Downing
 Brian Dozier
-Brian Fisher
-Brian Fuentes
 Brian Giles
 Brian Jordan
-Brian Lawrence
 Brian McCann
 Brian Roberts
-Brian Shouse
-Brian Wilson
-Brickyard Kennedy
 Bris Lord
-Britt Burns
-Bronson Arroyo
 Brook Jacoby
-Brooks Lawrence
 Brooks Robinson
-Bruce Berenyi
-Bruce Hurst
-Bruce Ruffin
-Bruce Sutter
-Bryan Harvey
 Bryce Harper
-Bryn Smith
-Bubba Church
 Buck Freeman
 Buck Herzog
 Buck Weaver
-Bucky Walters
-Bud Black
-Bud Daley
 Buddy Bell
-Buddy Groom
 Buddy Lewis
 Buddy Myer
-Bugs Raymond
-Bump Hadley
 Bump Wills
-Burleigh Grimes
-Burt Hooton
 Burt Shotton
 Buster Adams
-Buster Brown
 Buster Posey
-Butch Wensloff
-Buttons Briggs
-Buzz Capra
-Byung-Hyun Kim
-C. J. Wilson
 Cal Abrams
 Cal Ripken
-Calvin Schiraldi
-Camilo Pascual
 Carden Gillenwater
 Carl Crawford
-Carl Erskine
 Carl Everett
-Carl Fischer
 Carl Furillo
-Carl Hubbell
-Carl Mays
-Carl Morton
-Carl Pavano
 Carl Reynolds
-Carl Weilman
-Carl Willis
 Carl Yastrzemski
 Carlos Baerga
 Carlos Beltran
 Carlos Delgado
-Carlos Diaz
 Carlos Gomez
 Carlos Gonzalez
 Carlos Guillen
 Carlos Lee
-Carlos Marmol
-Carlos Martinez
 Carlos Pena
-Carlos Perez
 Carlos Quentin
-Carlos Zambrano
 Carlton Fisk
-Carmen Hill
 Carney Lansford
 Carson Bigbee
-Carson Smith
-Casey Janssen
 Cass Michaels
-Catfish Hunter
-CC Sabathia
 Cecil Cooper
 Cecil Fielder
 Cecil Travis
-Cecilio Guante
 Cesar Cedeno
 Cesar Tovar
-Chad Billingsley
-Chad Bradford
-Chad Durbin
-Chad Fox
-Chad Qualls
-Chan Ho Park
-Chappie McFarland
-Charles Nagy
 Charlie Babb
-Charlie Chech
 Charlie Gehringer
 Charlie Gelbert
 Charlie Hanford
 Charlie Hemphill
 Charlie Hickman
 Charlie Hollocher
-Charlie Hough
 Charlie Jamieson
 Charlie Keller
-Charlie Leibrandt
 Charlie Maxwell
 Charlie Neal
-Charlie Robertson
-Charlie Smith
 Chase Headley
 Chase Utley
 Chet Laabs
 Chet Lemon
-Chick Fraser
 Chick Gandil
 Chick Hafey
 Chick Stahl
 Chico Carrasquel
-Chief Bender
-Chief Johnson
 Chief Wilson
-Chien-Ming Wang
 Chili Davis
 Chipper Jones
 Chone Figgins
-Chris Archer
-Chris Bosio
-Chris Capuano
-Chris Carpenter
 Chris Chambliss
 Chris Davis
-Chris Hammond
-Chris Haney
 Chris Hoiles
-Chris Reitsma
 Chris Sabo
-Chris Sale
-Chris Short
 Chris Speier
 Chris Young
-Christy Mathewson
-Chuck Dobson
 Chuck Dressen
-Chuck Finley
 Chuck Klein
 Chuck Knoblauch
-Chuck McElroy
-Chuck Stobbs
 Cito Gaston
-Clarence Mitchell
-Clark Griffith
 Claude Cooper
-Claude Hendrix
-Claude Osteen
-Claude Passeau
 Claude Ritchey
-Claude Willoughby
-Clay Bryant
-Clay Hensley
-Clay Kirby
-Clayton Kershaw
 Cleon Jones
 Clete Boyer
-Cliff Chambers
-Cliff Fannin
 Cliff Floyd
 Cliff Heathcote
-Cliff Lee
-Cliff Melton
-Clint Brown
 Clyde Milan
-Clyde Shoun
 Coco Crisp
-Cody Allen
-Colby Lewis
-Cole Hamels
-Collin McHugh
-Connie Johnson
-Connie Marrero
-Corey Kluber
 Corey Koskie
 Corey Patterson
-Cory Lidle
-Cowboy Jones
 Craig Biggio
-Craig Kimbrel
-Craig Lefferts
-Craig Swan
 Curt Blefary
-Curt Davis
 Curt Flood
-Curt Leskanic
-Curt Schilling
-Curt Simmons
 Curt Walker
 Curtis Granderson
-Cy Blanton
-Cy Falkenberg
 Cy Seymour
 Cy Williams
-Cy Young
-D. J. Carrasco
 Dale Alexander
 Dale Mitchell
-Dale Mohorcic
 Dale Murphy
-Dale Murray
-Dallas Keuchel
-Damaso Marte
-Dan Haren
 Dan McGann
-Dan Miceli
-Dan Petry
-Dan Plesac
-Dan Quisenberry
-Dan Spillner
 Dan Uggla
-Dan Wheeler
-Daniel Bard
-Daniel Hudson
-Danny Boone
-Danny Cox
-Danny Darwin
-Danny Farquhar
-Danny Graves
 Danny Green
-Danny Jackson
-Danny MacFayden
 Danny Murphy
-Danny Patterson
 Daric Barton
 Darin Erstad
 Darrell Evans
 Darrell Porter
 Darren Daulton
-Darren Dreifort
-Darren Holmes
-Darren O'Day
-Darren Oliver
-Darryl Kile
 Darryl Strawberry
 Dave Bancroft
-Dave Beard
-Dave Boswell
 Dave Brain
-Dave Burba
-Dave Bush
 Dave Cash
 Dave Concepcion
-Dave Danforth
-Dave Davenport
-Dave Ferriss
-Dave Fleming
-Dave Frost
-Dave Giusti
-Dave Goltz
 Dave Henderson
-Dave Hillman
 Dave Hollins
-Dave Koslo
-Dave Lemanczyk
 Dave Magadan
-Dave McNally
 Dave Parker
-Dave Righetti
-Dave Roberts
 Dave Robertson
-Dave Rozema
-Dave Schmidt
-Dave Smith
-Dave Stewart
-Dave Stieb
-Dave Tobik
-Dave Veres
-Dave Wickersham
 Dave Winfield
 Davey Johnson
 Davey Lopes
-David Aardsma
-David Cone
-David Hernandez
 David Justice
 David Ortiz
-David Price
-David Riske
-David Robertson
-David Weathers
-David Wells
 David Wright
 Davy Jones
-Dazzy Vance
-Deacon Phillippe
-Dean Chance
-Dean Stone
 Dee Gordon
 Del Bissonette
 Del Crandall
 Del Ennis
 Del Pratt
-Dellin Betances
 Denis Menke
-Dennis Cook
-Dennis Eckersley
-Dennis Eckersley (R)
-Dennis Eckersley (S)
-Dennis Lamp
-Dennis Leonard
-Dennis Martinez
-Denny Galehouse
-Denny McLain
-Denny Neagle
-Dennys Reyes
 Derek Bell
-Derek Holland
 Derek Jeter
-Derek Lilliquist
-Derek Lowe
 Deron Johnson
 Derrek Lee
-Derrick Turnbow
 Devon White
-DeWayne Buice
 Dick Allen
 Dick Bartell
-Dick Bosman
 Dick Dietz
-Dick Donovan
-Dick Drago
 Dick Egan
-Dick Ellsworth
-Dick Fowler
 Dick Groat
-Dick Hoblitzell
+Dick Hoblitzel
 Dick McAuliffe
-Dick Newsome
-Dick Rudolph
-Dick Ruthven
-Dick Stigman
 Dick Stuart
 Dick Wakefield
 Dickie Thon
 Dixie Walker
-Dizzy Dean
-Dizzy Trout
-Doc Ayers
-Doc Crandall
 Doc Gessler
-Doc Medich
-Doc Newton
-Doc White
-Dock Ellis
 Dode Paskert
-Dolf Luque
-Dolly Gray
 Dolph Camilli
 Dom DiMaggio
-Don Aase
 Don Blasingame
 Don Buford
-Don Cardwell
-Don Carman
-Don Drysdale
-Don Gullett
 Don Hoak
 Don Hurst
 Don Johnson
-Don Larsen
 Don Mattingly
 Don Mincher
 Don Money
-Don Mossi
-Don Newcombe
-Don Nottebart
-Don Robinson
-Don Sutton
-Don Wilson
 Donie Bush
 Donn Clendenon
-Donnie Moore
-Dontrelle Willis
 Dots Miller
 Doug Baird
-Doug Brocail
-Doug Corbett
-Doug Davis
 Doug DeCinces
-Doug Drabek
-Doug Fister
-Doug Jones
-Doug McWeeny
-Doug Rau
-Doyle Alexander
-Drew Smyly
-Drew Storen
-Duane Pillette
-Duane Ward
 Duffy Lewis
-Duke Kenworthy
-Duke Maas
 Duke Snider
 Dummy Hoy
-Dummy Taylor
-Duster Mails
-Dustin Hermanson
 Dustin Pedroia
 Dusty Baker
-Dutch Leonard
 Dutch Meyer
-Dutch Ruether
-Dutch Ulrich
 Dutch Zwilling
 Dwayne Murphy
 Dwight Evans
-Dwight Gooden
 Earl Averill
 Earl Battey
-Earl Hamilton
-Earl Moore
-Earl Moseley
 Earl Sheely
 Earl Torgeson
 Earl Webb
-Earl Whitehill
-Earl Wilson
 Earle Combs
-Early Wynn
 Ed Abbaticchio
 Ed Bouchee
-Ed Brandt
 Ed Charles
-Ed Correa
 Ed Delahanty
-Ed Figueroa
 Ed Hahn
-Ed Halicki
-Ed Heusser
-Ed Holley
-Ed Karger
-Ed Klepfer
 Ed Konetchy
 Ed Lennox
 Ed Morgan
-Ed Morris
-Ed Nunez
-Ed Reulbach
-Ed Scott
-Ed Siever
-Ed Summers
-Ed Vande Berg
-Ed Walsh
-Ed Wells
-Ed Whitson
-Ed Willett
 Edd Roush
 Eddie Bressoud
-Eddie Cicotte
 Eddie Collins
 Eddie Foster
-Eddie Guardado
 Eddie Joost
 Eddie Lake
 Eddie Mathews
@@ -799,180 +1862,87 @@ Eddie Mayo
 Eddie Miller
 Eddie Moore
 Eddie Murray
-Eddie Plank
 Eddie Robinson
-Eddie Rommel
-Eddie Smith
 Eddie Stanky
 Eddie Yost
 Edgar Martinez
 Edgar Renteria
 Edgardo Alfonzo
-Edinson Volquez
 Edwin Encarnacion
-Edwin Jackson
-Elam Vangilder
 Elbie Fletcher
-Elden Auker
-Elias Sosa
 Elliott Maddox
 Ellis Burks
-Ellis Kinder
 Ellis Valentine
 Elmer Flick
-Elmer Ponder
-Elmer Riddle
 Elmer Smith
-Elmer Steele
 Elmer Valo
 Elston Howard
-Emil Yde
 Emmet Heidrick
 Enos Slaughter
-Enrique Romo
-Eppa Rixey
 Eric Chavez
 Eric Davis
-Eric Gagne
 Eric Karros
-Eric Milton
-Eric O'Flaherty
-Eric Plunk
 Eric Tipton
-Erik Bedard
-Erik Hanson
 Ernie Banks
-Ernie Broglio
-Ernie Camacho
 Ernie Lombardi
-Ernie Shore
-Ernie White
-Erskine Mayer
-Erv Brame
-Erv Palica
-Ervin Santana
-Esteban Loaiza
 Evan Longoria
-Ewell Blackwell
 Felipe Alou
 Felipe Lopez
-Felix Hernandez
-Felix Rodriguez
-Ferdie Schupp
-Fergie Jenkins
-Fernando Rodney
-Fernando Valenzuela
 Ferris Fain
 Fielder Jones
-Firpo Marberry
-Flint Rhem
-Floyd Bannister
-Floyd Youmans
-Francisco Cordero
-Francisco Liriano
-Francisco Rodriguez
 Frank Baker
-Frank Baumann
 Frank Bolling
 Frank Chance
-Frank Corridon
 Frank Demaree
-Frank DiPino
-Frank Francisco
 Frank Howard
 Frank Isbell
-Frank Kitson
-Frank LaCorte
-Frank Lary
 Frank Malzone
 Frank McCormick
-Frank Miller
-Frank Owen
-Frank Pastore
 Frank Robinson
 Frank Schulte
-Frank Smith
-Frank Sullivan
-Frank Tanana
 Frank Thomas
-Frank Viola
 Frank White
-Frank Williams
 Frankie Crosetti
 Frankie Frisch
 Franklin Gutierrez
-Fred Anderson
 Fred Clarke
-Fred Fussell
-Fred Glade
 Fred Hartman
-Fred Heimach
-Fred Hutchinson
 Fred Luderus
 Fred Lynn
 Fred McGriff
 Fred Merkle
-Fred Newman
-Fred Sanford
 Fred Schulte
 Fred Snodgrass
 Fred Tenney
-Fred Toney
-Freddie Fitzsimmons
 Freddie Freeman
 Freddie Lindstrom
-Freddy Garcia
 Freddy Parent
 Freddy Sanchez
-Fritz Ostermueller
-Fritz Peterson
 Gabby Hartnett
-Gabe White
-Garland Braxton
 Garret Anderson
 Garrett Atkins
-Garrett Richards
 Garry Maddox
 Garry Templeton
-Gary Bell
 Gary Carter
 Gary Gaetti
-Gary Lavelle
-Gary Lucas
-Gary Nolan
-Gary Peters
 Gary Pettis
 Gary Sheffield
 Gary Ward
-Gavin Floyd
 Gavvy Cravath
-Gaylord Perry
 Gee Walker
 Gene Alley
-Gene Bearden
-Gene Conley
-Gene Garber
 Gene Moore
-Gene Nelson
-Gene Packard
 Gene Tenace
 Gene Woodling
-Geoff Geary
 Geoff Jenkins
-Geoff Zahn
 George Altman
 George Bell
-George Blaeholder
 George Brett
-George Brunet
 George Burns
 George Case
-George Caster
 George Cutshaw
 George Davis
-George Earnshaw
 George Foster
-George Frazier
 George Gibson
 George Grantham
 George Harper
@@ -980,95 +1950,50 @@ George Hendrick
 George Kell
 George Kelly
 George McBride
-George McConnell
-George McQuillan
 George McQuinn
-George Mogridge
-George Mullin
 George Myatt
-George Pipgras
 George Scott
 George Selkirk
-George Sherrill
 George Sisler
-George Smith
 George Stone
 George Stovall
-George Suggs
-George Uhle
 George Van Haltren
 Gerardo Parra
-Gerrit Cole
-Gerry Staley
 Giancarlo Stanton
-Gil Heredia
 Gil Hodges
 Gil McDougald
-Gil Meche
 Ginger Beaumont
-Gio Gonzalez
-Giovanni Carrara
-Glen Hobbie
-Glen Perkins
-Glendon Rusch
 Glenn Beckert
 Glenn Davis
-Glenn Liebhardt
 Glenn Wright
 Goody Rosen
 Goose Goslin
-Gordon Rhodes
 Gorman Thomas
 Grady Hatton
 Grady Sizemore
 Graig Nettles
 Granny Hamner
-Grant Balfour
-Grant Jackson
-Greg Cadaret
 Greg Gross
-Greg Harris
-Greg Hibbard
-Greg Holland
 Greg Luzinski
-Greg Maddux
-Greg McMichael
-Greg Minton
-Greg Swindell
 Greg Vaughn
 Gregg Jefferies
-Gregg Olson
-Guillermo Mota
 Gus Bell
 Gus Suhr
 Gus Triandos
 Gus Zernial
-Guy Bush
-Guy Morton
 Hack Wilson
-Hal Brown
-Hal Carlson
 Hal Chase
-Hal Gregg
 Hal McRae
-Hal Newhouser
-Hal Schumacher
 Hal Trosky
-Hal White
-Ham Iburg
 Hank Aaron
-Hank Aguirre
 Hank Bauer
 Hank Blalock
-Hank Borowy
 Hank Edwards
 Hank Greenberg
 Hank Leiber
 Hank Majeski
-Hank Robinson
 Hank Sauer
 Hank Thompson
-Hank Wyse
 Hanley Ramirez
 Hans Lobert
 Happy Felsch
@@ -1077,225 +2002,78 @@ Harmon Killebrew
 Harold Baines
 Harold Reynolds
 Harry Bay
-Harry Brecheen
-Harry Byrd
-Harry Coveleski
 Harry Danning
 Harry Davis
-Harry Feldman
-Harry Gaspar
-Harry Gumbert
-Harry Harper
 Harry Heilmann
 Harry Hooper
-Harry Howell
-Harry Kelley
-Harry Krause
 Harry Lord
 Harry Lumley
 Harry Steinfeldt
 Harry Walker
 Harry Wolter
-Harvey Haddix
 Harvey Hendrick
 Harvey Kuenn
-Heath Bell
-Heathcliff Slocumb
-Hector Carrasco
-Hector Rondon
-Heinie Berger
 Heinie Groh
 Heinie Manush
 Heinie Wagner
 Heinie Zimmerman
-Herb Pennock
-Herb Score
 Herman Long
-Herman Pillette
-Hi Bithorn
-Hi Myers
-Hideo Nomo
-Hipolito Pichardo
-Hippo Vaughn
-Hiroki Kuroda
-Hisanori Takahashi
-Hisashi Iwakuma
 Hobe Ferris
-Hod Eller
-Hod Lisenbee
-Homer Bailey
 Honus Wagner
-Hooks Dauss
-Hooks Wiltse
 Hoot Evers
-Howard Ehmke
 Howard Johnson
-Howie Camnitz
-Howie Fox
 Howie Kendrick
-Howie Pollet
 Howie Shanks
-Hoyt Wilhelm
-Hub Perdue
-Hugh Bedient
-Hugh Casey
-Hugh Mulcahy
 Hughie Critz
-Hung-Chih Kuo
 Hunter Pence
-Huston Street
-Hyun-Jin Ryu
+Hy Myers
 Ian Desmond
-Ian Kennedy
 Ian Kinsler
 Ichiro Suzuki
-Ike Delock
 Irish Meusel
-Irv Young
-Ismael Valdez
 Ival Goodman
 Ivan Rodriguez
-Ivy Andrews
-J. C. Gutierrez
-J. C. Romero
-J. D. Martinez
-J. J. Putz
-J. P. Howell
 J.D. Drew
+J.D. Martinez
 J.J. Hardy
-Jack Armstrong
 Jack Barry
-Jack Billingham
-Jack Chesbro
 Jack Clark
-Jack Coombs
 Jack Fournier
-Jack Harper
-Jack Harshman
-Jack Kralick
-Jack Kramer
-Jack McDowell
-Jack Morris
-Jack Pfiester
-Jack Powell
-Jack Quinn
-Jack Russell
-Jack Sanford
-Jack Scott
 Jack Smith
-Jack Sutthoff
-Jack Taylor
 Jack Tobin
-Jack Warhop
-Jack Wilson
 Jackie Brandt
 Jackie Jensen
 Jackie Robinson
-Jacob deGrom
 Jacoby Ellsbury
 Jacque Jones
-Jaime Garcia
-Jaime Navarro
-Jair Jurrjens
-Jake Arrieta
 Jake Beckley
 Jake Daubert
-Jake Diekman
-Jake McGee
-Jake Miller
-Jake Peavy
 Jake Stahl
-Jake Weimer
-Jakie May
-James Shields
-Jamie Easterly
-Jamie Moyer
-Jaret Wright
-Jarrod Parker
-Jarrod Washburn
 Jason Bartlett
 Jason Bay
-Jason Christiansen
-Jason Frasor
 Jason Giambi
-Jason Grilli
-Jason Hammel
 Jason Heyward
-Jason Isringhausen
-Jason Jennings
 Jason Kendall
 Jason Kipnis
-Jason Motte
-Jason Schmidt
 Jason Thompson
-Javier Vazquez
 Jay Bell
 Jay Bruce
-Jay Howell
-Jay Powell
-Jay Witasick
 Jayson Werth
 Jeff Bagwell
 Jeff Blauser
-Jeff Brantley
 Jeff Burroughs
 Jeff Cirillo
 Jeff Conine
-Jeff Fassero
-Jeff Francis
-Jeff Gray
 Jeff Heath
 Jeff Kent
-Jeff Montgomery
-Jeff Nelson
-Jeff Parrett
-Jeff Pfeffer
-Jeff Reardon
-Jeff Robinson
-Jeff Russell
-Jeff Samardzija
-Jeff Shaw
-Jeff Tam
-Jeff Tesreau
-Jeff Weaver
-Jeff Zimmerman
-Jered Weaver
-Jeremy Bonderman
 Jeromy Burnitz
-Jerry Dipoto
-Jerry Don Gleaton
-Jerry Garvin
-Jerry Koosman
 Jerry Priddy
-Jerry Reed
-Jerry Reuss
-Jerry Walker
 Jesse Barfield
-Jesse Barnes
 Jesse Burkett
-Jesse Flores
-Jesse Haines
-Jesse Orosco
-Jesse Petty
-Jesse Tannehill
-Jeurys Familia
 Jhonny Peralta
-Jhoulys Chacin
 Jigger Statz
 Jiggs Donahue
-Jim Abbott
-Jim Acker
-Jim Archer
-Jim Bagby
-Jim Barr
-Jim Beattie
-Jim Bibby
 Jim Bottomley
-Jim Bouton
-Jim Bunning
-Jim Clancy
-Jim Colborn
-Jim Corsi
 Jim Davenport
 Jim Doyle
 Jim Edmonds
@@ -1303,49 +2081,25 @@ Jim Fregosi
 Jim Gentile
 Jim Gilliam
 Jim Gleeson
-Jim Gott
-Jim Hearn
 Jim Hickman
-Jim Johnson
-Jim Kaat
 Jim Landis
 Jim Lefebvre
-Jim Lonborg
-Jim Maloney
-Jim Mecir
-Jim Merritt
-Jim Nash
 Jim Northrup
-Jim O'Toole
-Jim Owens
-Jim Palmer
-Jim Perry
 Jim Piersall
 Jim Ray Hart
 Jim Rice
-Jim Rooker
 Jim Russell
-Jim Scott
-Jim Shaw
-Jim Slaton
 Jim Sundberg
 Jim Thome
-Jim Tobin
-Jim Turner
 Jim Viox
-Jim Weaver
-Jim Wilson
+Jimmie Dykes
 Jimmie Foxx
 Jimmie Hall
 Jimmy Barrett
 Jimmy Brown
 Jimmy Collins
-Jimmy Dygert
-Jimmy Dykes
 Jimmy Esmond
 Jimmy Johnston
-Jimmy Key
-Jimmy Ring
 Jimmy Rollins
 Jimmy Ryan
 Jimmy Sheckard
@@ -1353,1055 +2107,428 @@ Jimmy Slagle
 Jimmy Williams
 Jimmy Wynn
 Jo-Jo Moore
-Joakim Soria
-Joaquin Andujar
-Joaquin Benoit
-Joba Chamberlain
 Jody Davis
 Joe Adcock
-Joe Beckwith
-Joe Benz
-Joe Blanton
-Joe Borowski
-Joe Bowman
 Joe Carter
-Joe Coleman
 Joe Cronin
 Joe Cunningham
 Joe DiMaggio
-Joe Dobson
 Joe Ferguson
 Joe Foy
-Joe Gibbon
 Joe Gordon
 Joe Harris
-Joe Hatten
 Joe Hauser
-Joe Haynes
-Joe Hesketh
-Joe Horlen
+Joe Jackson
 Joe Judge
 Joe Kelley
 Joe Kuhel
-Joe Lake
-Joe Magrane
 Joe Mauer
-Joe McGinnity
 Joe Medwick
 Joe Morgan
-Joe Nathan
-Joe Niekro
-Joe Nuxhall
-Joe Oeschger
-Joe Price
 Joe Rudi
-Joe Sambito
 Joe Sewell
-Joe Shaute
 Joe Stripp
 Joe Tinker
 Joe Torre
 Joe Vosmik
-Joe Wood
-Joel Hanrahan
-Joel Pineiro
-Joel Zumaya
-Joey Jay
-Joey McLaughlin
 Joey Votto
-Johan Santana
 John Anderson
-John Axford
-John Burkett
-John Butcher
-John Candelaria
-John Danks
-John Denny
-John Farrell
-John Franco
-John Habyan
 John Kruk
-John Lackey
 John Mayberry
 John McGraw
-John Montefusco
 John Olerud
-John Patterson
-John Rocker
-John Romano
-John Smiley
-John Smoltz
-John Smoltz (R)
-John Smoltz (S)
 John Stearns
 John Stone
-John Thomson
 John Titus
-John Tudor
 John Valentin
-John Wetteland
-John Whitehead
-Johnny Allen
-Johnny Antonelli
-Johnny Babich
 Johnny Barrett
 Johnny Bates
-Johnny Beazley
 Johnny Bench
 Johnny Callison
-Johnny Cueto
 Johnny Evers
 Johnny Frederick
-Johnny Gorsica
 Johnny Hopp
-Johnny Humphries
-Johnny Lanning
 Johnny Lindell
 Johnny Logan
-Johnny Marcum
 Johnny Mize
-Johnny Morrison
 Johnny Mostil
-Johnny Niggeling
 Johnny Pesky
-Johnny Podres
 Johnny Ray
-Johnny Rigney
 Johnny Rizzo
-Johnny Sain
-Johnny Schmitz
+Johnny Romano
 Johnny Temple
-Johnny Vander Meer
-Jon Lester
-Jon Lieber
-Jon Matlack
-Jon Rauch
-Jonathan Broxton
 Jonathan Lucroy
-Jonathan Papelbon
-Jonny Venters
-Jordan Walden
-Jordan Zimmermann
 Jorge Posada
 Jose Abreu
 Jose Altuve
-Jose Arredondo
 Jose Bautista
 Jose Canseco
-Jose Contreras
 Jose Cruz
-Jose DeLeon
-Jose Fernandez
-Jose Guzman
-Jose Jimenez
-Jose Lima
-Jose Melendez
-Jose Mesa
 Jose Oquendo
-Jose Quintana
 Jose Reyes
-Jose Rijo
-Jose Rosado
-Jose Santiago
-Jose Valverde
-Josh Beckett
 Josh Donaldson
-Josh Fields
 Josh Hamilton
 Josh Harrison
-Josh Johnson
 Josh Reddick
-Josh Towers
-Josias Manzanillo
-Juan Berenguer
-Juan Carlos Oviedo
 Juan Gonzalez
-Juan Guzman
-Juan Marichal
-Juan Pizarro
-Juan Rincon
-Julian Tavarez
 Julio Franco
 Julio Lugo
-Julio Teheran
-Jumbo Elliott
-Justin Duchscherer
-Justin Masterson
-Justin Thompson
 Justin Upton
-Justin Verlander
-Justin Wilson
-Kaiser Wilhelm
 Kal Daniels
-Kameron Loe
-Karl Drews
-Kazuhiro Sasaki
-Keith Foulke
 Keith Hernandez
-Kelly Downs
 Kelly Gruber
 Kelly Johnson
-Kelly Wunsch
-Kelvim Escobar
-Kelvin Herrera
 Ken Boyer
-Ken Burkhart
 Ken Caminiti
-Ken Chase
-Ken Dayley
-Ken Forsch
-Ken Giles
 Ken Griffey
 Ken Griffey Jr.
 Ken Harrelson
 Ken Henderson
-Ken Hill
-Ken Holtzman
-Ken Howell
-Ken Johnson
 Ken Keltner
-Ken Kravec
-Ken McBride
 Ken McMullen
-Ken Raffensberger
-Ken Ryan
 Ken Singleton
 Ken Williams
-Kenley Jansen
 Kenny Lofton
-Kenny Rogers
 Kent Hrbek
-Kent Tekulve
-Kerry Ligtenberg
-Kerry Wood
-Kerry Wood (R)
-Kerry Wood (S)
-Kevin Appier
 Kevin Bass
-Kevin Brown
-Kevin Gregg
-Kevin Gross
 Kevin Kiermaier
 Kevin McReynolds
-Kevin Millwood
 Kevin Mitchell
-Kevin Rogers
 Kevin Seitzer
-Kevin Siegrist
-Kevin Tapani
 Kevin Youkilis
 Kevin Young
 Kid Elberfeld
-Kid Nichols
 Kiki Cuyler
-Kiko Calero
 Kip Selbach
-Kirby Higbe
 Kirby Puckett
 Kirk Gibson
-Kirk McCaskill
 Kitty Bransfield
-Koji Uehara
-Kris Benson
 Kris Bryant
-Kyle Farnsworth
-Kyle Hendricks
-Kyle Lohse
 Kyle Seager
 Lance Berkman
 Lance Johnson
-Lance Lynn
-Lance McCullers
 Lance Parrish
 Lance Richbourg
-Larry Andersen
-Larry Benton
-Larry Casian
-Larry Cheney
-Larry Christenson
-Larry Dierker
 Larry Doby
 Larry Doyle
-Larry French
 Larry Gardner
-Larry Gura
 Larry Hisle
-Larry Jackson
-Larry Jansen
-Larry McWilliams
 Larry Parrish
 Larry Walker
-Lary Sorensen
-LaTroy Hawkins
 Lave Cross
-Lee Gardner
-Lee Grissom
-Lee Guetterman
 Lee Magee
 Lee May
 Lee Mazzilli
-Lee Meadows
-Lee Smith
-Lee Stange
 Lee Tannehill
 Lee Walls
-Lefty Gomez
-Lefty Grove
-Lefty Leifield
-Lefty Mills
 Lefty O'Doul
-Lefty Stewart
-Lefty Tyler
-Lefty Williams
-Len Barker
 Len Koenecke
 Lenny Dykstra
 Leo Cardenas
-Leon Cadore
 Les Bell
 Les Fleming
-Les Lancaster
 Les Mann
-Lew Burdette
 Lew Fonseca
-Liam Hendriks
-Lindy McDaniel
-Livan Hernandez
-Lloyd Brown
 Lloyd Moseby
 Lloyd Waner
-Lon Warneke
 Lonnie Smith
 Lonny Frey
 Lorenzo Cain
 Lou Boudreau
-Lou Brissie
 Lou Brock
-Lou Fette
 Lou Gehrig
 Lou Klein
 Lou Whitaker
-Louis Drucke
 Lu Blue
 Luis Aparicio
-Luis Ayala
 Luis Castillo
-Luis DeLeon
 Luis Gonzalez
-Luis Leal
 Luis Olmo
-Luis Sanchez
-Luis Tiant
-Luis Vizcaino
 Luke Appling
-Luke Gregerson
-Luke Hamlin
 Lyman Bostock
 Lyn Lary
-Mace Brown
-Madison Bumgarner
 Magglio Ordonez
 Manny Machado
 Manny Ramirez
 Manny Sanguillen
 Marcus Giles
-Mariano Rivera
-Mario Soto
-Marius Russo
 Mark Belanger
-Mark Buehrle
-Mark Clark
-Mark Clear
-Mark Davis
-Mark Eichhorn
-Mark Fidrych
 Mark Grace
-Mark Gubicza
-Mark Guthrie
 Mark Kotsay
-Mark Langston
 Mark Loretta
-Mark Lowe
 Mark McGwire
-Mark Melancon
-Mark Mulder
-Mark Petkovsek
-Mark Portugal
-Mark Prior
-Mark Redman
 Mark Teixeira
-Mark Williamson
-Mark Wohlers
 Marquis Grissom
 Martin Prado
 Marty Marion
 Marty McManus
-Marty Pattin
-Mat Latos
-Matt Anderson
-Matt Belisle
-Matt Cain
-Matt Capps
 Matt Carpenter
-Matt Clement
 Matt Duffy
-Matt Garza
-Matt Harrison
-Matt Harvey
-Matt Herges
 Matt Holliday
 Matt Kemp
-Matt Lindstrom
-Matt Mantei
-Matt Morris
-Matt Thornton
 Matt Williams
-Matt Young
 Matty Alou
 Matty McIntyre
 Maury Wills
 Max Bishop
-Max Butcher
 Max Carey
 Max Flack
-Max Lanier
-Max Scherzer
 Max West
-Mel Harder
 Mel Ott
-Mel Parnell
-Mel Queen
-Mel Rojas
-Mel Stottlemyre
-Melido Perez
 Melvin Mora
 Melvin Upton
 Merv Rettenmund
 Michael Bourn
 Michael Brantley
-Michael Wuertz
 Mickey Cochrane
-Mickey Doolin
-Mickey Haefner
-Mickey Harris
-Mickey Lolich
+Mickey Doolan
 Mickey Mantle
-Mickey McDermott
 Mickey Rivers
 Mickey Tettleton
 Mickey Vernon
-Miguel Batista
 Miguel Cabrera
 Miguel Montero
 Miguel Tejada
-Mike Adams
-Mike Boddicker
-Mike Caldwell
 Mike Cameron
-Mike Cuellar
 Mike Davis
 Mike Donlin
 Mike Epstein
-Mike Fetters
-Mike Flanagan
-Mike Fornieles
-Mike Garcia
 Mike Greenwell
-Mike Hampton
 Mike Hargrove
-Mike Henneman
-Mike Jackson
-Mike James
 Mike Kreevich
-Mike Krukow
-Mike MacDougal
-Mike Maddux
-Mike Magnante
-Mike Marshall
-Mike McCormick
-Mike Minor
 Mike Mitchell
-Mike Moore
-Mike Morgan
 Mike Mowrey
-Mike Mussina
-Mike Norris
-Mike Parrott
-Mike Perez
 Mike Piazza
-Mike Prendergast
-Mike Remlinger
 Mike Schmidt
-Mike Schooler
 Mike Scioscia
-Mike Scott
-Mike Sirotka
-Mike Smithson
-Mike Stanton
-Mike Timlin
-Mike Torrez
-Mike Trombley
 Mike Trout
-Mike Witt
 Miller Huggins
 Milt Byrnes
-Milt Gaston
-Milt Pappas
 Milt Stock
 Milt Thompson
-Milt Wilcox
 Minnie Minoso
 Mitchell Page
 Mo Vaughn
-Moe Drabowsky
 Moises Alou
 Monte Irvin
-Monte Pearson
-Monty Stratton
 Mookie Betts
-Moose Haas
 Moose Solters
-Mordecai Brown
 Morgan Ensberg
 Morrie Rath
-Mort Cooper
-Mudcat Grant
-Murry Dickson
 Nap Lajoie
-Nap Rucker
-Nate Andrews
 Nate Colbert
-Nate Jones
-Nate Snell
-Neal Cotts
-Ned Garver
-Ned Garvin
-Neftali Feliz
-Neil Allen
 Nellie Fox
-Nels Potter
-Nelson Briles
 Nelson Cruz
-Nick Altrock
-Nick Cullop
 Nick Etten
 Nick Johnson
 Nick Markakis
-Nick Masset
-Nick Strincevich
-Noah Lowry
 Nolan Arenado
-Nolan Ryan
 Nomar Garciaparra
-Noodles Hahn
 Norm Cash
-Norm Charlton
 Norm Siebern
 Nyjer Morgan
-Octavio Dotel
-Odalis Perez
 Odell Hale
-Odell Jones
-Oil Can Boyd
-Oliver Perez
-Omar Daal
 Omar Vizquel
-Oral Hildebrand
-Orel Hershiser
 Orlando Cabrera
 Orlando Cepeda
-Orlando Hernandez
-Orlando Pena
-Orval Grove
-Orval Overall
 Oscar Grimes
-Oscar Jones
 Ossie Bluege
 Ossie Vitt
-Otto Hess
 Otto Knabe
 Ozzie Smith
 Pablo Sandoval
-Pascual Perez
-Pat Dobson
-Pat Hentgen
-Pat Jarvis
-Pat Malone
 Pat Mullin
-Pat Neshek
-Pat Ragan
-Pat Zachry
 Patsy Dougherty
-Paul Assenmacher
 Paul Blair
-Paul Dean
-Paul Derringer
-Paul Foytack
 Paul Goldschmidt
-Paul LaPalme
 Paul Lo Duca
-Paul Minner
 Paul Molitor
 Paul O'Neill
-Paul Quantrill
-Paul Shuey
-Paul Splittorff
-Paul Spoljaric
 Paul Waner
-Peaches Davis
 Peanuts Lowrey
-Pedro Astacio
 Pedro Guerrero
-Pedro Martinez
-Pedro Ramos
 Pee Wee Reese
 Pep Young
 Pepper Martin
-Pete Alexander
-Pete Appleton
-Pete Donohue
-Pete Dowling
 Pete Fox
 Pete Kilduff
-Pete Ladd
 Pete O'Brien
 Pete Reiser
 Pete Rose
 Pete Runnels
-Pete Schneider
-Pete Schourek
-Pete Vuckovich
 Pete Ward
-Peter Moylan
 Phil Bradley
 Phil Cavarretta
-Phil Collins
-Phil Douglas
-Phil Hughes
-Phil Marchildon
 Phil Nevin
-Phil Niekro
 Phil Rizzuto
 Pie Traynor
-Pink Hawley
 Pinky Higgins
 Pinky Whitney
 Placido Polanco
-Pol Perritt
-Preacher Roe
 Prince Fielder
 Rabbit Maranville
-Rafael Betancourt
 Rafael Furcal
 Rafael Palmeiro
-Rafael Perez
-Rafael Soriano
-Ralph Branca
 Ralph Garr
 Ralph Kiner
-Ralph Terry
-Ramiro Mendoza
-Ramon Martinez
-Ramon Ramirez
-Randy Johnson
-Randy Jones
-Randy Myers
 Randy Velarde
 Randy Winn
-Randy Wolf
 Raul Mondesi
-Ray Benge
 Ray Blades
 Ray Boone
-Ray Caldwell
 Ray Chapman
-Ray Collins
-Ray Culp
-Ray Fisher
 Ray Grimes
-Ray Herbert
-Ray Kremer
 Ray Lankford
 Ray Mueller
 Ray Powell
-Ray Prim
-Ray Sadecki
 Ray Sanders
-Ray Scarborough
-Ray Washburn
-Reb Russell
-Red Ames
-Red Barrett
-Red Donahue
-Red Faber
-Red Lucas
-Red Munger
 Red Murray
 Red Rolfe
-Red Ruffing
 Red Schoendienst
 Red Smith
 Reed Johnson
-Reggie Cleveland
 Reggie Jackson
 Reggie Sanders
 Reggie Smith
 Rennie Stennett
-Rex Barney
-Rheal Cormier
-Ricardo Rincon
 Rich Aurilia
-Rich Bordi
-Rich Garces
 Rich Gedman
-Rich Gossage
-Rich Harden
-Rich Monteleone
-Rich Rodriguez
 Rich Rollins
 Richard Hidalgo
 Richie Ashburn
 Richie Hebner
 Richie Zisk
-Rick Aguilera
 Rick Burleson
-Rick Camp
 Rick Cerone
-Rick Langford
-Rick Lysander
-Rick Mahler
-Rick Reed
-Rick Reuschel
-Rick Rhoden
-Rick Sutcliffe
-Rick White
-Rick Wise
 Rickey Henderson
 Rickie Weeks
-Ricky Bottalico
-Ricky Nolasco
 Rico Carty
 Rico Petrocelli
 Riggs Stephenson
-Rip Collins
-Rip Sewell
 Ripper Collins
-Rob Dibble
-Rob Murphy
-Robb Nen
 Robby Thompson
-Robert Person
 Roberto Alomar
 Roberto Clemente
-Roberto Hernandez
 Roberto Kelly
-Robin Roberts
 Robin Ventura
 Robin Yount
 Robinson Cano
 Rocky Colavito
-Rod Beck
 Rod Carew
 Roger Bresnahan
-Roger Clemens
-Roger Erickson
 Roger Maris
-Roger McDowell
 Roger Peckinpaugh
-Roger Wolff
 Rogers Hornsby
-Rollie Fingers
-Rollie Naylor
 Ron Cey
-Ron Darling
-Ron Davis
 Ron Gant
-Ron Guidry
 Ron Hansen
 Ron Hunt
-Ron Kline
 Ron LeFlore
 Ron Northey
-Ron Reed
-Ron Robinson
 Ron Santo
 Rondell White
-Roscoe Miller
 Ross Youngs
 Roy Campanella
 Roy Cullenbine
-Roy Halladay
-Roy Lee Jackson
 Roy McMillan
-Roy Oswalt
-Roy Patterson
 Roy Sievers
 Roy Smalley
 Roy Thomas
 Roy White
-Rube Benton
-Rube Marquard
-Rube Melton
 Rube Oldring
-Rube Vickers
-Rube Waddell
-Rube Walberg
-Ruben Gomez
 Ruben Sierra
-Rudy May
-Rudy Seanez
 Rudy York
-Russ Bauers
-Russ Christopher
-Russ Ford
-Russ Meyer
-Russ Ortiz
-Russ Springer
 Russell Martin
 Rusty Greer
-Rusty Meacham
 Rusty Staub
 Ryan Braun
-Ryan Cook
-Ryan Dempster
-Ryan Dempster (R)
-Ryan Dempster (S)
-Ryan Drese
 Ryan Howard
 Ryan Ludwick
-Ryan Madson
 Ryan Zimmerman
 Ryne Sandberg
 Sal Bando
-Sal Maglie
-Salome Barojas
-Salomon Torres
 Sam Chapman
 Sam Crawford
-Sam Dyson
-Sam Frock
 Sam Jethroe
-Sam Jones
-Sam Leever
 Sam Leslie
-Sam McDowell
 Sam Mertes
 Sam Rice
 Sam West
-Sammy Ellis
 Sammy Sosa
-Sammy Stewart
 Sammy Strang
-Sandy Koufax
-Saul Rivera
-Saul Rogovin
-Schoolboy Rowe
-Scot Shields
-Scott Baker
-Scott Bankhead
-Scott Downs
-Scott Erickson
-Scott Eyre
 Scott Fletcher
-Scott Garrelts
-Scott Kazmir
-Scott Linebrink
-Scott McGregor
-Scott Perry
-Scott Proctor
-Scott Radinsky
 Scott Rolen
-Scott Sanderson
-Scott Service
-Scott Stewart
-Scott Terry
-Scott Williamson
-Sean Doolittle
-Sean Marshall
-Sergio Romo
-Sergio Santos
 Shane Mack
-Shane Rawley
-Shane Reynolds
 Shane Victorino
 Shannon Stewart
-Shaun Marcum
-Shawn Estes
 Shawn Green
-Shelby Miller
-Sheriff Blake
 Sherm Lollar
 Sherry Magee
-Sherry Smith
 Shin-Soo Choo
-Shoeless Joe Jackson
-Si Johnson
-Sid Fernandez
 Sid Gordon
-Sid Hudson
-Sidney Ponson
 Simon Nicholls
 Sixto Lezcano
-Slim Harriss
-Slim Sallee
 Smoky Burgess
-Snake Wiltse
 Snuffy Stirnweiss
 Socks Seybold
 Solly Hemus
 Solly Hofman
-Sonny Gray
-Sonny Siebert
 Sparky Adams
-Spud Chandler
 Spud Davis
-Stan Bahnsen
-Stan Belinda
-Stan Coveleski
 Stan Hack
 Stan Lopata
 Stan Musial
 Stan Rojek
 Stan Spence
-Stan Williams
 Starling Marte
 Stephen Drew
-Stephen Strasburg
-Steve Avery
-Steve Barber
-Steve Bedrosian
-Steve Busby
-Steve Carlton
-Steve Cishek
-Steve Comer
-Steve Crawford
-Steve Delabar
 Steve Evans
-Steve Farr
 Steve Finley
 Steve Garvey
-Steve Gromek
-Steve Hargan
-Steve Howe
-Steve Karsay
 Steve Kemp
-Steve McCatty
 Steve O'Neill
-Steve Olin
-Steve Ontiveros
-Steve Reed
-Steve Rogers
 Steve Sax
-Steve Trout
-Stew Cliburn
-Stoney McGlynn
-Storm Davis
-Stu Miller
-Stubby Overmire
 Stuffy McInnis
-Syl Johnson
 Taffy Wright
-Takashi Saito
-Tanner Roark
-Taylor Buchholz
 Taylor Douthit
-Ted Blankenship
-Ted Gray
 Ted Kluszewski
-Ted Lewis
-Ted Lilly
-Ted Lyons
-Ted Power
 Ted Simmons
 Ted Williams
-Teddy Higuera
-Terry Adams
-Terry Forster
 Terry Kennedy
-Terry Leach
-Terry Mathews
 Terry Moore
-Terry Mulholland
 Terry Pendleton
 Terry Puhl
 Terry Turner
-Tex Carleton
-Tex Hughson
-Thornton Lee
 Thurman Munson
 Tillie Shafer
-Tillie Walker
-Tim Belcher
-Tim Burke
-Tim Crabtree
-Tim Hudson
+Tilly Walker
 Tim Jordan
-Tim Leary
-Tim Lincecum
 Tim McCarver
 Tim Naehring
 Tim Raines
 Tim Salmon
-Tim Scott
-Tim Stoddard
-Tim Wakefield
 Tim Wallach
-Tim Worrell
 Tino Martinez
-Tiny Bonham
-Tippy Martinez
 Tito Francona
 Toby Harrah
 Todd Frazier
-Todd Frohwirth
 Todd Helton
 Todd Hundley
-Todd Jones
-Todd Stottlemyre
-Todd Worrell
-Togie Pittinger
-Tom Bradley
-Tom Brewer
 Tom Brunansky
-Tom Burgmeier
-Tom Candiotti
 Tom Daly
-Tom Edens
-Tom Glavine
-Tom Gordon
-Tom Gordon (R)
-Tom Gordon (S)
 Tom Haller
-Tom Henke
 Tom Herr
-Tom Hughes
-Tom Hume
-Tom Niedenfuer
 Tom Paciorek
-Tom Phoebus
-Tom Seaton
-Tom Seaver
-Tom Sturdivant
 Tom Tresh
-Tom Wilhelmsen
-Tom Zachary
 Tommie Agee
-Tommy Bridges
 Tommy Davis
 Tommy Glaviano
-Tommy Greene
-Tommy Hanson
 Tommy Harper
 Tommy Henrich
 Tommy Holmes
-Tommy Hughes
-Tommy John
 Tommy Leach
-Tommy Thomas
 Tony Armas
 Tony Bernazard
-Tony Castillo
-Tony Cloninger
 Tony Cuccinello
 Tony Fernandez
 Tony Gonzalez
@@ -2413,100 +2540,45 @@ Tony Pena
 Tony Perez
 Tony Phillips
 Tony Taylor
-Tony Watson
 Topper Rigney
 Topsy Hartsel
 Torii Hunter
 Travis Hafner
 Travis Jackson
-Travis Miller
-Trevor Hoffman
-Trevor Rosenthal
 Tris Speaker
 Trot Nixon
 Troy Glaus
-Troy Percival
 Troy Tulowitzki
-Tug McGraw
-Turk Farrell
 Ty Cobb
-Tyler Clippard
-Tyson Ross
-Ubaldo Jimenez
-Ugueth Urbina
-Urban Shocker
 Vada Pinson
-Van Mungo
-Vean Gregg
-Vern Bickford
-Vern Kennedy
-Vern Law
-Vern Olsen
 Vern Stephens
 Vernon Wells
-Vic Aldridge
-Vic Darensbourg
 Vic Power
-Vic Raschi
 Vic Saier
-Vic Sorrell
 Vic Wertz
-Vic Willis
-Victor Cruz
 Victor Martinez
-Vida Blue
 Vince DiMaggio
-Vinegar Bend Mizell
-Vinnie Pestano
-Virgil Barnes
-Virgil Trucks
-Vive Lindaman
 Vladimir Guerrero
 Von Hayes
 Wade Boggs
-Wade Davis
-Wade Miley
-Waite Hoyt
 Walker Cooper
 Wally Berger
-Wally Hebert
 Wally Judnich
 Wally Moon
 Wally Moses
 Wally Pipp
 Wally Post
 Wally Schang
-Walt Masterson
-Walt Terrell
-Walter Johnson
-Wandy Rodriguez
 Ward Miller
-Warren Hacker
-Warren Spahn
-Watty Clark
-Wayne Garland
-Wayne LaMaster
-Weldon Henley
-Wes Ferrell
 Wes Parker
 Wes Westrum
-Whit Wyatt
-Whitey Ford
-Whitey Glazner
 Whitey Kurowski
 Whitey Lockman
 Wid Conroy
-Wilbur Cooper
-Wilbur Wood
-Wilcy Moore
-Wiley Piatt
 Will Clark
-Will Smith
 Willard Marshall
-Willard Nixon
 Willie Crawford
 Willie Davis
-Willie Hernandez
 Willie Horton
 Willie Jones
 Willie Kamm
@@ -2514,30 +2586,16 @@ Willie Keeler
 Willie Mays
 Willie McCovey
 Willie McGee
-Willie Mitchell
 Willie Randolph
 Willie Stargell
 Willie Upshaw
 Willie Wilson
-Willis Hudlin
-Wilson Alvarez
-Wilton Lopez
-Win Kellum
-Win Mercer
-Woodie Fryman
 Woodie Held
 Woody English
-Woody Williams
-Xavier Hernandez
 Yadier Molina
 Yasiel Puig
 Yoenis Cespedes
 Yogi Berra
-Yovani Gallardo
-Yu Darvish
-Zach Britton
-Zach Duke
-Zack Greinke
 Zack Wheat
 Zeke Bonura
 Zoilo Versalles
