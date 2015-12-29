@@ -1,6 +1,48 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Player Name" class="form-control" />
+      <span class="input-group-btn" id="player-names-search-button">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <p class="my-paragraph"></p>
+    <p class="my-paragraph">Pick a player and check out their Rankometer!
+  </div>
+
+  <div class="col-sm-1">
+    <a>
+      <image src="images/icons/infoicon.jpg" align="right" height="30px" width="30px" title="Rankometer visualizes a player's greatness by comparing their performance to his peers.
+        For every season in a player's career, it ranks the top 30 performers by Wins Above Replacement (WAR)
+        and highlights where that player ranks. Simply put, the more color the greater the player." align="right">
+    </a>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-sm-12">
-    <p class="my-title"><b>A look at the 2016 Hall of Fame candidates</b>
+    <!--   <image style="position:absolute;left:10px;top:10px;"src="images/icons/darkgraybox.png" height="600" >   -->
+    <a id="player-rankometer-link" href="" target="_blank">
+      <!--   <image style="position:absolute;left:10px;top:10px;"id="player-rankometer" height="600" >  -->
+      <image class="img-responsive" id="player-rankometer">
+        <!--   <image  class="img-responsive" id="player-rankometer"> -->
+        <p class="my-subtext"></p>
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <p class="my-title"><b>A look at the 2016 Hall of Fame candidates</b></p>
     <p class="my-paragraph">
       Let's use Rankometer to evaluate this year's candidates,
       starting with hitters. Several players (Troy Glaus, Mark Grudzielanek,
