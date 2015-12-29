@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p class="my-title"><b>A look at the 2016 Hall of Fame candidates</b>
+    <p class="my-paragraph">
+      Let's use Rankometer to evaluate this year's candidates,
+      starting with hitters. Several players (Troy Glaus, Mark Grudzielanek,
+      Mike Lowell, Brad Ausmus, Mike Sweeney, and David Eckstein) are not
+      shown because they have no seasons in which they
+      ranked in the top 30 for Wins Above Replacement (WAR) which Rankometer is based on.
+    </p>
+
+    <div class="divclass">
+      <img class="maincol" src="images/rankometer/Mike-Piazza.png">
+      <img class="rightcol" src="images/rankometer/Jeff-Bagwell.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Tim-Raines.png">
+      <img class="rightcol" src="images/rankometer/Barry-Bonds.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Edgar-Martinez.png">
+      <img class="rightcol" src="images/rankometer/Alan-Trammell.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Jeff-Kent.png">
+      <img class="rightcol" src="images/rankometer/Fred-McGriff.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Larry-Walker.png">
+      <img class="rightcol" src="images/rankometer/Gary-Sheffield.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Mark-McGwire.png">
+      <img class="rightcol" src="images/rankometer/Sammy-Sosa.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Nomar-Garciaparra.png">
+      <img class="rightcol" src="images/rankometer/Ken-Griffey-Jr..png">
+      <br>
+      <img class="maincol" src="images/rankometer/Jim-Edmonds.png">
+      <img class="rightcol" src="images/rankometer/Jason-Kendall.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Luis-Castillo.png">
+      <img class="rightcol" src="images/rankometer/Randy-Winn.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Garret-Anderson.png">
+      <br>
+    </div>
+
+    <p class="my-paragraph">Now let's look at the pitchers.</p>
+    <div class="divclass">
+      <img class="maincol" src="images/rankometer/Curt-Schilling.png">
+      <img class="rightcol" src="images/rankometer/Roger-Clemens.png">
+      <br>
+      <img class="maincol" src="images/rankometer/Mike-Hampton.png">
+      <br>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    var playerNameToImageName = function(playerName) {
+      return 'images/rankometer/' + playerName.replace(' ', '-') + '.png';
+    };
+
+    var showPlayerImage = function(fileName) {
+      $("#player-rankometer-link").attr("href", "images/rankometer/" + fileName);
+      $("#player-rankometer").attr("src", "images/rankometer/" + fileName);
+    };
+
+    $.getJSON('player.json', function(data) {
+      var players = data;
+
+      $('#player-names').attr("placeholder", players[0].value);
+      showPlayerImage(players[0].icon);
+
+      $("#player-names").autocomplete({
+        source: players,
+        select: function(event, ui) {
+          showPlayerImage(ui.item.icon);
+        }
+      });
+    })
+  });
+</script>
