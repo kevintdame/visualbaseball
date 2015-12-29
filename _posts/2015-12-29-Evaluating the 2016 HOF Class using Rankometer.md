@@ -2,7 +2,7 @@
 layout: post
 ---
 
-Rankometer is a tool to visually evaluate a player by compareing that player to the elite at his position, in his era, throughout his career. So let's use it to evaluate this year's candidates. Let's start with 2 candidates whose Rankometer shows (undeniably) that they are hall of fame worthy, with long stretches of dominance.  Barry bonds...
+Rankometer is a tool to visually evaluate a player by comparing that player to the elite at his position, in his era, throughout his career. So let's use it to evaluate this year's candidates. Let's start with 2 candidates whose Rankometer shows (undeniably) that they are hall of fame worthy, with long stretches of dominance.  Barry bonds...
 
 <img src="images/rankometer/Barry-Bonds.png" width="800" />
 
