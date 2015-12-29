@@ -1,169 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-  <meta charset="utf-8">
-    <title>jQuery UI Tooltip - Default functionality</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script>
-    $(function() {
-      $( document ).tooltip();
-    });
-    </script>
-    <style>
-    label {
-      display: inline-block;
-      width: 5em;
-    }
-    </style>
+---
+layout: page
+title: Paintomatic
+---
 
 
-
-  <title>A Baseball Website</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<link href='https://fonts.googleapis.com/css?family=Roboto-Thin' rel='stylesheet' type='text/css'>
-  <style>
-    .navbar {
-        background-color: black;
-    }
-    .navbar .my-navbar-brand {
-      color: white;
-      font-size: 24px;
-      font-family: 'Roboto';
-    }
-
-    #player-names {
-      border-size: 1px;
-      border-radius: 1px;
-      border-color: black;
-    }
-
-    #copy-right-info {
-      text-align: left;
-    }
-
-    footer {
-      margin-top: 10px;
-    }
-
-    .my-paragraph {
-      font-size: 16px;
-      font-family: 'Roboto';
-    }
-
-    .my-subtext {
-      font-size: 12px;
-      color: black;
-      font-family: 'Roboto';
-    }
-
-    .ui-autocomplete {
-        max-height: 200px;
-        overflow-y: auto;
-        /* prevent horizontal scrollbar */
-        overflow-x: hidden;
-      }
-      /* IE 6 doesn't support max-height
-       * we use height instead, but this forces the menu to always be this tall
-       */
-      * html .ui-autocomplete {
-        height: 100px;
-      }
-
-  </style>
-  <link rel="stylesheet" href="style.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Player Name" class="form-control" />
+      <span class="input-group-btn" id="player-names-search-button">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
-
-            <a class="navbar-brand my-navbar-brand" href="index.html"><image style="float:left;" class="img-responsive" src="images/icons/kevindamebaseball3.png" height="250px" width="250px"></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-  <li><a href="index.html">RANKOMETER </a></li>
-          <li><a href="batcode.html">BATCODE </a></li>
-          <li class="active"><a href="paintomatic.html">PAINTOMATIC <span class="sr-only">(current)</span></a></li>
-          <li><a href="5tools.html">5-TOOLS </a></li>
-            <li><a href="blog.html">BLOG</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="batcode.html">BATCODE</a></li>
-              <li><a href="paintomatic.html">PAINTOMATIC</a></li>
-              <li><a href="5tools.html">5 TOOLS</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Contact Kevin</a></li>
-            </ul>
-          </li>
-            <li><a href="https://twitter.com/intent/tweet?&url=http://kevintdame.github.io/visualbaseball" target="_blank"><image style="float:left;" class="img-responsive" src="images/icons/Twitter_logo_white.png" height="20px" width="20px" align="middle"></a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav>
-  <div class="container">
-
-
-
-  <div class="row">
-
-    <div class="col-sm-3">
-      <div class="input-group" id="player-names-group">
-        <input id="player-names" type="text" placeholder="Player Name" class="form-control"/>
-        <span class="input-group-btn" id="player-names-search-button">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
-        </span>
-      </div>
+      </span>
     </div>
+  </div>
 
   <div class="col-sm-8">
+    <p class="my-paragraph">Paintomatic is not yet operational but coming soon!</p>
+  </div>
+
+
+  <div class="col-sm-1">
+    <a>
+      <image class="img-responsive" src="images/icons/infoicon.jpg" height="30px" width="30px" title="Paintomatic shows what types of pitchers a pitcher throws, how often they throw them (size of circle) and quality of pitch (color)." align="right">
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
     <p class="my-paragraph"></p>
-          <p class="my-paragraph">Paintomatic is not yet operational but coming soon!
-      <div class="col-sm-1"></div>
+    <a>
+      <image class="img-responsive" src="images/paintomatic/paintomatic mock2.png">
+    </a>
   </div>
-
-
-      <div class="col-sm-1">
-      <a ><image class="img-responsive" src="images/icons/infoicon.jpg" height="30px" width="30px" title=
-        "Paintomatic shows what types of pitchers a pitcher throws, how often they throw them (size of circle) and quality of pitch (color)." align="right" ></a>
-      </div>
-
-  </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <p class="my-paragraph"></p>
-          <a ><image class="img-responsive" src="images/paintomatic/paintomatic mock2.png" ></a>
-      </div>
-    </div>
-
-
-    <footer class="row">
-
-
-
-</body>
-</html>
+</div>
