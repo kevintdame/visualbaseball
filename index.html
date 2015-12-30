@@ -45,27 +45,39 @@ title: Rankometer
 
 <script>
   $(function() {
-    var playerNameToImageName = function(playerName) {
-      return 'images/rankometer/' + playerName.replace(' ', '-') + '.png';
-    };
-
-    var showPlayerImage = function(fileName) {
-      $("#player-rankometer-link").attr("href", "images/rankometer/" + fileName);
-      $("#player-rankometer").attr("src", "images/rankometer/" + fileName);
+    var updateAnchor = function(playerName) {
+      $.uriAnchor.setAnchor({player: playerName});
     };
 
     $.getJSON('player.json', function(data) {
       var players = data;
 
-      $('#player-names').attr("placeholder", players[0].value);
-      showPlayerImage(players[0].icon);
-
       $("#player-names").autocomplete({
         source: players,
         select: function(event, ui) {
-          showPlayerImage(ui.item.icon);
+          updateAnchor(ui.item.value);
         }
       });
-    })
+
+      var onHashChange = function() {
+        var anchorMap = $.uriAnchor.makeAnchorMap();
+        var playerName = anchorMap['player'];
+        var player = players.find(function(player) {
+          return player.value == playerName
+        });
+        if (!player) {
+          player = players[Math.floor(Math.random() * players.length)];
+        }
+        if (player) {
+          $('#player-names').val(player.value);
+          $("#player-rankometer-link").attr("href", "images/rankometer/" + player.icon);
+          $("#player-rankometer").attr("src", "images/rankometer/" + player.icon);
+        }
+      };
+
+      $(window)
+        .bind('hashchange', onHashChange)
+        .trigger('hashchange');
+    });
   });
 </script>
