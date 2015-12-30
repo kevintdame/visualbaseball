@@ -6,44 +6,44 @@ Rankometer is a tool to visually evaluate a player by comparing that player to t
 
 Barry Bonds:
 
-<img src="images/rankometer/Barry-Bonds.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Barry-Bonds.png)
 
 ...and Roger Clemens:
 
-<img src="images/rankometer/Roger-Clemens (SP).png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Roger-Clemens (SP).png)
 
 Of course these players are being kept out of the Hall of Fame for PED reasons. Now let's look at some of the other hitters.
 
 Ken Griffey Junior tops the list, with the most impressive Rankometer:
 
-<img src="images/rankometer/Ken-Griffey-Jr..png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Ken-Griffey-Jr..png)
 
 The next tier down is filled with a number of players whose Rankometers look fairly similar. All of these
 have the shape of "borderline HOF-er."
 
 Mike Piazza:
 
-<img src="images/rankometer/Mike-Piazza.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Mike-Piazza.png)
 
 Jeff Bagwell:
 
-<img src="images/rankometer/Jeff-Bagwell.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Jeff-Bagwell.png)
 
 Jim Edmonds:
 
-<img src="images/rankometer/Jim-Edmonds.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Jim-Edmonds.png)
 
 Edgar Martinez:
 
-<img src="images/rankometer/Edgar-Martinez.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Edgar-Martinez.png)
 
 Tim Raines:
 
-<img src="images/rankometer/Tim-Raines.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Tim-Raines.png)
 
 Alan Trammel:
 
-<img src="images/rankometer/Alan-Trammell.png" width="800" />
+![]({{site.baseurl}}/images/rankometer/Alan-Trammell.png)
 
 It's surprising to me that Piazza and Bagwell get so much more attention than the rest of these players,
 given how similar their Rankometers are.
