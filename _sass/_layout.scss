@@ -191,7 +191,8 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
 }
 
 
@@ -214,6 +215,7 @@
 }
 
 .post-content {
+    font-size: 16px;
     margin-bottom: $spacing-unit;
 
     h2 {

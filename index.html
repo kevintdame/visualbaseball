@@ -1,30 +1,71 @@
 ---
 layout: default
-title: Blog
+title: Rankometer
 ---
 
-<div class="home">
+<div class="row">
+  <div class="col-sm-3">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Player Name" class="form-control" />
+      <span class="input-group-btn" id="player-names-search-button">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </div>
 
-  <h1 class="page-heading"></h1>
+  <div class="col-sm-8">
+    <p class="my-paragraph"></p>
+    <p class="my-paragraph">Pick a player and check out their Rankometer!
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-
-
-        <h2>      
-          <p class="post-link" >{{ post.title }}</p>
-          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <hr>
-        </h2>
-
-        {{post.content}}
-
-      </li>
-    {% endfor %}
-
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <div class="col-sm-1">
+    <a>
+      <image src="images/icons/infoicon.jpg" align="right" height="30px" width="30px" title="Rankometer visualizes a player's greatness by comparing their performance to his peers.
+        For every season in a player's career, it ranks the top 30 performers by Wins Above Replacement (WAR)
+        and highlights where that player ranks. Simply put, the more color the greater the player." align="right">
+    </a>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <!--   <image style="position:absolute;left:10px;top:10px;"src="images/icons/darkgraybox.png" height="600" >   -->
+    <a id="player-rankometer-link" href="" target="_blank">
+      <!--   <image style="position:absolute;left:10px;top:10px;"id="player-rankometer" height="600" >  -->
+      <image class="img-responsive" id="player-rankometer">
+        <!--   <image  class="img-responsive" id="player-rankometer"> -->
+        <p class="my-subtext"></p>
+    </a>
+  </div>
+</div>
+
+
+
+<script>
+  $(function() {
+    var playerNameToImageName = function(playerName) {
+      return 'images/rankometer/' + playerName.replace(' ', '-') + '.png';
+    };
+
+    var showPlayerImage = function(fileName) {
+      $("#player-rankometer-link").attr("href", "images/rankometer/" + fileName);
+      $("#player-rankometer").attr("src", "images/rankometer/" + fileName);
+    };
+
+    $.getJSON('player.json', function(data) {
+      var players = data;
+
+      $('#player-names').attr("placeholder", players[0].value);
+      showPlayerImage(players[0].icon);
+
+      $("#player-names").autocomplete({
+        source: players,
+        select: function(event, ui) {
+          showPlayerImage(ui.item.icon);
+        }
+      });
+    })
+  });
+</script>
