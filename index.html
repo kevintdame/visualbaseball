@@ -65,13 +65,13 @@ title: Rankometer
         var player = players.find(function(player) {
           return player.value == playerName
         });
-        if (!player) {
-          player = players[Math.floor(Math.random() * players.length)];
-        }
         if (player) {
           $('#player-names').val(player.value);
           $("#player-rankometer-link").attr("href", "images/rankometer/" + player.icon);
           $("#player-rankometer").attr("src", "images/rankometer/" + player.icon);
+        } else {
+          var placeHolderPlayer = players[Math.floor(Math.random() * players.length)];
+          updateAnchor(placeHolderPlayer.value)
         }
       };
 
