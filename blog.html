@@ -3,28 +3,32 @@ layout: default
 title: Blog
 ---
 
-<div class="home">
-
-  <h1 class="page-heading"></h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
+<div class="row">
+  <div class="col-sm-8">
 
 
-        <h2>
-          <p class="post-link" >{{ post.title }}</p>
-          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <hr>
-        </h2>
+    <div class="home">
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
 
-        {{post.content}}
 
-      </li>
-    {% endfor %}
+          <h2>
+            <p class="post-link">{{ post.title }}</p>
+            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+            <hr>
+          </h2>
 
-  </ul>
+          {{post.content}}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </li>
+        {% endfor %}
 
+      </ul>
+
+      <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
+
+    </div>
+
+  </div>
 </div>

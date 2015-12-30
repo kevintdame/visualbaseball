@@ -6,23 +6,48 @@ title: Rankometer
 <div class="row">
 
   <div class="col-sm-3">
-    <div class="input-group" id="player-names-group">
-      <input id="player-names" type="text" placeholder="Player Name" class="form-control" />
-      <span class="input-group-btn" id="player-names-search-button">
-        <button class="btn btn-default" type="button">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </button>
-      </span>
-    </div>
+
+      <div class="input-group" id="player-names-group">
+        <input id="player-names" type="text" placeholder="Player Name" class="form-control" />
+        <span class="input-group-btn" id="player-names-search-button">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </span>
+      </div>
+        </div>
+
+
+  <div class="col-sm-2 mybutton2">
+
+    <span class="mybutton">
+      <a href="{{site.baseurl}}/index.html">
+        <image style="float:left;" src="{{site.baseurl}}/images/icons/media-shuffle.png" height="25px">
+      </a>
+    </span>
+    <span class="mybutton2">
+      <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Check out this Rankometer!" data-size="large" data-hashtags="kevindamebaseball,rankometer">Tweet</a>
+      <script>
+        ! function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, 'script', 'twitter-wjs');
+      </script>
+    </span>
+
   </div>
 
-  <div class="col-sm-1">
-    <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Check out this Rankometer!" data-size="large" data-hashtags="kevindamebaseball,rankometer">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
 
-  <div class="col-sm-7">
-    <p class="my-paragraph">Pick a player and check out their Rankometer!
+
+
+  <div class="col-sm-6">
+    <p class="vertalign">Pick a player and check out their Rankometer!
   </div>
 
   <div class="col-sm-1">
@@ -51,7 +76,9 @@ title: Rankometer
 <script>
   $(function() {
     var updateAnchor = function(playerName) {
-      $.uriAnchor.setAnchor({player: playerName});
+      $.uriAnchor.setAnchor({
+        player: playerName
+      });
     };
 
     $.getJSON('player.json', function(data) {
