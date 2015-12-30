@@ -14,8 +14,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Fast Company, and the San Francisco Chronicle, can also be found at The Hardball Times.
   A lifelong Red Sox fan, Kevin currently resides in the San Francisco Bay Area.
   He welcomes your comments, questions and suggestions via email.
-baseurl: "/visualbaseball" # the subpath of your site, e.g. /blog
-url: "http://http://kevintdame.github.io/visualbaseball" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://kevindamebaseball.com" # the base hostname & protocol for your site
 twitter_username: kevintdame
 
 # Build settings
