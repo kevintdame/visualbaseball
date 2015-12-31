@@ -29,8 +29,9 @@ text-anchor: end;
 
 .mybutton2 {
   padding-top: 3px;
-  padding-right: 5px;
-
+  padding-right: 10px;
+  padding-left: 0px;
+  float:right;
 }
 
 .vertalign {
@@ -156,7 +157,9 @@ text-anchor: end;
     .post-list {
       font-size: 16px;
       color: black;
-      font-family: 'Roboto-Light';
+      font-family: 'Roboto-Light'
+      padding-bottom: 50px;
+      padding-top: 50px;
     }
 
     .post-list img {
