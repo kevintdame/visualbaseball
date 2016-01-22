@@ -98,8 +98,8 @@ label {
         });
         if (player) {
           $('#player-names').val(player.value);
-          $("#player-paintomatic-link").attr("href", "paintomaticimages/" + player.icon);
-          $("#player-paintomatic").attr("src", "paintomaticimages/" + player.icon);
+          $("#player-paintomatic-link").attr("href", "images/paintomatic" + player.icon);
+          $("#player-paintomatic").attr("src", "images/paintomatic" + player.icon);
         } else {
           var placeHolderPlayer = players[0];
           updateAnchor(placeHolderPlayer.value);
