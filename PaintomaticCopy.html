@@ -1,0 +1,128 @@
+---
+layout: default
+title: Paintomatic
+---
+<style>
+label {
+  display: inline-block;
+  width: 5em;
+}
+.tooltip-inner {
+  color: red;
+  background: red;
+  border: solid 1px red;
+  font-size: 60px;
+}
+</style>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Clayton Kershaw 2015" class="form-control" />
+      <div class="input-group-btn" id="player-names-search-button">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+        <button class="btn btn-default" id="random-button" type="button">
+          <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <p class="vertalign">Pick a player and go!
+  </div>
+
+</div>
+
+<!-- removing twitter button for now
+
+<div class="col-sm-1 mybutton2">
+  <span class="mybutton2">
+    <a id='twitter-share-button' href="javascript:void(0);" NAME="My Window Name" title=" tweet this ">
+      <image src="images/icons/twitter-logo-black.png" height=30px>
+    </a>
+  </span>
+
+</div>
+
+-->
+
+
+<div class="row">
+  <div class="col-sm-12">
+      <div class="shadow">
+    <!--   <image style="position:absolute;left:10px;top:10px; "src="images/icons/darkgraybox.png " height="600 " >   -->
+    <a id="player-paintomatic-link" href="" target="_blank">
+      <!--   <image style="position:absolute;left:10px;top:10px; "id="player-rankometer " height="600 " >  -->
+      <image class="img-responsive " id="player-paintomatic" >
+      <!-- <image  class="img-responsive " id="player-rankometer "> -->
+    </a>
+  </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-12">
+  <p class="vertalign"> Paintomatic shows what types of pitches a pitcher throws, how often they throw them (size of circle)
+     pitch value (color) and pitch movement. All data sourced from fangraphs.
+  </div>
+
+</div>
+
+
+<script>
+  $(function() {
+    var updateAnchor = function(playerName) {
+      $.uriAnchor.setAnchor({
+        player: playerName
+      });
+    };
+
+    $.getJSON('paintomaticplayer.json', function(data) {
+      var players = data;
+
+      $("#player-names").autocomplete({
+        source: players,
+        select: function(event, ui) {
+          updateAnchor(ui.item.value);
+        }
+      });
+
+      var onHashChange = function() {
+        var anchorMap = $.uriAnchor.makeAnchorMap();
+        var playerName = anchorMap['player'];
+        var player = players.find(function(player) {
+          return player.value == playerName
+        });
+        if (player) {
+          $('#player-names').val(player.value);
+          $("#player-paintomatic-link").attr("href", "images/paintomatic/" + player.icon);
+          $("#player-paintomatic").attr("src", "images/paintomatic/" + player.icon);
+        } else {
+          var placeHolderPlayer = players[0];
+          updateAnchor(placeHolderPlayer.value);
+        }
+      };
+
+      $(window)
+        .bind('hashchange', onHashChange)
+        .trigger('hashchange');
+
+      $('#random-button').click(function() {
+        var placeHolderPlayer = players[Math.floor(Math.random() * players.length)];
+        updateAnchor(placeHolderPlayer.value)
+      });
+
+      $('#twitter-share-button').click(function() {
+        var currentUrl = window.location.href;
+        var text = 'Check out this Paintomatic.' + currentUrl;
+        window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&original_referer=http://kevindamebaseball.com", "Ratting", "width=550,height=170,0,status=0,");
+
+      });
+    });
+  });
+</script>

@@ -15,11 +15,19 @@ text-anchor: end;
   color: white;
 }
 
-#player-names {
+#player-names1 {
   border-size: 2px;
   border-radius: 1px;
   border-color: black;
 }
+
+#player-names2 {
+  border-size: 2px;
+  border-radius: 1px;
+  border-color: black;
+}
+
+
 
 .mybutton {
   padding-top: 2px;

@@ -1,0 +1,49 @@
+---
+layout: default
+title: Paintomatic
+---
+<script>
+  var playerName = A.J. Burnett;
+  var years = {2010,2011,2012,2013,2015};
+
+  var currentYearIndex = 0;
+
+  function nextYear(){
+    var nextYearIndex = currentYearIndex + i;
+    if (nextYearIndex > years.length-1) {return false;}
+    displayYearImage(nextYearIndex);
+  }
+  function previousYear(){
+    var previousYearIndex = currentYearIndex - i;
+    if (previousYearIndex < 0) {return false;}
+    displayYearImage(previousYearIndex);
+  }
+  function displayYearImage(yearIndex){
+    document.getElementById(‘heroimage’).src = “images/paintomaticgallery/“ + playerName + “-“ + years[yearIndex] + “.png”;
+    currentYearIndex = nextYear;
+  }
+
+
+    document.getElementById(‘next’).onclick = nextYear>;
+    document.getElementById(‘next’).onclick = previousYear;
+
+
+</script>
+
+<div class="row">
+
+
+  <button class="btn btn-default" id="left-button" type="button">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  </button>
+
+  <button class="btn btn-default" id="right-button" type="button">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  </button>
+
+
+id="heroimage" onclick="displayYearImage(yearIndex)"left-button
+
+
+
+</div>

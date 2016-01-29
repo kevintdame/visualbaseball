@@ -1,0 +1,158 @@
+---
+layout: default
+title: Paintomatic
+---
+<style>
+label {
+  display: inline-block;
+  width: 5em;
+}
+.tooltip-inner {
+  color: red;
+  background: red;
+  border: solid 1px red;
+  font-size: 60px;
+}
+</style>
+
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="input-group" id="player-names-group1">
+      <input id="player-names1" type="text" placeholder="Clayton Kershaw 2015" class="form-control" />
+      <div class="input-group-btn" id="player-names-search-button1">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+        <button class="btn btn-default" id="random-button1" type="button">
+          <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+<!-- removing twitter button for now
+
+<div class="col-sm-1 mybutton2">
+  <span class="mybutton2">
+    <a id='twitter-share-button' href="javascript:void(0);" NAME="My Window Name" title=" tweet this ">
+      <image src="images/icons/twitter-logo-black.png" height=30px>
+    </a>
+  </span>
+
+</div>
+
+-->
+
+
+<div class="row">
+
+  <div class="col-sm-6">
+      <div class="shadow">
+    <!--   <image style="position:absolute;left:10px;top:10px; "src="images/icons/darkgraybox.png " height="600 " >   -->
+    <a id="player-paintomatic-link1" href="" target="_blank">
+      <!--   <image style="position:absolute;left:10px;top:10px; "id="player-rankometer " height="600 " >  -->
+      <image class="img-responsive " id="player-paintomatic1" >
+      <!-- <image  class="img-responsive " id="player-rankometer "> -->
+    </a>
+  </div>
+    </div>
+
+
+  <div class="col-sm-6">
+      <div class="shadow">
+    <!--   <image style="position:absolute;left:10px;top:10px; "src="images/icons/darkgraybox.png " height="600 " >   -->
+    <a id="player-paintomatic-link1" href="" target="_blank">
+      <!--   <image style="position:absolute;left:10px;top:10px; "id="player-rankometer " height="600 " >  -->
+      <image class="img-responsive " id="player-paintomatic1" >
+      <!-- <image  class="img-responsive " id="player-rankometer "> -->
+    </a>
+  </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-sm-12">
+  <p class="vertalign"> Paintomatic shows what types of pitches a pitcher throws, how often they throw them (size of circle)
+     pitch value (color) and pitch movement. All data sourced from fangraphs.
+  </div>
+
+</div>
+
+
+<script>
+
+  $(function() {
+    var updateAnchor = function(playerName1) {
+      $.uriAnchor.setAnchor({
+        player1: playerName1
+      });
+    };
+
+    $.getJSON('paintomaticplayer.json', function(data) {
+      var players1 = data;
+
+      $("#player-names1").autocomplete({
+        source: players1,
+        select: function(event, ui) {
+          updateAnchor(ui.item.value);
+        }
+      });
+
+      var onHashChange = function() {
+        var anchorMap = $.uriAnchor.makeAnchorMap();
+        var playerName1 = anchorMap['player1'];
+        var player1 = players1.find(function(player1) {
+          return player1.value == playerName1
+        });
+        if (player1) {
+          $('#player-names1').val(player1.value);
+          $("#player-paintomatic-link1").attr("href", "images/paintomatic/" + player1.icon);
+          $("#player-paintomatic1").attr("src", "images/paintomatic/" + player1.icon);
+        } else {
+          var placeHolderPlayer1 = players1[0];
+          updateAnchor(placeHolderPlayer1.value);
+        }
+      };
+
+
+    
+
+
+
+
+
+      $(window)
+        .bind('hashchange', onHashChange)
+        .trigger('hashchange');
+
+      $('#random-button1').click(function() {
+        var placeHolderPlayer1 = players1[Math.floor(Math.random() * players1.length)];
+        updateAnchor(placeHolderPlayer1.value)
+      });
+
+      $('#random-button2').click(function() {
+        var placeHolderPlayer2 = players2[Math.floor(Math.random() * players2.length)];
+        updateAnchor(placeHolderPlayer2.value)
+      });
+
+      $('#twitter-share-button').click(function() {
+        var currentUrl = window.location.href;
+        var text = 'Check out this Paintomatic.' + currentUrl;
+        window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&original_referer=http://kevindamebaseball.com", "Ratting", "width=550,height=170,0,status=0,");
+
+      });
+    });
+  });
+</script>
