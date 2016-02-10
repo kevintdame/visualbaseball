@@ -1,0 +1,73 @@
+---
+layout: default
+title: Paintomatic
+---
+
+
+<div class="row">
+      <input id="player-names" type="text"  />
+        <!-- ABOVE: assigning an ID to the info entered which is text.-->
+        <button class="btn btn-default" type="kevinbutton"></button>
+        <!-- ABOVE: <button> element displays a button. btn bttn-default is a bootstrap default button. type="kevinbutton" is just our internal name for the button  -->
+</div>
+
+<!-- DELETED: <div id="player-names-group"> class="input-group" (which I deleted) seems to be another bootstrap formatting thing which enables things to be appended to the input)-->
+<!-- DELETED: class="form-control" (which I deleted after the type="text") is just bootstrap styling like 100% width-->
+
+
+<div class="row">
+    <image id="player-paintomatic">
+      <!--  ABOVE: ID just displays an image with ID payer-paintomatic. The class (I removed) ensures the image is responsive to browser size.     -->
+</div>
+
+
+
+<script>
+
+  $(function() {
+    var updateAnchor = function(playerName) {
+      $.uriAnchor.setAnchor({
+        player: playerName
+      });
+    };
+
+    $.getJSON('paintomaticplayer.json', function(data) {
+      var players = data;
+      // players is the output. data is the source.
+
+      $("#player-names").autocomplete({
+        source: players,
+        select: function(event, ui) {
+          updateAnchor(ui.item.value);
+        }
+      });
+
+      var onHashChange = function() {
+        var anchorMap = $.uriAnchor.makeAnchorMap();
+        var playerName = anchorMap['player'];
+        var player = players.find(function(player) {
+          return player.value == playerName
+        });
+        if (player) {
+          $('#player-names').val(player.value);
+
+          $("#player-paintomatic").attr("src", "images/paintomatic/" + player.icon);
+          // <!--defines player-paintomatic as an image from the above folder with the player.icon as end of file name-->
+        } else {
+          var placeHolderPlayer = players[0];
+          updateAnchor(placeHolderPlayer.value);
+        }
+      };
+
+// I DON'T UNDERSTAND THE BELOW CODE!!
+
+      $(window)
+        .bind('hashchange', onHashChange)
+        .trigger('hashchange');
+
+
+
+
+    });
+  });
+</script>

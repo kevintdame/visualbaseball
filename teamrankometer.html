@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rankometer
+title: Team Rankometer
 ---
 <style>
 label {
@@ -31,7 +31,7 @@ label {
   </div>
 
   <div class="col-sm-7">
-    <p class="vertalign">Pick a player and go!
+    <p class="vertalign">Pick a team and go!
   </div>
 
 
@@ -69,8 +69,8 @@ label {
 
 <div class="row">
   <div class="col-sm-12">
-  <p class="vertalign"> Rankometer visualizes a player's greatness by comparing their performance to their peers.
-    For every season in a player's career, it ranks the top 30 performers by Wins Above Replacement (WAR) and highlights where that player ranks. Simply put, the more color the greater the player.
+  <p class="vertalign"> Rankometer visualizes a team's strength by comparing their performance to their peers.
+    For each member of the rotation and bullpen, it ranks the top 30 performers by Wins Above Replacement (WAR) and highlights where that player ranks. Simply put, the more color the greater the team.
   </div>
 
 </div>
@@ -84,7 +84,7 @@ label {
       });
     };
 
-    $.getJSON('rankometer-player.json', function(data) {
+    $.getJSON('rankometer-team.json', function(data) {
       var players = data;
 
       $("#player-names").autocomplete({
@@ -102,8 +102,8 @@ label {
         });
         if (player) {
           $('#player-names').val(player.value);
-          $("#player-rankometer-link").attr("href", "images/rankometer-players/" + player.icon);
-          $("#player-rankometer").attr("src", "images/rankometer-players/" + player.icon);
+          $("#player-rankometer-link").attr("href", "images/rankometer-teams/" + player.icon);
+          $("#player-rankometer").attr("src", "images/rankometer-teams/" + player.icon);
         } else {
           var placeHolderPlayer = players[0];
           updateAnchor(placeHolderPlayer.value);
