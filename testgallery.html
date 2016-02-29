@@ -1,0 +1,149 @@
+---
+layout: default
+title: Paintomatic
+---
+
+<style>
+label {
+  display: inline-block;
+  width: 5em;
+}
+.tooltip-inner {
+  color: red;
+  background: red;
+  border: solid 1px red;
+  font-size: 60px;
+}
+</style>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Clayton Kershaw 2015" class="form-control" />
+      <div class="input-group-btn" id="player-names-search-button">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+        <button class="btn btn-default" id="random-button" type="button">
+          <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p class="vertalign">Pick a player and go!
+  </div>
+
+  <div class="col-sm-2">
+  <button class="btn btn-default" id="left-button" type="button" onclick="previousYear()">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  </button>
+
+  <button class="btn btn-default" id="right-button" type="button" onclick="nextYear()">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  </button>
+</div>
+
+
+</div>
+
+<
+
+<div class="row">
+    <a id="player-paintomatic-link" href="" target="_blank">
+      <image class="img-responsive " id="heroimage" >
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+$(function() {
+  var updateAnchor = function(playerName) {
+    $.uriAnchor.setAnchor({
+      player: playerName
+    });
+  };
+
+  $.getJSON('paintomaticplayer.json', function(data) {
+    var players = data;
+
+    $("#player-names").autocomplete({
+      source: players,
+      select: function(event, ui) {
+        updateAnchor(ui.item.value);
+      }
+    });
+
+    var onHashChange = function() {
+      var anchorMap = $.uriAnchor.makeAnchorMap();
+      var playerName = anchorMap['player'];
+      var player = players.find(function(player) {
+        return player.value == playerName
+      });
+      if (player) {
+        $('#player-names').val(player.value);
+        $("#player-paintomatic-link").attr("href", "images/paintomatic/" + player.icon);
+        $("#player-paintomatic").attr("src", "images/paintomatic/" + player.icon);
+      } else {
+        var placeHolderPlayer = players[0];
+        updateAnchor(placeHolderPlayer.value);
+      }
+    };
+
+    $(window)
+      .bind('hashchange', onHashChange)
+      .trigger('hashchange');
+
+    $('#random-button').click(function() {
+      var placeHolderPlayer = players[Math.floor(Math.random() * players.length)];
+      updateAnchor(placeHolderPlayer.value)
+    });
+
+    $('#twitter-share-button').click(function() {
+      var currentUrl = window.location.href;
+      var text = 'Check out this Paintomatic.' + currentUrl;
+      window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&original_referer=http://kevindamebaseball.com", "Ratting", "width=550,height=170,0,status=0,");
+
+    });
+  });
+});
+
+
+
+  var playerName = "A.J.-Burnett";
+  var years = [2007,2008,2009,2010,2011,2012,2013,2014,2015];
+
+  var currentYearIndex = 0;
+
+  function nextYear(){
+    var nextYearIndex = currentYearIndex + 1;
+    if (nextYearIndex > years.length-1) {return false;}
+    displayYearImage(nextYearIndex);
+  }
+  function previousYear(){
+    var previousYearIndex = currentYearIndex - 1;
+    if (previousYearIndex < 0) {return false;}
+    displayYearImage(previousYearIndex);
+  }
+  function displayYearImage(yearIndex){
+    document.getElementById('heroimage').src = "images/paintomaticgallery/" + playerName + "-" + years[yearIndex] + ".png";
+    currentYearIndex = yearIndex;
+  }
+  displayYearImage(0);
+
+
+    // document.getElementById('next').onclick = nextYear;
+    // document.getElementById('previous').onclick = previousYear;
+
+
+</script>
