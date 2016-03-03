@@ -102,8 +102,8 @@ label {
         });
         if (player) {
           $('#player-names').val(player.value);
-          $("#player-rankometer-link").attr("href", "images/rankometer-players/" + player.icon);
-          $("#player-rankometer").attr("src", "images/rankometer-players/" + player.icon);
+          $("#player-rankometer-link").attr("href", "images/rankometer/" + player.icon);
+          $("#player-rankometer").attr("src", "images/rankometer/" + player.icon);
         } else {
           var placeHolderPlayer = players[0];
           updateAnchor(placeHolderPlayer.value);
