@@ -35,14 +35,17 @@
 
 <script>
     function searchPlayer(playerName) {
+        console.log("Fetching all_players.csv");
         Papa.parse('all_players.csv', {
             download: true,
             header: true,
             complete: function(allPlayersData) {
                 const player = allPlayersData.data.find(p => p['Player Name'] === playerName);
+                console.log("Player data:", player);
                 if (player) {
                     $('#years-active').text(player.Years);
 
+                    console.log("Fetching baseball_data_1900_2024.csv for", playerName);
                     Papa.parse('baseball_data_1900_2024.csv', {
                         download: true,
                         header: true,
