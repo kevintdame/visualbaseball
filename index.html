@@ -35,7 +35,7 @@
 
 <script>
 
-    function searchPlayer(playerName) {
+function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
         download: true,
         header: true,
@@ -48,7 +48,7 @@
                     download: true,
                     header: true,
                     complete: function(baseballData) {
-                        const playerStats = baseballData.data.filter(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
+                        const playerStats = baseballData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
                         $('#player-data tbody').empty();
                         for(const stat of playerStats) {
                             $('#player-data tbody').append(`
@@ -65,6 +65,7 @@
         }
     });
 }
+
 
 
     $('#search-button').click(function() {
