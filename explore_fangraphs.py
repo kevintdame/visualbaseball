@@ -13,7 +13,7 @@ PITCHERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit
 CHROMEDRIVER_PATH = '/Users/kevindame/Documents/BaseballWebsiteCode/chromedriver'
 options = webdriver.ChromeOptions()
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36")
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
+driver = webdriver.Chrome(options=options)
 
 
 # ... [Your popup handling functions remain the same]
