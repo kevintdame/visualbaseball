@@ -11,12 +11,9 @@
             width: 3.5%;
             display: inline-block;
             vertical-align: top;
-            font-size: 0.7em; 
+            font-size: 0.7em; /* Adjusting the font size */
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-        .highlighted {
-            background-color: orange;
         }
     </style>
 </head>
@@ -27,8 +24,8 @@
     <button id="search-button" type="button">Search</button>
 </div>
 
-<div id="player-Info">
-    <h2>Player Info</h2>
+<div id="player-info">
+    <h2>Player Rankometer</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -49,6 +46,7 @@ function searchPlayer(playerName) {
                 let startYear = parseInt(years[0]);
                 let endYear = parseInt(years[1]);
 
+
                 Papa.parse('baseball_data_1900_2024.csv', {
                     download: true,
                     header: true,
@@ -57,20 +55,11 @@ function searchPlayer(playerName) {
                         for(let year = startYear; year <= endYear; year++) {
                             const playersOfYear = baseballData.data.filter(p => p.Year == year);
                             playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' '));
-
+                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
                             let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
-                            
-                            let highlight = false;
-                            for (const player of top30Players) {
-                                if (player.toLowerCase() === playerName.toLowerCase() || highlight) {
-                                    columnHtml += `<span class="highlighted">${player}</span><br>`;
-                                    highlight = true;
-                                } else {
-                                    columnHtml += `${player}<br>`;
-                                }
+                            for(const player of top30Players) {
+                                columnHtml += `${player}<br>`;
                             }
-
                             columnHtml += '</div>';
                             $("#yearly-ranks").append(columnHtml);
                         }
