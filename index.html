@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rankometer</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        /* Some basic styling to display columns for each year */
+        .year-column {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .year-column ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="row">
-  <div class="col-sm-4">
-    <div class="input-group" id="player-names-group">
-      <input id="player-names" type="text" placeholder="Enter Player Name..." class="form-control" />
-      <button id="search-button" class="btn btn-default" type="button">Search</button>
+    <div class="col-sm-4">
+        <div class="input-group" id="player-names-group">
+            <input id="player-names" type="text" placeholder="Enter Player Name..." class="form-control" />
+            <button id="search-button" class="btn btn-default" type="button">Search</button>
+        </div>
     </div>
-  </div>
 </div>
 
 <div id="player-info">
     <h2>Player Info</h2>
     <p>Years Active: <span id="years-active"></span></p>
+    <div id="ranked-data"></div> <!-- This will hold the yearly data in columns -->
 </div>
 
 <script>
+function displayTop30ByYear(years, baseballData) {
+    const activeYears = years.split('-');
+    const startYear = parseInt(activeYears[0]);
+    const endYear = parseInt(activeYears[1]);
+
+    for (let year = startYear; year <= endYear; year++) {
+        const yearlyData = baseballData.filter(p => p['Year'] == year);
+        yearlyData.sort((a, b) => b['WAR'] - a['WAR']); // Sort by WAR in descending order
+        const top30 = yearlyData.slice(0, 30); // Get top 30
+
+        let displayData = `<div class="year-column">
+                             <h3>${year}</h3>
+                             <ul>`;
+        top30.forEach(player => {
+            displayData += `<li>${player['Player Name']}</li>`;
+        });
+        displayData += `</ul></div>`;
+
+        $('#ranked-data').append(displayData);
+    }
+}
 
 function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
@@ -35,8 +66,14 @@ function searchPlayer(playerName) {
             const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
             if (player) {
                 $('#years-active').text(player.Years);
-            } else {
-                $('#years-active').text('Player not found');
+
+                Papa.parse('baseball_data_1900_2024.csv', {
+                    download: true,
+                    header: true,
+                    complete: function(baseballData) {
+                        displayTop30ByYear(player.Years, baseballData.data);
+                    }
+                });
             }
         }
     });
@@ -48,6 +85,5 @@ $('#search-button').click(function() {
 });
 
 </script>
-
 </body>
 </html>
