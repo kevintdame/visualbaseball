@@ -15,6 +15,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        .highlighted {
+            background-color: orange;
+        }
     </style>
 </head>
 <body>
@@ -24,8 +27,8 @@
     <button id="search-button" type="button">Search</button>
 </div>
 
-<div id="player-info">
-    <h2>Player Stats</h2>
+<div id="player-Info">
+    <h2>Player Info</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -58,10 +61,10 @@ function searchPlayer(playerName) {
 
                             let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
                             
-                            let highlight = false; 
+                            let highlight = false;
                             for (const player of top30Players) {
                                 if (player.toLowerCase() === playerName.toLowerCase() || highlight) {
-                                    columnHtml += `<span style="background-color:orange">${player}</span><br>`;
+                                    columnHtml += `<span class="highlighted">${player}</span><br>`;
                                     highlight = true;
                                 } else {
                                     columnHtml += `${player}<br>`;
