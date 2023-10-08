@@ -26,7 +26,7 @@
 
 <div id="player-info">
     <h2>Player Info</h2>
-    <p>Career Span In Years: <span id="years-active"></span></p>
+    <p>Career Span: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
     </div>
@@ -45,40 +45,29 @@ function searchPlayer(playerName) {
                 let years = player.Years.match(/\d{4}/g);
                 let startYear = parseInt(years[0]);
                 let endYear = parseInt(years[1]);
-
-                // First, we check in the pitchers dataset
-                Papa.parse('baseball_pitchers_1900_2024.csv', {
-                    download: true,
-                    header: true,
-                    complete: function(pitcherData) {
-                        const pitcherYears = pitcherData.data.filter(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-                        if (pitcherYears.length > 0) {
-                            processPlayerData(startYear, endYear, pitcherData);
-                        } else {
-                            // If not found in the pitcher dataset, check the hitters dataset
-                            Papa.parse('baseball_hitters_1900_2024.csv', {
-                                download: true,
-                                header: true,
-                                complete: function(hitterData) {
-                                    const hitterYears = hitterData.data.filter(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-                                    if (hitterYears.length > 0) {
-                                        processPlayerData(startYear, endYear, hitterData);
-                                    } else {
-                                        console.error("Player data not found in either dataset!");
-                                    }
-                                }
-                            });
-                        }
-                    }
-                });
-            } else {
-                console.error("Player not found in the all_players.csv!");
+                processData('baseball_pitchers_1900_2024.csv', playerName, startYear, endYear);
             }
         }
     });
 }
 
-function processPlayerData(startYear, endYear, baseballData) {
+function processData(csvFile, playerName, startYear, endYear) {
+    Papa.parse(csvFile, {
+        download: true,
+        header: true,
+        complete: function(data) {
+            const playerYears = data.data.filter(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
+            if (playerYears.length > 0) {
+                displayPlayerData(startYear, endYear, data);
+            } else if (csvFile === 'baseball_pitchers_1900_2024.csv') {
+                // If not found in the pitcher dataset, check the hitters dataset
+                processData('baseball_hitters_1900_2024.csv', playerName, startYear, endYear);
+            }
+        }
+    });
+}
+
+function displayPlayerData(startYear, endYear, baseballData) {
     $("#yearly-ranks").empty();
     for (let year = startYear; year <= endYear; year++) {
         const playersOfYear = baseballData.data.filter(p => p.Year == year);
@@ -92,6 +81,7 @@ function processPlayerData(startYear, endYear, baseballData) {
         $("#yearly-ranks").append(columnHtml);
     }
 }
+
 
 
 
