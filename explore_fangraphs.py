@@ -8,7 +8,7 @@ import pandas as pd
 import time
 
 PITCHERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit&lg=all&qual=y&type=8&month=0&ind=0&sortcol=20&sortdir=desc&startdate=&enddate=&season1={year}&season={year}'
-HITTERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&qual=y&type=8&month=0&ind=0&startdate=&enddate=&season1={year}&season={year}'
+# HITTERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&qual=y&type=8&month=0&ind=0&startdate=&enddate=&season1={year}&season={year}'
 
 CHROMEDRIVER_PATH = '/Users/kevindame/Documents/BaseballWebsiteCode/chromedriver'
 options = webdriver.ChromeOptions()
@@ -47,9 +47,9 @@ pitchers_data = scrape_fangraphs_data(PITCHERS_URL, "pitchers")
 pitchers_data.to_csv('baseball_data_pitchers_1900_2024.csv', index=False)
 print("Pitchers data scraping complete. Data saved to 'baseball_data_pitchers_1900_2024.csv'.")
 
-# Scrape data for hitters and save to CSV
-hitters_data = scrape_fangraphs_data(HITTERS_URL, "hitters")
-hitters_data.to_csv('baseball_data_hitters_1900_2024.csv', index=False)
-print("Hitters data scraping complete. Data saved to 'baseball_data_hitters_1900_2024.csv'.")
+# Commented out the hitters scraping part
+# hitters_data = scrape_fangraphs_data(HITTERS_URL, "hitters")
+# hitters_data.to_csv('baseball_data_hitters_1900_2024.csv', index=False)
+# print("Hitters data scraping complete. Data saved to 'baseball_data_hitters_1900_2024.csv'.")
 
 driver.close()
