@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Rankings by Year</title>
+    <title>Rankometer</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
+
 <body>
-    <div class="row">
-        <div class="input-group" id="player-names-group">
-            <input id="player-name" type="text" placeholder="Enter Player Name..." class="form-control">
-            <button id="search-button" class="btn btn-default" type="button">Search</button>
-        </div>
-    </div>
 
-    <div id="player-info">
-        <h2>Player Info</h2>
-        Years Active: <span id="years-active"></span>
-        <table id="player-data">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <!-- Add as many columns as needed for players -->
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="input-group" id="player-names-group">
+      <input id="player-names" type="text" placeholder="Enter Player Name..." class="form-control" />
+      <button id="search-button" class="btn btn-default" type="button">Search</button>
     </div>
+  </div>
+</div>
 
-    <script>
-        // Insert the script provided previously here
-    </script>
+<div id="player-info">
+    <h2>Player Info</h2>
+    <p>Years Active: <span id="years-active"></span></p>
+</div>
+
+<script>
+
+function searchPlayer(playerName) {
+    Papa.parse('all_players.csv', {
+        download: true,
+        header: true,
+        complete: function(allPlayersData) {
+            const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
+            if (player) {
+                $('#years-active').text(player.Years);
+            } else {
+                $('#years-active').text('Player not found');
+            }
+        }
+    });
+}
+
+$('#search-button').click(function() {
+    const playerName = $('#player-names').val();
+    searchPlayer(playerName);
+});
+
+</script>
+
 </body>
 </html>
