@@ -10,6 +10,8 @@ import time
 PITCHERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit&lg=all&qual=y&type=8&month=0&ind=0&sortcol=20&sortdir=desc&startdate=&enddate=&season1={year}&season={year}'
 # HITTERS_URL = 'https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&qual=y&type=8&month=0&ind=0&startdate=&enddate=&season1={year}&season={year}'
 
+SLEEP_INTERVAL = 10
+
 CHROMEDRIVER_PATH = '/Users/kevindame/Documents/BaseballWebsiteCode/chromedriver'
 options = webdriver.ChromeOptions()
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36")
