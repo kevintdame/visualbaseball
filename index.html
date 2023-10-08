@@ -1,57 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankometer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        .year-column {
+            width: 3.5%;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 0.7em; /* Adjusting the font size */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <input id="player-names" type="text" placeholder="Enter Player Name..." />
+    <button id="search-button" type="button">Search</button>
+</div>
+
+<div id="player-info">
+    <h2>Player Info</h2>
+    <p>Years Active: <span id="years-active"></span></p>
+    <div id="yearly-ranks">
+        <!-- Year columns will be appended here -->
+    </div>
+</div>
+
+<script>
+
 function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
         download: true,
         header: true,
         complete: function(allPlayersData) {
             const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-            
             if (player) {
                 $('#years-active').text(player.Years);
                 let years = player.Years.match(/\d{4}/g);
                 let startYear = parseInt(years[0]);
                 let endYear = parseInt(years[1]);
-                
-                // New function to parse baseball data and display it
-                function parseAndDisplayData(file) {
-                    Papa.parse(file, {
-                        download: true,
-                        header: true,
-                        complete: function(baseballData) {
-                            $("#yearly-ranks").empty();
-                            for(let year = startYear; year <= endYear; year++) {
-                                const playersOfYear = baseballData.data.filter(p => p.Year == year);
-                                playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                                const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' '));
-                                let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
-                                for(const player of top30Players) {
-                                    columnHtml += `${player}<br>`;
-                                }
-                                columnHtml += '</div>';
-                                $("#yearly-ranks").append(columnHtml);
-                            }
-                        }
-                    });
-                }
 
-                // Check in both files
-                Papa.parse('baseball_pitchers_1900_2024.csv', {
+
+                Papa.parse('baseball_data_1900_2024.csv', {
                     download: true,
                     header: true,
-                    complete: function(pitcherData) {
-                        const pitcher = pitcherData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-                        if (pitcher) {
-                            parseAndDisplayData('baseball_pitchers_1900_2024.csv');
-                        } else {
-                            Papa.parse('baseball_hitters_1900_2024.csv', {
-                                download: true,
-                                header: true,
-                                complete: function(hitterData) {
-                                    const hitter = hitterData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-                                    if (hitter) {
-                                        parseAndDisplayData('baseball_hitters_1900_2024.csv');
-                                    }
-                                }
-                            });
+                    complete: function(baseballData) {
+                        $("#yearly-ranks").empty();
+                        for(let year = startYear; year <= endYear; year++) {
+                            const playersOfYear = baseballData.data.filter(p => p.Year == year);
+                            playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
+                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
+                            let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
+                            for(const player of top30Players) {
+                                columnHtml += `${player}<br>`;
+                            }
+                            columnHtml += '</div>';
+                            $("#yearly-ranks").append(columnHtml);
                         }
                     }
                 });
@@ -59,3 +69,13 @@ function searchPlayer(playerName) {
         }
     });
 }
+
+$('#search-button').click(function() {
+    const playerName = $('#player-names').val();
+    searchPlayer(playerName);
+});
+
+</script>
+
+</body>
+</html>
