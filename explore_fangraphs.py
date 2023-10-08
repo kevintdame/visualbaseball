@@ -20,6 +20,7 @@ def close_popup(driver):
         close_button.click()
         print("Primary pop-up closed.")
     except:
+        print("Failed to close primary popup.")
         pass
 
 def close_ad_popup(driver):
@@ -29,6 +30,7 @@ def close_ad_popup(driver):
             print("Detected the second type of ad pop-up. Refreshing the page.")
             driver.refresh()
     except:
+        print("Failed to close second popup.")
         pass
 
 def close_third_popup(driver):
@@ -38,6 +40,7 @@ def close_third_popup(driver):
             print("Detected the third type of pop-up. Refreshing the page.")
             driver.refresh()
     except:
+        print("Failed to close third popup.")
         pass
 
 def check_failure_to_load(driver):
@@ -57,6 +60,8 @@ for year in range(1900, 2025):
     print(f"Fetching data for {year}...")
     url = BASE_URL.format(year=year)
     driver.get(url)
+    print(f"Current URL: {driver.current_url}")
+    print(f"Page Title: {driver.title}")
 
     close_popup(driver)
     close_ad_popup(driver)
@@ -83,22 +88,17 @@ for year in range(1900, 2025):
     try:
         name_elements = soup.find_all('td', {'data-stat': 'Name'})
         player_names = [name.a.text if name.a else 'N/A' for name in name_elements]
-
         team_elements = soup.find_all('td', {'data-stat': 'Team'})
         teams = [team.a.text if team.a else 'N/A' for team in team_elements]
-
         war_elements = soup.find_all('td', {'data-stat': 'WAR'})
         war_values = [war.text if war else 'N/A' for war in war_elements]
-
         df = pd.DataFrame({
             'Year': year,
             'Player Name': player_names,
             'Team': teams,
             'WAR': war_values
         })
-
         all_data_frames.append(df.head(30))
-
     except AttributeError as e:
         print(f"Error occurred for the year {year}.")
         continue
@@ -107,46 +107,3 @@ driver.close()
 final_df = pd.concat(all_data_frames)
 final_df.to_csv('baseball_data_1900_2024.csv', index=False)
 print("Data scraping complete. Data saved to 'baseball_data_1900_2024.csv'.")
-
-# Code that creates a list of all players and their career start and end years:
-
-import requests
-from bs4 import BeautifulSoup
-import csv
-
-def get_players(letter):
-    url = f"https://www.baseball-reference.com/players/{letter}/"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-    players = []
-    for item in soup.select("p"):
-        link = item.find('a')
-        if link:
-            name = link.text
-            years = item.text.replace(name, '').strip().strip("()")
-            players.append((name, years))
-    return players
-
-def save_to_csv(players):
-    with open("all_players.csv", "w", newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Player Name", "Years"])
-        for player in players:
-            writer.writerow(player)
-
-def main():
-    all_players = []
-    for letter in 'abcdefghijklmnopqrstuvwxyz':
-        print(f"Processing players with last names starting with '{letter}'...")
-        all_players.extend(get_players(letter))
-
-    # Filter out unwanted entries
-    unwanted_entries = ["Professional Baseball", "Other Personnel", "Managers Directory", "Bullpen Wiki"]
-    all_players = [player for player in all_players if not any(unwanted in player[0] for unwanted in unwanted_entries)]
-
-    save_to_csv(all_players)
-    print("All players saved to all_players.csv")
-
-if __name__ == "__main__":
-    main()
