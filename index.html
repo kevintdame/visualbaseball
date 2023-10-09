@@ -88,24 +88,6 @@ for(let year = startYear; year <= endYear; year++) {
 }
 // ... (rest of the code)
 
-                        for(let year = startYear; year <= endYear; year++) {
-                            const playersOfYear = baseballData.data.filter(p => p.Year == year);
-                            playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
-                            let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
-                            for(const player of top30Players) {
-                                columnHtml += `${player}<br>`;
-                            }
-                            columnHtml += '</div>';
-                            $("#yearly-ranks").append(columnHtml);
-                        }
-                    }
-                });
-            }
-        }
-    });
-}
-
 $('#search-button').click(function() {
     const playerName = $('#player-names').val();
     searchPlayer(playerName);
