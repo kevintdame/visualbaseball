@@ -11,7 +11,7 @@
             width: 3.5%;
             display: inline-block;
             vertical-align: top;
-            font-size: 0.7em; 
+            font-size: 0.7em; /* Adjusting the font size */
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -26,8 +26,7 @@
 
 <div id="player-info">
     <h2>Player Info</h2>
-    <p>Career Span: <span id="years-active"></span></p>
-    <p>Position: <span id="player-position"></span></p>
+    <p>Years: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
     </div>
@@ -47,62 +46,25 @@ function searchPlayer(playerName) {
                 let startYear = parseInt(years[0]);
                 let endYear = parseInt(years[1]);
 
-                determinePlayerPosition(playerName, startYear, endYear);
-            }
-        }
-    });
-}
 
-function determinePlayerPosition(playerName, startYear, endYear) {
-    // First, let's check the pitchers CSV
-    Papa.parse('baseball_pitchers_1900_2024.csv', {
-        download: true,
-        header: true,
-        complete: function(data) {
-            const playerInPitchers = data.data.some(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-            if (playerInPitchers) {
-                $('#position').text('Pitcher');
-                displayPlayerData(playerName, startYear, endYear, 'baseball_pitchers_1900_2024.csv');
-            } else {
-                console.log("Did not find player in pitchers' CSV, checking hitters' CSV..."); // Debug statement
-
-                // If not found in the pitchers CSV, let's check the hitters CSV
-                Papa.parse('baseball_hitters_1900_2024.csv', {
+                Papa.parse('baseball_data_1900_2024.csv', {
                     download: true,
                     header: true,
-                    complete: function(data) {
-                        const playerInHitters = data.data.some(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
-                        if (playerInHitters) {
-                            console.log("Found player in hitters' CSV."); // Debug statement
-                            $('#position').text('Hitter');
-                            displayPlayerData(playerName, startYear, endYear, 'baseball_hitters_1900_2024.csv');
-                        } else {
-                            console.log("Player not found in either CSV."); // Debug statement
+                    complete: function(baseballData) {
+                        $("#yearly-ranks").empty();
+                        for(let year = startYear; year <= endYear; year++) {
+                            const playersOfYear = baseballData.data.filter(p => p.Year == year);
+                            playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
+                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
+                            let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
+                            for(const player of top30Players) {
+                                columnHtml += `${player}<br>`;
+                            }
+                            columnHtml += '</div>';
+                            $("#yearly-ranks").append(columnHtml);
                         }
                     }
                 });
-            }
-        }
-    });
-}
-
-
-function displayPlayerData(csvFile, playerName, startYear, endYear) {
-    Papa.parse(csvFile, {
-        download: true,
-        header: true,
-        complete: function(baseballData) {
-            $("#yearly-ranks").empty();
-            for(let year = startYear; year <= endYear; year++) {
-                const playersOfYear = baseballData.data.filter(p => p.Year == year);
-                playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); 
-                let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
-                for(const player of top30Players) {
-                    columnHtml += `${player}<br>`;
-                }
-                columnHtml += '</div>';
-                $("#yearly-ranks").append(columnHtml);
             }
         }
     });
