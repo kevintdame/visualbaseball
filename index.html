@@ -34,7 +34,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Player Info!</h2>
+    <h2>Player Info</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -76,17 +76,6 @@ function highlightPlayerAndBelow(yearlyRanksElem, playerName) {
 // Update the part where the yearly ranks are appended to include a call to highlightPlayerAndBelow
 // ... (rest of the code)
 $("#yearly-ranks").empty();
-for(let year = startYear; year <= endYear; year++) {
-    const playersOfYear = baseballData.data.filter(p => p.Year == year);
-    playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-    let yearlyRanksElem = $(`<div class="year-column"><h3>${year}</h3></div>`);
-    playersOfYear.forEach(p => {
-        yearlyRanksElem.append(`<div class="player">${p['Player Name']}</div>`);
-    });
-    highlightPlayerAndBelow(yearlyRanksElem, playerName);
-    $("#yearly-ranks").append(yearlyRanksElem);
-}
-// ... (rest of the code)
 
                         for(let year = startYear; year <= endYear; year++) {
                             const playersOfYear = baseballData.data.filter(p => p.Year == year);
