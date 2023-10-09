@@ -8,6 +8,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         .year-column {
+body {
+    background-color: black;
+    color: gray;
+    font-family: Arial, sans-serif;
+}
+
+#player-info h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: orange;
+}
+
+#player-names {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#search-button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.highlighted-player, .players-below {
+    background-color: orange;
+    color: black;
+}
+
+.year-column {
+    font-size: 0.6em; /* Smaller font size */
+}
+
+.player {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#rankometer-title {
+    font-size: 3em;
+    color: orange;
+    margin-bottom: 20px;
+}
+
 .highlighted-player {
     background-color: orange;
     color: white;
@@ -28,7 +76,7 @@
 </head>
 <body>
 
-<div>
+<div id="rankometer-title">Rankometer</div><div>
     <input id="player-names" type="text" placeholder="Enter Player Name..." />
     <button id="search-button" type="button">Search</button>
 </div>
@@ -81,7 +129,15 @@ for(let year = startYear; year <= endYear; year++) {
     playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
     let yearlyRanksElem = $(`<div class="year-column"><h3>${year}</h3></div>`);
     playersOfYear.forEach(p => {
-        yearlyRanksElem.append(`<div class="player">${p['Player Name']}</div>`);
+        
+// Update the part where the yearly ranks are appended to display only the last name
+// ... (rest of the code)
+playersOfYear.forEach(p => {
+    const lastName = p['Player Name'].split(' ').pop(); // Extract the last name
+    yearlyRanksElem.append(`<div class="player">${lastName}</div>`);
+});
+// ... (rest of the code)
+
     });
     highlightPlayerAndBelow(yearlyRanksElem, playerName);
     $("#yearly-ranks").append(yearlyRanksElem);
