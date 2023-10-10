@@ -8,6 +8,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
 
+        footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333;  /* This is a dark gray; adjust as desired */
+    text-align: center;
+}
+
+#headshot {
+    width: 100px;  /* Adjust based on the size of your headshot */
+    border-radius: 50%;  /* Makes the image circular */
+    margin-right: 20px;
+}
+
+        
         header {
     width: 100%;
     padding: 10px 0;
@@ -244,6 +258,11 @@ $('#search-button').click(function() {
 });
 
 </script>
+
+    <footer>
+    <img src="path/to/headshot.png" alt="Your Headshot" id="headshot">
+    <p>Your Name and any other info you want here</p>
+</footer>
 
 </body>
 </html>
