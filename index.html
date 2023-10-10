@@ -14,20 +14,25 @@
 }
 
 #search-button {
-    background-color: white; /* Set background color of the button to white */
-    border: none; 
-    cursor: pointer; 
-    padding: 0; 
-    margin-left: 10px; 
+    background-color: white; /* Ensures the button has a white background */
+    border: 1px solid black; /* Adds a black border around the button */
+    height: 50px; /* Matches the height of the search box */
+    display: flex; /* Enables flexbox layout for centering the icon vertically */
+    align-items: center; /* Centers the icon vertically inside the button */
+    padding: 0 10px; /* Adds some horizontal padding so the icon isn't touching the edges */
 }
 
 #search-button img {
-    height: 50px; /* Adjust based on the height of your search box */
-    width: auto; /* This will ensure the image maintains its aspect ratio */
+    height: 30px; /* Adjust if needed, to fit inside the button */
+    width: auto; 
 }
 
 #player-names {
-    color: gray; /* Set text color in the search box to gray */
+    color: gray; /* Set the regular text color to gray */
+}
+
+#player-names:focus {
+    color: gray; /* Ensures text color remains gray even when the search box is focused */
 }
 
 
