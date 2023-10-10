@@ -146,71 +146,64 @@ function fetchPlayerData(playerName, csvFileName) {
     });
 }
 
-
-
-
-    
 function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
         download: true,
         header: true,
         complete: function(allPlayersData) {
-            const matchingPlayers = allPlayersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
+            const playersWithName = allPlayersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
 
-let longestSpan = 0;
-let playerWithLongestSpan = null;
+            if (playersWithName.length > 0) {
+                playersWithName.sort((a, b) => {
+                    const aYears = a.Years.match(/\d{4}/g) || [];
+                    const bYears = b.Years.match(/\d{4}/g) || [];
+                    return (bYears[1] - bYears[0]) - (aYears[1] - aYears[0]);
+                });
 
-matchingPlayers.forEach(player => {
-    const years = player.Years.match(/\d{4}/g);
-    if (years && years.length === 2) {
-        const span = parseInt(years[1]) - parseInt(years[0]);
-        if (span > longestSpan) {
-            longestSpan = span;
-            playerWithLongestSpan = player;
-        }
-    }
-});
-
-const player = playerWithLongestSpan;
-
-            
-            if (player) {
+                const player = playersWithName[0];
                 $('#years-active').text(player.Years.replace('+ (', ''));
                 $('#rankometer-header').text(`Rankometer for ${playerName}`);
 
-                let years = player.Years.match(/\d{4}/g);
-                let startYear = parseInt(years[0]);
-                let endYear = parseInt(years[1]);
+                // Fetch data from both CSVs and determine which one to use based on the frequency of the player's name.
+                let pitcherCount = 0;
+                let hitterCount = 0;
 
+                Papa.parse('baseball_pitchers_1900_2024.csv', {
+                    download: true,
+                    header: true,
+                    complete: function(pitchersData) {
+                        pitcherCount = pitchersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase()).length;
 
-                // Check if player is in pitchers CSV
-Papa.parse('baseball_pitchers_1900_2024.csv', {
-    download: true,
-    header: true,
-    complete: function(pitchersData) {
-        const isPitcher = pitchersData.data.some(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
-        
-        if (isPitcher) {
-            fetchPlayerData(playerName, 'baseball_pitchers_1900_2024.csv');
-        } else {
-            fetchPlayerData(playerName, 'baseball_hitters_1900_2024.csv');
-        }
-    },
-    error: function(error) {
-        console.error('Error accessing pitchers CSV:', error);
-    }
-});
+                        Papa.parse('baseball_hitters_1900_2024.csv', {
+                            download: true,
+                            header: true,
+                            complete: function(hittersData) {
+                                hitterCount = hittersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase()).length;
 
-
-
-
-
-
-                
+                                // Choose the CSV where the player appears most frequently.
+                                if (pitcherCount >= hitterCount) {
+                                    fetchPlayerData(playerName, 'baseball_pitchers_1900_2024.csv');
+                                } else {
+                                    fetchPlayerData(playerName, 'baseball_hitters_1900_2024.csv');
+                                }
+                            }
+                        });
+                    }
+                });
+            } else {
+                console.warn(`Player "${playerName}" not found in all_players.csv.`);
             }
+        },
+        error: function(error) {
+            console.error('Error accessing all_players CSV:', error);
         }
     });
 }
+
+
+
+    
+
 
 
 
