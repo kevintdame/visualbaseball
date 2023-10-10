@@ -28,16 +28,16 @@
     text-align: center;  /* Centers the player name within the rectangle */
 }
 
+.year-column {
+    width: 3.5%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.7em; /* Adjusting the font size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;  /* Center-align content */
+}
 
-
-        .year-column {
-            width: 3.5%;
-            display: inline-block;
-            vertical-align: top;
-            font-size: 0.7em; /* Adjusting the font size */
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
     </style>
 </head>
 <body>
@@ -48,7 +48,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Player Info!</h2>
+    <h2>Player Info</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
