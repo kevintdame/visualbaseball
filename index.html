@@ -109,6 +109,15 @@ input, button {
 
 <script>
 
+    function updateSubtitle(isPitcher, yearsActive) {
+    if (isPitcher) {
+        $('#years-active').text(`Top 30 Pitchers by WAR: ${yearsActive}`);
+    } else {
+        $('#years-active').text(`Top 30 Hitters by WAR: ${yearsActive}`);
+    }
+}
+
+    
 function fetchPlayerData(playerName, csvFileName) {
     Papa.parse(csvFileName, {
         download: true,
@@ -118,6 +127,14 @@ function fetchPlayerData(playerName, csvFileName) {
             const years = $('#years-active').text().match(/\d{4}/g);
             const startYear = parseInt(years[0]);
             const endYear = parseInt(years[1]);
+
+            if (csvFile === 'baseball_pitchers_1900_2024.csv') {
+    updateSubtitle(true, `${startYear}-${endYear}`);
+} else {
+    updateSubtitle(false, `${startYear}-${endYear}`);
+}
+
+            
             for(let year = startYear; year <= endYear; year++) {
                 const playerNameLower = playerName.toLowerCase();
                 const playersOfYear = data.data.filter(p => p.Year == year);
@@ -175,7 +192,6 @@ const player = playerWithLongestSpan;
 
             
             if (player) {
-                $('#years-active').text(player.Years.replace('+ (', ''));
                 $('#rankometer-header').text(`Rankometer for ${playerName}`);
 
                 let years = player.Years.match(/\d{4}/g);
