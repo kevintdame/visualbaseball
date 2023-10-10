@@ -30,7 +30,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Player Info</h2>
+    <h2>Player Info!!</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -62,18 +62,7 @@ function searchPlayer(playerName) {
 const playerNameLower = playerName.toLowerCase();
 const playersOfYear = baseballData.data.filter(p => p.Year == year);
 playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-let columnContent = '<div class="year-column"><h3>' + year + '</h3>';
-playersOfYear.slice(0, 30).forEach(player => {
- const last_name = player['Player Name'].split(" ").pop();
-if (player['Player Name'].toLowerCase().includes(playerNameLower)) {
-    columnContent += '<p class="highlighted-player">' + last_name + '</p>';
-} else {
-    columnContent += '<p>' + last_name + '</p>';
-}
 
-});
-columnContent += '</div>';
-$("#yearly-ranks").append(columnContent);
 
                             playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
                             const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
