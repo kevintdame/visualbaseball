@@ -96,10 +96,20 @@ playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
 
                             playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
                             const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ').trim()); // Taking only the last name and trimming spaces
-                            let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
-                            const searchedLastName = playerName.split(" ").pop().toLowerCase();  // New line
+
+                            let columnHtml = `<div class="year-column">`;
+                            const searchedLastName = playerName.split(" ").pop().toLowerCase();
                             let highlightFound = false;
 
+
+
+
+
+
+
+
+
+                            
                           for(const player of top30Players) {
     if (player.toLowerCase() === searchedLastName) {
         columnHtml += `<span class="highlighted-player">${player}</span><br>`;
@@ -113,7 +123,7 @@ playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
     }
 }
 
-
+                            columnHtml += `<strong>${year}</strong><br>`;
                             columnHtml += '</div>';
                             $("#yearly-ranks").append(columnHtml);
                         }
