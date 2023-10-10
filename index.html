@@ -8,6 +8,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
 
+        header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #333;  /* This is a dark gray; adjust as desired */
+    text-align: center;
+}
+
+        #content-area {
+    background-color: #f5f5f5;  /* This is a light gray; adjust as desired */
+    margin: 20px 15%;  /* This adds top/bottom margin and sets left/right margin to 15% of viewport width */
+    padding: 20px;
+}
+
+#logo {
+    width: 150px;  /* Adjust based on the size of your logo */
+}
+
 .year-column strong {
     font-size: 1.2em; /* Adjust this value to your desired font size */
     /* any other existing styles for this selector */
@@ -118,8 +135,10 @@ input, button {
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
     <p>Top 30 Players by WAR: <span id="years-active"></span></p>
-    <div id="yearly-ranks">
-        <!-- Year columns will be appended here -->
+    <div id="content-area">
+        <div id="yearly-ranks">
+            <!-- Year columns will be appended here -->
+        </div>
     </div>
 </div>
 
