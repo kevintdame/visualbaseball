@@ -109,15 +109,6 @@ input, button {
 
 <script>
 
-    function updateSubtitle(isPitcher, yearsActive) {
-    if (isPitcher) {
-        $('#years-active').text(`Top 30 Pitchers by WAR: ${yearsActive}`);
-    } else {
-        $('#years-active').text(`Top 30 Hitters by WAR: ${yearsActive}`);
-    }
-}
-
-    
 function fetchPlayerData(playerName, csvFileName) {
     Papa.parse(csvFileName, {
         download: true,
@@ -127,14 +118,6 @@ function fetchPlayerData(playerName, csvFileName) {
             const years = $('#years-active').text().match(/\d{4}/g);
             const startYear = parseInt(years[0]);
             const endYear = parseInt(years[1]);
-
-            if (csvFile === 'baseball_pitchers_1900_2024.csv') {
-    updateSubtitle(true, `${startYear}-${endYear}`);
-} else {
-    updateSubtitle(false, `${startYear}-${endYear}`);
-}
-
-            
             for(let year = startYear; year <= endYear; year++) {
                 const playerNameLower = playerName.toLowerCase();
                 const playersOfYear = data.data.filter(p => p.Year == year);
@@ -163,35 +146,18 @@ function fetchPlayerData(playerName, csvFileName) {
     });
 }
 
-   
+
+
+
+    
 function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
         download: true,
         header: true,
         complete: function(allPlayersData) {
-
-            const matchingPlayers = allPlayersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
-
-let longestSpan = 0;
-let playerWithLongestSpan = null;
-
-matchingPlayers.forEach(player => {
-    const years = player.Years.match(/\d{4}/g);
-    if (years && years.length === 2) {
-        const span = parseInt(years[1]) - parseInt(years[0]);
-        if (span > longestSpan) {
-            longestSpan = span;
-            playerWithLongestSpan = player;
-        }
-    }
-});
-
-const player = playerWithLongestSpan;
-
-
-
-            
+            const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
             if (player) {
+                $('#years-active').text(player.Years.replace('+ (', ''));
                 $('#rankometer-header').text(`Rankometer for ${playerName}`);
 
                 let years = player.Years.match(/\d{4}/g);
@@ -217,11 +183,20 @@ Papa.parse('baseball_pitchers_1900_2024.csv', {
     }
 });
 
+
+
+
+
+
                 
             }
         }
     });
 }
+
+
+
+
 
     
 $('#search-button').click(function() {
