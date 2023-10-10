@@ -152,7 +152,28 @@ function searchPlayer(playerName) {
         download: true,
         header: true,
         complete: function(allPlayersData) {
-            const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
+
+            const matchingPlayers = allPlayersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
+
+let longestSpan = 0;
+let playerWithLongestSpan = null;
+
+matchingPlayers.forEach(player => {
+    const years = player.Years.match(/\d{4}/g);
+    if (years && years.length === 2) {
+        const span = parseInt(years[1]) - parseInt(years[0]);
+        if (span > longestSpan) {
+            longestSpan = span;
+            playerWithLongestSpan = player;
+        }
+    }
+});
+
+const player = playerWithLongestSpan;
+
+
+
+            
             if (player) {
                 $('#years-active').text(player.Years.replace('+ (', ''));
                 $('#rankometer-header').text(`Rankometer for ${playerName}`);
