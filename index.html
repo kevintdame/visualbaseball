@@ -74,7 +74,7 @@ function searchPlayer(playerName) {
         complete: function(allPlayersData) {
             const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
             if (player) {
-                $('#years-active').text(player.Years);
+                $('#years-active').text(player.Years.replace('+(', ''));
                 $('#rankometer-header').text(`Rankometer for ${playerName}`);
 
                 let years = player.Years.match(/\d{4}/g);
