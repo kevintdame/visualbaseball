@@ -7,13 +7,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
-.highlighted-player {
+.highlighted-player, .subsequent-player {
     font-weight: bold;
     background-color: orange;
-    padding: 2px 5px;  /* Adjust as needed for top/bottom and left/right padding */
-    display: inline-block;  /* To ensure the background color wraps around the text */
-    margin-bottom: 2px;  /* Adjust for spacing between lines */
+    padding: 2px 5px;
+    display: inline-block;
+    margin-bottom: 2px;
+    width: 95%;  /* Adjust this value based on the column width */
+    text-align: center;  /* Centers the player name within the rectangle */
 }
+
 
 .subsequent-player {
     font-weight: bold;
@@ -21,7 +24,10 @@
     padding: 2px 5px;
     display: inline-block;
     margin-bottom: 2px;
+    width: 95%;  /* Adjust this value based on the column width */
+    text-align: center;  /* Centers the player name within the rectangle */
 }
+
 
 
         .year-column {
@@ -42,7 +48,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Player Info</h2>
+    <h2>Player Info!</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
