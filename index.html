@@ -58,7 +58,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Rankometer!!</h2>
+<h2 id="rankometer-header">Rankometer</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -75,6 +75,8 @@ function searchPlayer(playerName) {
             const player = allPlayersData.data.find(p => p['Player Name'].toLowerCase() === playerName.toLowerCase());
             if (player) {
                 $('#years-active').text(player.Years);
+                $('#rankometer-header').text(`Rankometer for ${playerName}`);
+
                 let years = player.Years.match(/\d{4}/g);
                 let startYear = parseInt(years[0]);
                 let endYear = parseInt(years[1]);
