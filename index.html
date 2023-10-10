@@ -14,36 +14,44 @@
 }
 
 #search-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center-align children */
-    border: 1px solid black; /* Apply a black border around the container */
+    display: flex; 
+    align-items: center; 
+    border: 1px solid black; 
+    width: 420px; /* You can adjust this to your desired width */
 }
 
 #player-names {
-    flex-grow: 1; /* Allows the input to take up available space */
-    border: none; /* Remove individual border from the search box */
-    outline: none; /* Removes the default focus outline */
-    color: gray; /* Text color */
-    padding: 10px; /* Some padding for text inside the input */
+    width: 320px; /* Adjust based on the desired width of the search box */
+    border-right: none; /* Removes the right border */
+    outline: none; 
+    color: gray; 
+    padding: 10px; 
+    border-top-left-radius: 4px; /* Rounded corners on the left side */
+    border-bottom-left-radius: 4px;
 }
+
+#search-button {
+    background-color: white;
+    border: none; 
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+    padding: 0 10px; 
+    border-left: none; /* Removes the left border */
+    border-top-right-radius: 4px; /* Rounded corners on the right side */
+    border-bottom-right-radius: 4px;
+}
+
+#search-button img {
+    height: 30px; 
+    width: auto;
+}
+
 
 #player-names:focus {
     color: gray; /* Ensures text color remains gray when focused */
 }
 
-#search-button {
-    background-color: white;
-    border: none; /* Remove individual border from the button */
-    height: 100%; /* Make the button height match the parent container */
-    display: flex;
-    align-items: center; /* Center the icon vertically */
-    padding: 0 10px; /* Horizontal padding for the icon */
-}
-
-#search-button img {
-    height: 30px; /* Adjust if needed */
-    width: auto;
-}
 
 
 
