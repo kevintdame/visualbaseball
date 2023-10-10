@@ -13,27 +13,38 @@
     padding: 0;
 }
 
-#search-button {
-    background-color: white; /* Ensures the button has a white background */
-    border: 1px solid black; /* Adds a black border around the button */
-    height: 50px; /* Matches the height of the search box */
-    display: flex; /* Enables flexbox layout for centering the icon vertically */
-    align-items: center; /* Centers the icon vertically inside the button */
-    padding: 0 10px; /* Adds some horizontal padding so the icon isn't touching the edges */
-}
-
-#search-button img {
-    height: 30px; /* Adjust if needed, to fit inside the button */
-    width: auto; 
+#search-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center-align children */
+    border: 1px solid black; /* Apply a black border around the container */
 }
 
 #player-names {
-    color: gray; /* Set the regular text color to gray */
+    flex-grow: 1; /* Allows the input to take up available space */
+    border: none; /* Remove individual border from the search box */
+    outline: none; /* Removes the default focus outline */
+    color: gray; /* Text color */
+    padding: 10px; /* Some padding for text inside the input */
 }
 
 #player-names:focus {
-    color: gray; /* Ensures text color remains gray even when the search box is focused */
+    color: gray; /* Ensures text color remains gray when focused */
 }
+
+#search-button {
+    background-color: white;
+    border: none; /* Remove individual border from the button */
+    height: 100%; /* Make the button height match the parent container */
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    padding: 0 10px; /* Horizontal padding for the icon */
+}
+
+#search-button img {
+    height: 30px; /* Adjust if needed */
+    width: auto;
+}
+
 
 
         
