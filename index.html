@@ -12,15 +12,18 @@
     font-family: 'Roboto', sans-serif;
 }
 
-    .highlighted-player, .subsequent-player, .player-name {
-    margin: 0 0 5px 0;  /* This adds a 5-pixel bottom margin */
-    padding: 2px 5px;
-    display: inline-block;
+.highlighted-player, .subsequent-player {
+    font-weight: bold;
+    background-color: orange;
+    padding: 2px 0;  /* Remove left and right padding */
     line-height: 1.2;
-    background-color: transparent;  /* Default state */
+    display: flex;  /* Use flexbox for centering */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    margin-bottom: 5px;
     width: 95%;
-    text-align: center;
 }
+
 
 .highlighted-player, .subsequent-player {
     background-color: orange;
@@ -53,7 +56,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Rankometer!</h2>
+    <h2>Rankometer</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
