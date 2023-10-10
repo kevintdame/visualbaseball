@@ -57,7 +57,7 @@
 </div>
 
 <div id="player-info">
-    <h2>Rankometer</h2>
+    <h2>Rankometer!</h2>
     <p>Years Active: <span id="years-active"></span></p>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -92,7 +92,7 @@ playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
 
 
                             playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ')); // Taking only the last name
+                            const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ').trim()); // Taking only the last name and trimming spaces
                             let columnHtml = `<div class="year-column"><strong>${year}</strong><br>`;
                             const searchedLastName = playerName.split(" ").pop().toLowerCase();  // New line
                             let highlightFound = false;
