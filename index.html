@@ -255,7 +255,7 @@ input, button {
 
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-    <p>Top 30 Players rated by WAR: <span id="years-active"></span></p>
+    <p>Top 30 Players by WAR: <span id="years-active"></span></p>
     <div id="content-area">
         <div id="yearly-ranks">
             <!-- Year columns will be appended here -->
@@ -368,8 +368,9 @@ $('#search-button').click(function() {
 
 // This function captures the visualization as an image
 function captureVisualization() {
-    html2canvas(document.querySelector("#yearly-ranks")).then(canvas => {
-        // Convert the canvas to a PNG data URL
+html2canvas(document.querySelector("#yearly-ranks"), {scale: 2}).then(canvas => {
+
+   // Convert the canvas to a PNG data URL
         const imageUrl = canvas.toDataURL("image/png");
         
         // Create an anchor tag and image tag
