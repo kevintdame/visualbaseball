@@ -262,7 +262,8 @@
                         columnHtml += '</div>';
                         $("#yearly-ranks").append(columnHtml);
                     }
-                    captureVisualization(playerName);
+                    setTimeout(captureVisualization, 500); // wait for half a second
+
                 }
             });
         }
@@ -362,9 +363,13 @@ function captureVisualization() {
             searchPlayer(playerName);
         });
 
-      document.addEventListener("DOMContentLoaded", function() {
-    searchPlayer('Babe Ruth');
+      // Set default player visual for Babe Ruth
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        searchPlayer('Babe Ruth');
+    }, 1000); // wait for 1 second before loading default player
 });
+
 
 
     </script>
