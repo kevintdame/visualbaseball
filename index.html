@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Rankometer</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankometer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
 
         html, body {
     margin: 0;
@@ -238,24 +237,31 @@ input, button {
     </style>
 </head>
 <body>
+
 <header>
-<img alt="Your Logo" id="logo" src="kevindamebaseball_logo.png"/>
+    <img src="kevindamebaseball_logo.png" alt="Your Logo" id="logo">
 </header>
-<div id="search-container" style="display: flex; flex-direction: row; align-items: center; width: auto; padding: 5px; margin-top: 20px;">
-<input id="player-names" placeholder=" Enter Player Name..." style="height: 40px; padding: 0; line-height: 40px; width: 250px; border: 2px solid white; margin-right: 20px;" type="text"/>
-<button id="search-button" type="button">
-<img alt="Search" src="search_icon.png"/>
-</button>
+
+    
+<div id="search-container">
+    <input id="player-names" type="text" placeholder=" Enter Player Name..." />
+    <button id="search-button" type="button">
+        <img src="search_icon.png" alt="Search">
+    </button>
 </div>
+
+
+
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-<p>Top 30 Players by WAR: <span id="years-active"></span></p>
-<div id="content-area">
-<div id="yearly-ranks">
-<!-- Year columns will be appended here -->
+    <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+    <div id="content-area">
+        <div id="yearly-ranks">
+            <!-- Year columns will be appended here -->
+        </div>
+    </div>
 </div>
-</div>
-</div>
+
 <script>
 
 function fetchPlayerData(playerName, csvFileName) {
@@ -364,9 +370,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 </script>
-<footer>
-<img alt="Your Headshot" id="headshot" src="headshot.png"/>
-<p>Your Name and any other info you want here</p>
+
+    <footer>
+    <img src="headshot.png" alt="Your Headshot" id="headshot">
+    <p>Your Name and any other info you want here</p>
 </footer>
+
 </body>
 </html>
