@@ -368,8 +368,7 @@ $('#search-button').click(function() {
 
 // This function captures the visualization as an image
 function captureVisualization() {
-         html2canvas(document.querySelector("#yearly-ranks"))
-
+    html2canvas(document.querySelector("#yearly-ranks")).then(canvas => {
         // Convert the canvas to a PNG data URL
         const imageUrl = canvas.toDataURL("image/png");
         
@@ -386,7 +385,7 @@ function captureVisualization() {
         
         // Append the image to the anchor and then replace the visualization with the anchor
         anchor.appendChild(img);
-        const visualizationContainer = document.querySelector("#visualization");
+        const visualizationContainer = document.querySelector("#yearly-ranks");
         visualizationContainer.parentNode.replaceChild(anchor, visualizationContainer);
     });
 }
