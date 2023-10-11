@@ -217,7 +217,7 @@
     </div>
     <div id="player-info">
         <h2 id="rankometer-header">Rankometer</h2>
-        <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+        <p>Top 30 BallPlayers by WAR: <span id="years-active"></span></p>
         <div id="content-area">
             <div id="yearly-ranks">
                 <!-- Year columns will be appended here -->
@@ -225,6 +225,10 @@
         </div>
     </div>
     <script>
+        
+        let defaultVisualizationGenerated = false;
+
+        
         function fetchPlayerData(playerName, csvFileName) {
             Papa.parse(csvFileName, {
                 download: true,
@@ -258,7 +262,7 @@
                         columnHtml += '</div>';
                         $("#yearly-ranks").append(columnHtml);
                     }
-                    captureVisualization();
+                    captureVisualization(playerName);
                 }
             });
         }
@@ -315,23 +319,33 @@
             });
         }
 
-        function captureVisualization() {
-            html2canvas(document.querySelector("#yearly-ranks"), { scale: 2 }).then(canvas => {
-                const imageUrl = canvas.toDataURL("image/png");
+        function captureVisualization(playerName) {
+    if (defaultVisualizationGenerated && playerName === 'Babe Ruth') {
+        return; // Do not regenerate the visualization for Babe Ruth
+    }
 
-                const anchor = document.createElement('a');
-                const img = document.createElement('img');
+    html2canvas(document.querySelector("#yearly-ranks"), {scale: 2}).then(canvas => {
+        // Convert the canvas to a PNG data URL
+        const imageUrl = canvas.toDataURL("image/png");
+        
+        // Create an anchor tag and image tag
+        const anchor = document.createElement('a');
+        const img = document.createElement('img');
+        
+        // Set the href of the anchor tag to the image URL and open in a new tab
+        anchor.href = imageUrl;
+        anchor.target = '_blank';
+        
+        // Set the src of the image tag to the image URL
+        img.src = imageUrl;
+        
+        // Append the image to the anchor and then replace the visualization with the anchor
+        anchor.appendChild(img);
+        const visualizationContainer = document.querySelector("#yearly-ranks");
+        visualizationContainer.parentNode.replaceChild(anchor, visualizationContainer);
+    });
+}
 
-                anchor.href = imageUrl;
-                anchor.target = '_blank';
-                img.src = imageUrl;
-
-                anchor.appendChild(img);
-                const visualizationContainer = document.querySelector("#yearly-ranks");
-                visualizationContainer.parentNode.appendChild(anchor);
-                visualizationContainer.style.display = 'none';
-            });
-        }
 
         $('#search-button').click(function() {
             const previousImage = document.querySelector("#yearly-ranks").nextSibling;
