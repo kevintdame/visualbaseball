@@ -217,7 +217,7 @@
     </div>
     <div id="player-info">
         <h2 id="rankometer-header">Rankometer</h2>
-        <p>Top 30 BallPlayers by WAR: <span id="years-active"></span></p>
+        <p>Top 30 Players by WAR: <span id="years-active"></span></p>
         <div id="content-area">
             <div id="yearly-ranks">
                 <!-- Year columns will be appended here -->
@@ -319,12 +319,10 @@
             });
         }
 
-        function captureVisualization(playerName) {
-    if (defaultVisualizationGenerated && playerName === 'Babe Ruth') {
-        return; // Do not regenerate the visualization for Babe Ruth
-    }
 
-    html2canvas(document.querySelector("#yearly-ranks"), {scale: 2}).then(canvas => {
+function captureVisualization() {
+        html2canvas(document.querySelector("#yearly-ranks"), {scale: 2}).then(canvas => {
+
         // Convert the canvas to a PNG data URL
         const imageUrl = canvas.toDataURL("image/png");
         
@@ -339,12 +337,18 @@
         // Set the src of the image tag to the image URL
         img.src = imageUrl;
         
-        // Append the image to the anchor and then replace the visualization with the anchor
+        // Append the image to the anchor
         anchor.appendChild(img);
+
+        // Hide the original visualization
         const visualizationContainer = document.querySelector("#yearly-ranks");
-        visualizationContainer.parentNode.replaceChild(anchor, visualizationContainer);
+        visualizationContainer.style.display = "none";
+
+        // Append the anchor (with image) below the original visualization
+        visualizationContainer.parentNode.appendChild(anchor);
     });
 }
+
 
 
         $('#search-button').click(function() {
