@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rankometer</title>
@@ -296,6 +297,7 @@ function fetchPlayerData(playerName, csvFileName) {
                 columnHtml += `<strong>${year}</strong><br>`;
                 columnHtml += '</div>';
                 $("#yearly-ranks").append(columnHtml);
+                captureVisualization();
             }
         }
     });
@@ -363,6 +365,33 @@ $('#search-button').click(function() {
     searchPlayer(playerName);
 });
 
+
+// This function captures the visualization as an image
+function captureVisualization() {
+    html2canvas(document.querySelector("#visualization")).then(canvas => {
+        // Convert the canvas to a PNG data URL
+        const imageUrl = canvas.toDataURL("image/png");
+        
+        // Create an anchor tag and image tag
+        const anchor = document.createElement('a');
+        const img = document.createElement('img');
+        
+        // Set the href of the anchor tag to the image URL and open in a new tab
+        anchor.href = imageUrl;
+        anchor.target = '_blank';
+        
+        // Set the src of the image tag to the image URL
+        img.src = imageUrl;
+        
+        // Append the image to the anchor and then replace the visualization with the anchor
+        anchor.appendChild(img);
+        const visualizationContainer = document.querySelector("#visualization");
+        visualizationContainer.parentNode.replaceChild(anchor, visualizationContainer);
+    });
+}
+
+
+    
     // Set default player visual for Babe Ruth
 document.addEventListener("DOMContentLoaded", function() {
     searchPlayer('Babe Ruth');
