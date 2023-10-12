@@ -140,11 +140,14 @@ header {
     /* any other existing styles for this selector */
 }
 
-        #yearly-ranks {   /* Pushing the visualizations down */
-    margin-top: 5vh;
-    margin-left: 5%;
-    background-color: black
+#yearly-ranks {
+    margin-top: 5vh;           /* Existing style: Pushing the visualizations down */
+    margin-left: 5%;           /* Existing style */
+    background-color: black;   /* Existing style */
+    min-width: 1200px;         /* New style: Set a minimum width */
+    overflow: auto;            /* New style: Enable scrolling */
 }
+
 
         #rankometer-header {
     margin-top: 2vh; /* Adjust this value as needed */
@@ -254,7 +257,7 @@ input, button {
 
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-    <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+    <p>Top 30 Baseball Players by WAR: <span id="years-active"></span></p>
     <div id="content-area">
         <div id="yearly-ranks">
             <!-- Year columns will be appended here -->
