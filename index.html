@@ -3,6 +3,7 @@
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rankometer</title>
@@ -256,7 +257,7 @@ input, button {
 
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-    <p>Top 30 Ball Players by WAR: <span id="years-active"></span></p>
+    <p>Top 30 Players by WAR: <span id="years-active"></span></p>
     <div id="content-area">
         <div id="yearly-ranks">
             <img id="generatedImage" alt="Visualization" style="display: none;">
@@ -266,6 +267,8 @@ input, button {
 </div>
 
 <script>
+
+document.addEventListener("DOMContentLoaded", function() {
 
 function fetchPlayerData(playerName, csvFileName) {
     Papa.parse(csvFileName, {
@@ -362,6 +365,8 @@ $('#search-button').click(function() {
 document.addEventListener("DOMContentLoaded", function() {
     searchPlayer('Babe Ruth');
 });
+
+    });
 
     
 </script>
