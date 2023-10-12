@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rankometer</title>
@@ -140,14 +142,11 @@ header {
     /* any other existing styles for this selector */
 }
 
-#yearly-ranks {
-    margin-top: 5vh;           /* Existing style: Pushing the visualizations down */
-    margin-left: 5%;           /* Existing style */
-    background-color: black;   /* Existing style */
-    min-width: 1200px;         /* New style: Set a minimum width */
-    overflow: auto;            /* New style: Enable scrolling */
+        #yearly-ranks {   /* Pushing the visualizations down */
+    margin-top: 5vh;
+    margin-left: 5%;
+    background-color: black
 }
-
 
         #rankometer-header {
     margin-top: 2vh; /* Adjust this value as needed */
@@ -257,9 +256,10 @@ input, button {
 
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-    <p>Top 30 Baseball Players by WAR: <span id="years-active"></span></p>
+    <p>Top 30 Ball Players by WAR: <span id="years-active"></span></p>
     <div id="content-area">
         <div id="yearly-ranks">
+            <img id="generatedImage" alt="Visualization" style="display: none;">
             <!-- Year columns will be appended here -->
         </div>
     </div>
@@ -273,36 +273,28 @@ function fetchPlayerData(playerName, csvFileName) {
         header: true,
         complete: function(data) {
             $("#yearly-ranks").empty();
-            const years = $('#years-active').text().match(/\d{4}/g);
-            const startYear = parseInt(years[0]);
-            const endYear = parseInt(years[1]);
-            for(let year = startYear; year <= endYear; year++) {
-                const playerNameLower = playerName.toLowerCase();
-                const playersOfYear = data.data.filter(p => p.Year == year);
-                playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
-                const top30Players = playersOfYear.slice(0, 30).map(p => p['Player Name'].split(' ').slice(-1).join(' ').trim()); // Taking only the last name
-                let columnHtml = `<div class="year-column">`;
-                const searchedLastName = playerName.split(" ").pop().toLowerCase();
-                let highlightFound = false;
+            const years = $('#years-active').text().match(/\d{4/);
 
-                for(const player of top30Players) {
-                    if (player.toLowerCase() === searchedLastName) {
-                        columnHtml += `<span class="highlighted-player">${player}</span><br>`;
-                        highlightFound = true;
-                    } else if (highlightFound) {
-                        columnHtml += `<span class="subsequent-player">${player}</span><br>`;
+            // ... [the rest of your existing logic for fetching data and constructing visualization]
+
+            // Image capture script
+            html2canvas(document.querySelector("#yearly-ranks")).then(canvas => {
+                const imgURL = canvas.toDataURL("image/png");
+                document.querySelector("#generatedImage").src = imgURL;
+
+                // Hide the original visualization content
+                Array.from(document.querySelector("#yearly-ranks").children).forEach(child => {
+                    if (child.id !== "generatedImage") {
+                        child.style.display = "none";
                     } else {
-                        columnHtml += `<span class="player-name">${player}</span><br>`;
+                        child.style.display = "block";
                     }
-                }
-
-                columnHtml += `<strong>${year}</strong><br>`;
-                columnHtml += '</div>';
-                $("#yearly-ranks").append(columnHtml);
-            }
+                });
+            });
         }
     });
 }
+
 
 function searchPlayer(playerName) {
     Papa.parse('all_players.csv', {
