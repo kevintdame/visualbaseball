@@ -257,7 +257,7 @@ input, button {
 
 <div id="player-info">
 <h2 id="rankometer-header">Rankometer</h2>
-    <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+    <p>Top 30 Ball Players by WAR: <span id="years-active"></span></p>
     <div id="content-area">
         <div id="yearly-ranks">
             <img id="generatedImage" alt="Visualization" style="display: none;">
@@ -280,27 +280,26 @@ function fetchPlayerData(playerName, csvFileName) {
 
             // ... [the rest of your existing logic for fetching data and constructing visualization]
 
-            // Image capture script
-           setTimeout(function() {
-    // Image capture script
-        html2canvas(document.querySelector("#yearly-ranks"), { useCORS: true }).then(canvas => {
-        const imgURL = canvas.toDataURL("image/png");
-        document.querySelector("#generatedImage").src = imgURL;
+            // Image capture script with a delay
+            setTimeout(function() {
+                html2canvas(document.querySelector("#yearly-ranks"), { useCORS: true }).then(canvas => {
+                    const imgURL = canvas.toDataURL("image/png");
+                    document.querySelector("#generatedImage").src = imgURL;
 
-        // Hide the original visualization content
-        Array.from(document.querySelector("#yearly-ranks").children).forEach(child => {
-            if (child.id !== "generatedImage") {
-                child.style.display = "none";
-            } else {
-                child.style.display = "block";
-            }
-        });
-    });
-}, 500);  // This introduces a 500 milliseconds delay
-
+                    // Hide the original visualization content
+                    Array.from(document.querySelector("#yearly-ranks").children).forEach(child => {
+                        if (child.id !== "generatedImage") {
+                            child.style.display = "none";
+                        } else {
+                            child.style.display = "block";
+                        }
+                    });
+                });
+            }, 500);  // This introduces a 500 milliseconds delay
         }
     });
 }
+
 
 
 function searchPlayer(playerName) {
