@@ -6,7 +6,13 @@
     <title>Rankometer</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
+
+body, html {
+    overflow-x: auto;  /* This will add a horizontal scrollbar if content overflows */
+}
 
 #player-names {
     text-indent: 10px;
@@ -51,7 +57,6 @@
     /* Other styles as needed */
 }
 
-      
 #main-container {
     justify-content: flex-start;  /* This will align the children (search box and player info) to the left. */
     align-items: flex-start; 
@@ -60,8 +65,9 @@
     box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 0;
-
 }
+
+
 
 #search-container {
     padding: 5px;
@@ -186,27 +192,24 @@ header {
 }
 
 
-
-
-
-
-
-        
-    #content-area {
-        position: relative; /* Set positioning context for absolutely positioned children */
-        background-color: #000000;  /* This is a light gray; adjust as desired */
-   /*  margin: 20px 5%;  This adds top/bottom margin and sets left/right margin to 5% of viewport width */
-    margin-left: 5%; 
-    margin-right: 5%; 
-
-    padding: 0px;
-    padding-top: 50px; /* Adjust this value to your preference */
-
-    margin-top: 0;      /* Remove top margin */
-    margin-bottom: 30;   /* Remove bottom margin */
-
-    
+/* Default styles for desktops and larger screens */
+#content-area {
+    position: relative;
+    background-color: #000000;
+    width: 1200px;  /* Set fixed width for desktops and larger screens */
+    margin: 0 auto; /* This will center the container on the page */
+    padding: 50px 0 0; /* Combined padding values */
+    overflow-x: auto; /* Add horizontal scrolling if content overflows */
 }
+
+/* Override styles for smaller screens (e.g., smartphones) */
+@media (max-width: 768px) {
+    #content-area {
+        width: 320px;  /* Set fixed width for smaller screens */
+    }
+}
+
+
 
 #logo {
     width: 200px;  /* You can adjust this based on the desired size of your logo */
