@@ -381,12 +381,15 @@ input, button {
     <div class="dropdown">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
-            <a href="#">RANKOMETER</a>
-            <a href="#">PAINTOMATIC</a>
-            <a href="#">5 TOOL ANALYZER</a>
+            <a href="#" data-content="rankometer" id="option1">RANKOMETER</a>
+            <a href="#" data-content="paintomatic" id="option2">PAINTOMATIC</a>
+            <a href="#" data-content="5toolanalyzer" id="option3">5 TOOL ANALYZER</a>            
         </div>
     </div>
     
+   
+    
+
 
 </header>
 
@@ -520,6 +523,8 @@ function fetchPlayerData(playerName, csvFileName) {
 
 
 function searchPlayer(playerName) {
+    console.log("searchPlayer called with:", playerName);
+
     Papa.parse('all_players.csv', {
         download: true,
         header: true,
@@ -581,11 +586,6 @@ $('#search-button').click(function() {
     searchPlayer(playerName);
 });
 
-    // Set default player visual for Babe Ruth
-document.addEventListener("DOMContentLoaded", function() {
-    searchPlayer('Babe Ruth');
-});
-
 $('#player-names').on('keydown', function(e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
         // Prevent the default action (form submission or any other default behavior)
@@ -597,25 +597,62 @@ $('#player-names').on('keydown', function(e) {
     }
 });
 
+
+
    
 $(document).ready(function() {
+    console.log("Page is loaded.");
+    searchPlayer('Babe Ruth');
+
+    console.log("jQuery version:", $.fn.jquery);
+
     // Toggle dropdown menu on button click
     $(".dropbtn").on("click", function() {
+        console.log("Menu button clicked!");  
         $(".dropdown-content").toggle();
     });
 
-    // Hide dropdown menu when a link is clicked
     $(".dropdown-content a").on("click", function() {
-        $(".dropdown-content").hide();
-    });
+    console.log("Dropdown item clicked!");
+    $(".dropdown-content").hide();
 
-    // Optional: Hide dropdown menu when clicking outside of it
+    // Remove the previous message if it exists.
+    $("#temporaryMessage").remove();
+
+    const contentToShow = $(this).data("content");
+    if (contentToShow === "rankometer") {
+        // If it's the "RANKOMETER" option, show the player search functionality
+        $("#main-container, #content-area").show();
+    } else {
+        // Hide the main content
+        $("#main-container, #content-area").hide();
+
+        // Depending on the clicked item, show a specific message.
+        let message = "Coming Soon!";
+        if (contentToShow === "paintomatic") {
+            message = "Paintomatic Coming Soon!";
+        } else if (contentToShow === "5toolanalyzer") {
+            message = "5 Tool Analyzer Coming Soon!";
+        }
+
+        // Append the message to the body.
+        $("body").append('<div id="temporaryMessage" style="text-align: center; font-size: 24px; color: white; margin-top: 50px;">' + message + '</div>');
+    }
+});
+
+
+    // Hide dropdown menu when clicking outside of it
     $(document).on("click", function(event) {
         if (!$(event.target).closest('.dropdown').length) {
             $(".dropdown-content").hide();
         }
     });
 });
+
+
+
+
+
 
 
 </script>
