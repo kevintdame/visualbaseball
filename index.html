@@ -14,6 +14,23 @@ body, html {
     overflow-x: auto;  /* This will add a horizontal scrollbar if content overflows */
 }
 
+
+
+/* Styles for the footer container */
+footer {
+    display: flex; /* Sets the footer to use the Flexbox layout */
+    align-items: center; /* Vertically centers the content within the footer */
+}
+
+/* Styles for the text within the footer */
+footer p {
+    margin: 0; /* Removes any default margin */
+    padding-left: 10px; /* Adds some space to the left of the text */
+}
+
+
+
+
 #player-names {
     text-indent: 10px;
 }
@@ -169,15 +186,18 @@ input[type="text"] {
         footer {
      text-align: left;
     margin-left: 5%;
+    margin-right: 43%;
+    margin-top: 1%;
+    margin-bottom: 5%;
     background-color: 0;  /* This is a dark gray; adjust as desired */
 }
 
         
 #headshot {
-    width: 100px;  /* Adjust based on the size of your headshot */
+    width: 50px;  /* Adjust based on the size of your headshot */
     border-radius: 50%;  /* Makes the image circular */
     margin-right: 20px;
-    margin-left: 5%;
+    margin-left: 0%;
 
 }
 
@@ -219,7 +239,7 @@ header {
 
        
 .year-column strong {
-    font-size: 1.3em; /* Adjust this value to your desired font size */
+    font-size: 1.0em; /* Adjust this value to your desired font size */
     /* any other existing styles for this selector */
 }
 
@@ -330,7 +350,7 @@ input, button {
      <!-- Text section -->
      <div id="player-info">
         <h2 id="rankometer-header">Rankometer</h2>
-        <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+        <p>Top 30 Baseball Players by WAR: <span id="years-active"></span></p>
     </div>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -521,10 +541,12 @@ $('#player-names').on('keydown', function(e) {
    
 </script>
 
-    <footer>
+<footer>
     <img src="headshot.png" alt="Your Headshot" id="headshot">
-    <p>Your Name and any other info you want here</p>
+    <p>Kevin Dame is a writer and visual designer who brings sports information to life in new and meaningful ways. His work has been featured on espn.com, ESPN the Magazine, Fast Company, SB Nation, and The Hardball Times. 
+    </p>
 </footer>
+
 
 </body>
 </html>
