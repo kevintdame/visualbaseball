@@ -14,6 +14,60 @@ body, html {
     overflow-x: auto;  /* This will add a horizontal scrollbar if content overflows */
 }
 
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right; /* Right-align the dropdown */
+    margin-right: 60px; /* Pushes the dropdown 30px from the right edge */
+
+}
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color:orange;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Change the button color on hover */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: orange;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Right-align the dropdown content */
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content on button hover */
+/*
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
 
 
 /* Styles for the footer container */
@@ -222,12 +276,6 @@ header {
     overflow-x: auto; /* Add horizontal scrolling if content overflows */
 }
 
-/* Override styles for smaller screens (e.g., smartphones) */
-/* @media (max-width: 1024px) and (orientation: landscape) {*/
-    /* #content-area {*/
-        /* width: 1200px;  /* Set fixed width for smaller screens */
-    /* }*/
-/* }*/
 
 
 
@@ -329,6 +377,17 @@ input, button {
 
 <header>
     <img src="kevindamebaseball_logo.png" alt="Your Logo" id="logo">
+
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="#">RANKOMETER</a>
+            <a href="#">PAINTOMATIC</a>
+            <a href="#">5 TOOL ANALYZER</a>
+        </div>
+    </div>
+    
+
 </header>
 
  <!-- The parent flex container -->
@@ -350,7 +409,7 @@ input, button {
      <!-- Text section -->
      <div id="player-info">
         <h2 id="rankometer-header">Rankometer</h2>
-        <p>Top 30 Players by WAR: <span id="years-active"></span></p>
+        <p>Top 30 Baseball Players by WAR: <span id="years-active"></span></p>
     </div>
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
@@ -539,6 +598,26 @@ $('#player-names').on('keydown', function(e) {
 });
 
    
+$(document).ready(function() {
+    // Toggle dropdown menu on button click
+    $(".dropbtn").on("click", function() {
+        $(".dropdown-content").toggle();
+    });
+
+    // Hide dropdown menu when a link is clicked
+    $(".dropdown-content a").on("click", function() {
+        $(".dropdown-content").hide();
+    });
+
+    // Optional: Hide dropdown menu when clicking outside of it
+    $(document).on("click", function(event) {
+        if (!$(event.target).closest('.dropdown').length) {
+            $(".dropdown-content").hide();
+        }
+    });
+});
+
+
 </script>
 
 <footer>
@@ -546,6 +625,7 @@ $('#player-names').on('keydown', function(e) {
     <p>Kevin Dame is a writer and visual designer who brings sports information to life in new and meaningful ways. His work has been featured on espn.com, ESPN the Magazine, Fast Company, SB Nation, and The Hardball Times. 
     </p>
 </footer>
+
 
 
 </body>
