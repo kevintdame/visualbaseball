@@ -1016,11 +1016,17 @@ newSvg.style("border", "0px solid red");
         .attr("stroke", "#e6f5ff")
         .attr("stroke-width", 16);
 
-    const getColor = value => {
-        if (value <= -5) return "#438aac";  
-        if (value <= 0) return "#f1b64c";  
-        if (value <= 5) return "#e56139";  
-        return "#e34c35"; 
+        const getColor = value => {
+        if (value <= -5.2) return "#1779a6";  
+        if (value <= -2.5) return "#258bad";  
+        if (value <= -1.45) return "#369db5"; 
+        if (value <= -0.3) return "#46b1bd";  
+        if (value <= 0.9) return "#5ac3c5";  
+        if (value <= 2.5) return "#aecf7b"; 
+        if (value <= 4.2) return "#fed242";  
+        if (value <= 6.9) return "#f9ab3d";  
+        if (value <= 13.3) return "#f67736";  
+        return "#f34130"; 
     };
 
     svg.selectAll("circle")
