@@ -844,7 +844,7 @@ function searchPaintomatic(playerName) {
     console.log("searchPaintomatic called with:", playerName);
 
     // Construct the filename based on the naming convention
-    const csvFileName = `paintomatic_player_files/${playerName.replace(/\s/g, '-')}-Paintomatic.csv`;
+    const csvFileName = `${playerName.replace(/\s/g, '-')}-Paintomatic.csv`;
 
     // Try fetching the file
     Papa.parse(csvFileName, {
@@ -969,7 +969,7 @@ newSvg.style("border", "0px solid red");
     const yScale = d3.scaleLinear().domain([-15, 15]).range([height, 0]);
 
     let sanitizedPlayerName = playerName.split(' ').join('-'); // Replace spaces with hyphens
-    let csvFileName = `paintomatic_player_files/${sanitizedPlayerName}-Paintomatic.csv`;
+    let csvFileName = `${sanitizedPlayerName}-Paintomatic.csv`;
 
     d3.csv(csvFileName).then(data => {
         console.log(data);
