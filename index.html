@@ -12,6 +12,7 @@
     
 <style>
 
+
 body, html {
     overflow-x: auto;  /* This will add a horizontal scrollbar if content overflows */
 }
@@ -126,7 +127,6 @@ footer p {
 #rankometer-content-area, #yearly-ranks, #yearly-ranks-2 {
     margin-left: 0;  /* or any other value you want */
     padding-left: 0; /* or any other value you want */
-
     /* Other styles as needed */
 }
 
@@ -181,7 +181,6 @@ footer p {
     left: 0;    /* Adjust if needed */
     color: orange;
     padding-left: 0px;
-
 }
 
 #player-info-2 {
@@ -190,15 +189,16 @@ footer p {
     /* background-color: blue;  for visualization purposes */
     position: absolute;
     top: -20px; /* Adjust this value as needed to control the overlap */
-    left: 50px;    /* Adjust if needed */
+    left: 0;    /* Adjust if needed */
     color: #4495ca;
     padding-left: 0px;
+    
 
 }
 
-#player-info, player-info-2 > * {
+#player-info, #player-info-2 {
     margin-left: 50px;  /* adjust this value as needed */
-
+    padding-top: 20px;
 }
 
 
@@ -230,7 +230,7 @@ input[type="text"] {
     height: 50px; /* Adjust as needed */
     font-size: 24px; /* Makes the text inside the box larger */
     margin-left: 5%; /* Left-aligns the box with the rest of your content */
-    margin-top: 30px; /* Pushes the search box down. Adjust this value as needed */
+    margin-top: 5px; /* Pushes the search box down. Adjust this value as needed */
     background-color: white; /* Makes the search box white */
 }
 
@@ -290,7 +290,7 @@ header {
 #logo {
     width: 200px;  /* You can adjust this based on the desired size of your logo */
     margin-right: 50px; /* Space between the logo and any other content in the header */
-        margin-left: 4%;
+        margin-left: 5%;
 }
 
        
@@ -473,7 +473,7 @@ input, button {
 
 #second-container-text-container {
             margin-top: 50px;
-            margin-bottom: 50px
+            margin-bottom: 0px
         }
 
 /* Style the axis line */
@@ -544,6 +544,7 @@ input, button {
 <!-- CONTENT AREA FOR RANKOMETER -->
 
 <div id="rankometer-content-area"> 
+
      <!-- Text section -->
      <div id="player-info">
         <h2 id="rankometer-header">Rankometer</h2>
@@ -552,7 +553,13 @@ input, button {
     <div id="yearly-ranks">
         <!-- Year columns will be appended here -->
     </div>
+
+    <div id="text-above-svg" style="text-align: RIGHT; font-family: Helvetica; margin-right: 30px; margin-bottom: 30px;font-size: 14px; color: #e6f5ff;">
+        SOURCE: FANGRAPHS.COM
+    </div>
+    
 </div>
+
 
 
 
@@ -561,12 +568,12 @@ input, button {
 
 
 
-<div id="paintomatic-content-area" style="display: none;">
+<div id="paintomatic-content-area">
     
     <!-- Text section -->
     <div id="player-info-2">
         <h2 id="paintomatic-header">Paintomatic</h2>
-        <p>Pitch type, value, movement, usage and velocity: <span id="years-active"></span></p>
+        <p>Pitch type, value, movement, usage and velocity, 2023 Season <span id="years-active"></span></p>
     </div>
 
 
@@ -615,6 +622,9 @@ input, button {
 
 </div>
 
+<div id="text-above-svg" style="text-align: RIGHT; font-family: Helvetica; margin-right: 30px; margin-bottom: 30px;font-size: 14px; color: #4495ca;">
+    SOURCE: FANGRAPHS.COM
+</div>
 
 </div>
 
@@ -637,7 +647,7 @@ document.getElementById("option1").addEventListener("click", function() {
     document.getElementById("paintomatic-search-container").style.display = "none";
 
     // Reset the value of the Paintomatic search box
-    document.getElementById("paintomatic-search").value = "Enter Player Name for Paintomatic...";
+    document.getElementById("paintomatic-search").value = "Enter Player Name ...";
 });
 
 document.getElementById("option2").addEventListener("click", function() {
@@ -645,7 +655,7 @@ document.getElementById("option2").addEventListener("click", function() {
     document.getElementById("paintomatic-search-container").style.display = "block";
 
     // Reset the value of the Rankometer search box
-    document.getElementById("player-names").value = "Enter Player Name for Rankometer...";
+    document.getElementById("player-names").value = "Enter Player Name ...";
 });
 
 
