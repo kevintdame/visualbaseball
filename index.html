@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rankometer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+<style>
+
+
+body, html {
+    overflow-x: auto;  /* This will add a horizontal scrollbar if content overflows */
+}
+
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right; /* Right-align the dropdown */
+    margin-right: 60px; /* Pushes the dropdown 30px from the right edge */
+
+}
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color:orange;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Change the button color on hover */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: orange;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Right-align the dropdown content */
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content on button hover */
+/*
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
+
+
+/* Styles for the footer container */
+footer {
+    display: flex; /* Sets the footer to use the Flexbox layout */
+    align-items: center; /* Vertically centers the content within the footer */
+}
+
+/* Styles for the text within the footer */
+footer p {
+    margin: 0; /* Removes any default margin */
+    padding-left: 10px; /* Adds some space to the left of the text */
+}
+
+
+
+
+#player-names {
+    text-indent: 10px;
+}
+
+#player-names::placeholder {
+    text-indent: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+        html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+        
+}
+
+        body {
+    background-color: black;
+}
+
+#player-names
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+        svg {
+    margin: 0;
+}
+
+#rankometer-content-area, #yearly-ranks, #yearly-ranks-2 {
+    margin-left: 0;  /* or any other value you want */
+    padding-left: 0; /* or any other value you want */
+    /* Other styles as needed */
+}
+
+#main-container {
+    justify-content: flex-start;  /* This will align the children (search box and player info) to the left. */
+    align-items: flex-start; 
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 55px;
+    padding: 5px;
+}
+
+#rankometer-search-container input,
+#paintomatic-search-container input {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px; /* Explicit height */
+    font-size: 16px; /* Explicit font size */
+    color: grey; /* Or any other color */
+    margin-left: 40px; /* or any other value you want */
+    /* background-color: red; for visualization purposes */
+}
+
+
+
+#rankometer-header {
+    font-size: 40px;  /* Adjust this value to your preferred font size */
+    color: orange;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+
+
+#paintomatic-header {
+    font-size: 40px;  /* Adjust this value to your preferred font size */
+    color: #4495ca;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+
+#player-info {
+    /* text-align: left;  // Ensures text inside is left-aligned. */
+    width: calc(100% - 500px);
+    /* background-color: blue;  for visualization purposes */
+    position: absolute;
+    top: -20px; /* Adjust this value as needed to control the overlap */
+    left: 0;    /* Adjust if needed */
+    color: orange;
+    padding-left: 0px;
+}
+
+#player-info-2 {
+    /* text-align: left;  // Ensures text inside is left-aligned. */
+    width: calc(100% - 500px);
+    /* background-color: blue;  for visualization purposes */
+    position: absolute;
+    top: -20px; /* Adjust this value as needed to control the overlap */
+    left: 0;    /* Adjust if needed */
+    color: #4495ca;
+    padding-left: 0px;
+    
+
+}
+
+#player-info, #player-info-2 {
+    margin-left: 50px;  /* adjust this value as needed */
+    padding-top: 20px;
+}
+
+
+
+#player-names {
+    height: 40px;  
+    padding: 0;  /* Remove padding */
+    line-height: 40px;  /* Center the text vertically */    width: 250px; /* Adjusted width */
+    border: 1px solid black; 
+    outline: none; 
+    color: gray; 
+    border-radius: 0; /* Reset border-radius */
+    font-size: 18px; /* Makes the text inside the box larger */
+
+}
+
+
+
+#player-names:focus {
+    color: gray; /* Ensures text color remains gray when focused */
+}
+
+
+
+
+        
+input[type="text"] {
+    width: 400px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    font-size: 24px; /* Makes the text inside the box larger */
+    margin-left: 5%; /* Left-aligns the box with the rest of your content */
+    margin-top: 5px; /* Pushes the search box down. Adjust this value as needed */
+    background-color: white; /* Makes the search box white */
+}
+
+
+
+        footer {
+     text-align: left;
+    margin-left: 5%;
+    margin-right: 43%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    background-color: 0;  /* This is a dark gray; adjust as desired */
+}
+
+        
+#headshot {
+    width: 50px;  /* Adjust based on the size of your headshot */
+    border-radius: 50%;  /* Makes the image circular */
+    margin-right: 20px;
+    margin-left: 0%;
+
+}
+
+        
+header {
+    text-align: left;
+    background-color: #000; /* Dark black background */
+    padding-left: 20px; /* Left padding to ensure content doesn't stick to the edge */
+    padding-top: 15px;  /* Increase this value for more height */
+    padding-bottom: 15px;  /* Increase this value for more height */
+
+}
+
+
+/* Default styles for desktops and larger screens */
+#rankometer-content-area {
+    position: relative;
+    background-color: #000000;
+    width: 1700px;  /* Set fixed width for desktops and larger screens */
+    padding: 50px 0 0; /* Combined padding values */
+    overflow-x: auto; /* Add horizontal scrolling if content overflows */
+    margin-left: 100px;
+}
+
+/* Default styles for desktops and larger screens */
+#paintomatic-content-area {
+    position: relative;
+    background-color: white;
+    width: 1700px;  /* Set fixed width for desktops and larger screens */
+    padding: 50px 0 0; /* Combined padding values */
+    overflow-x: auto; /* Add horizontal scrolling if content overflows */
+    margin-left: 100px;
+
+}
+
+
+
+#logo {
+    width: 200px;  /* You can adjust this based on the desired size of your logo */
+    margin-right: 50px; /* Space between the logo and any other content in the header */
+        margin-left: 80px;
+}
+
+       
+.year-column strong {
+    font-size: 1.0em; /* Adjust this value to your desired font size */
+    /* any other existing styles for this selector */
+}
+
+        #yearly-ranks {   /* Pushing the visualizations down */
+    margin-top: 5vh;
+    padding: 80px;
+    background-color: black
+}
+
+
+        
+body {
+    background-color: #d1d0d0;
+    color: black;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.player-name {
+    color: #444444;
+}
+
+input, button {
+    background-color: #8d0202;  /* Dark gray background */
+    color: white;            /* White text */
+    border: 1px solid white; /* White border */
+}
+
+        
+
+
+
+        
+.highlighted-player, .subsequent-player, .player-name {
+    display: inline-block;
+    margin-bottom: 3px;  /* Adjust as needed */
+    text-align: center;
+    line-height: 1.2;  /* Adjust as needed */
+    width: 95%;
+    padding: 2px 4.5px;  /* This ensures a consistent vertical size */
+
+}
+
+
+
+
+.highlighted-player, .subsequent-player {
+    padding-left: 3px;  /* Decrease the left padding slightly */
+    padding-right: 7px; /* Increase the right padding slightly */
+    background-color: orange;
+    color: black; /* Change the text color to black for better contrast against the orange background */
+
+}
+
+
+
+        .player-name {
+    line-height: 1.2;
+}
+
+.year-column {
+    width: 3.5%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.7em; /* Adjusting the font size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;  /* Center-align content */
+    margin-right: 10px;  /* Adjust this value based on the desired spacing */
+    color: white;
+
+}
+
+#main-container > *, #rankometer-content-area > * {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+/* paintomatic styles
+
+ *, *:before, *:after {
+    box-sizing: border-box;
+}
+
+    /* Reset styles for the involved text divs */
+    #text-above-svg, #second-text {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4; /* Set a consistent line-height */
+}
+
+#second-text {
+    margin-left: 100px;
+}
+
+        /* Positioning and styling for the SVG */
+        #chart {
+            margin-top: 5px;  /* Adjust this value as needed */
+            margin-left: 50px;  /* Adjust this value as needed */
+        }
+    
+        /* Flex container to align texts */
+        #text-container {
+            display: flex;
+            align-items: center;  /* This will vertically center the items */
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    
+        /* Separate margin for the second text */
+        #second-text {
+            margin-left: 20px;
+        }
+
+        #gradient-legend-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 600px;
+}
+
+#gradient-image {
+    width: 80%;  /* Adjust width if needed */
+    height: auto;
+}
+
+#current-visual-container, #new-visual-container {
+    margin: 0;
+    padding: 0;
+}
+
+#current-visual-container {
+    width: 650px;  /* Adjust accordingly if you want a different width */
+    margin-right: 50px;
+}
+
+
+#new-visual-container {
+    width: 950px;
+    flex-shrink: 0; 
+    border: 0px solid rgb(10, 139, 55);  /* To visualize the boundary */
+    margin-right: 100px;
+    margin-bottom: 70px;
+
+
+}
+
+
+#visuals-container {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 1750px;  
+    overflow: auto;
+    margin-top: 30px;
+}
+
+
+
+
+
+#chart, #new-chart {
+    margin-top: 5px;  /* Adjust this value as needed */
+}
+
+#new-chart {
+    width: 100%;
+    height: 600px;
+    overflow: visible;  /* This ensures that SVG elements won't get clipped */
+}
+
+
+
+#second-container-text-container {
+            margin-top: 50px;
+            margin-bottom: 0px
+        }
+
+/* Style the axis line */
+#new-chart .domain {
+    stroke: #e6f5ff; /* Change to desired color */
+    stroke-width: 8; /* Change to desired width */
+}
+
+/* Style the tick lines */
+#new-chart .tick line {
+    stroke: #e6f5ff; /* Change to desired color */
+    stroke-width: 8; /* Change to desired width */
+}
+
+/* Style the tick labels */
+#new-chart .tick text {
+    fill: #4495ca; /* Change to desired color */
+    font-size: 14; /* Change to desired font size */
+    font-family: Helvetica; /* Change to desired font family */
+}
+
+ </style>
+
+
+
+
+</head>
+
+<body>
+
+<header>
+    <img src="icons/kevindamebaseball_logo.png" alt="Your Logo" id="logo">
+
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="#" data-content="rankometer" id="option1">RANKOMETER</a>
+            <a href="#" data-content="paintomatic" id="option2">PAINTOMATIC</a>
+            <a href="#" data-content="5toolanalyzer" id="option3">5 TOOL ANALYZER</a>            
+        </div>
+    </div>
+    
+   
+    
+
+
+</header>
+
+<!-- CONTENT AREA FOR SEARCH BOXES -->
+
+<!-- The parent flex container -->
+<!--<div id="main-container" style="display: flex; align-items: center; justify-content: flex-start; padding: 5px 20px; padding-left: 70px;"> -->
+    <div id="main-container">
+
+    <!-- Search box container for Rankometer -->
+    <div id="rankometer-search-container">
+        <input id="player-names" type="text" placeholder="Enter Player Name for Rankometer..." />
+    </div>
+
+    <!-- Search box container for Paintomatic -->
+    <div id="paintomatic-search-container" style="display: none;">
+        <input id="paintomatic-search" type="text" placeholder="Enter Player Name for Paintomatic..." />
+    </div>
+</div>
+
+
+
+
+
+<!-- CONTENT AREA FOR RANKOMETER -->
+
+<div id="rankometer-content-area"> 
+
+     <!-- Text section -->
+     <div id="player-info">
+        <h2 id="rankometer-header">Rankometer</h2>
+        <p>Top 30 Baseball Players by WAR: <span id="years-active"></span></p>
+    </div>
+    <div id="yearly-ranks">
+        <!-- Year columns will be appended here -->
+    </div>
+
+    <div id="text-above-svg" style="text-align: RIGHT; font-family: Helvetica; margin-right: 30px; margin-bottom: 30px;font-size: 14px; color: #e6f5ff;">
+        SOURCE: FANGRAPHS.COM
+    </div>
+    
+</div>
+
+
+
+
+<!-- CONTENT AREA FOR PAINTOMATIC -->
+
+
+
+
+<div id="paintomatic-content-area">
+    
+    <!-- Text section -->
+    <div id="player-info-2">
+        <h2 id="paintomatic-header">Paintomatic</h2>
+        <p>Pitch type, value, movement, usage and velocity, 2023 Season <span id="years-active"></span></p>
+    </div>
+
+
+    <!-- Flex container to hold both visuals side by side -->
+    <div id="visuals-container" style="display: flex; justify-content: space-between;">
+
+
+    <!-- Container for the scatter chart visual -->
+    <div id="current-visual-container">
+        <!-- Your current SVG and legend go here -->
+ <!-- Text above the SVG -->
+ <div id="text-container">
+    <div id="text-above-svg" style="text-align: left; font-family: Helvetica; font-size: 14px; color: #4495ca;">
+        PITCH MOVEMENT FROM BATTER'S  VIEW
+    </div>
+    <div id="second-text" style="text-align: left; font-family: Helvetica; font-size: 14px; color: #4495ca; margin-left: 17px;">
+        |------------------------15 INCHES-----------------------|
+    </div>
+</div>
+
+<svg width="600" height="600" id="chart"></svg>
+
+
+<div id="gradient-legend-container">
+<span style="text-align: left; font-family: Helvetica; font-size: 14px; color: #4495ca; text-transform:uppercase; ">Low Pitch Value</span>
+<img src="icons/pitch-value-gradient.png" alt="Pitch Value Gradient" id="gradient-image"/>
+<span style="text-align: right; font-family: Helvetica; font-size: 14px; color: #4495ca;text-transform:uppercase; ">High Pitch Value</span>
+</div>            <!-- ... -->
+       
+    </div>
+
+    <!-- Container for the velocity chart visual -->
+    <div id="new-visual-container">
+        <!-- Your new SVG or other visual elements go here -->
+        <!-- Any legends or additional elements for the new visual -->
+         <!-- Text below the new SVG -->
+         <div id="second-container-text-container">
+
+            <div id="text-above-svg" style="text-align: left; font-family: Helvetica; font-size: 14px; color: #4495ca;">
+                PITCH USAGE AND VELOCITY
+            </div>
+            <svg width="800" height="800" id="new-chart"></svg>
+
+        </div>
+    </div>
+
+</div>
+
+<div id="text-above-svg" style="text-align: RIGHT; font-family: Helvetica; margin-right: 30px; margin-bottom: 30px;font-size: 14px; color: #4495ca;">
+    SOURCE: FANGRAPHS.COM
+</div>
+
+</div>
+
+<!-- CONTENT AREA FOR 5 TOOL ANALYZER -->
+
+<div id="toolanalyzer-content-area" style="display: none;">
+    <!-- Your content for 5 Tool Analyzer goes here -->
+</div>
+
+
+<script>
+
+var playerName = ""; // Declare playerName globally
+
+// ALTERNATING SEARCH BOX SCRIPTS
+
+// Example of toggling based on menu items or buttons
+document.getElementById("option1").addEventListener("click", function() {
+    document.getElementById("rankometer-search-container").style.display = "block";
+    document.getElementById("paintomatic-search-container").style.display = "none";
+
+    // Reset the value of the Paintomatic search box
+    document.getElementById("paintomatic-search").value = "Enter Player Name ...";
+});
+
+document.getElementById("option2").addEventListener("click", function() {
+    document.getElementById("rankometer-search-container").style.display = "none";
+    document.getElementById("paintomatic-search-container").style.display = "block";
+
+    // Reset the value of the Rankometer search box
+    document.getElementById("player-names").value = "Enter Player Name ...";
+});
+
+
+
+
+// RANKOMETER SCRIPTS
+
+let currentMode = "Rankometer"; // Default mode
+let currentContent = "rankometer"; // default section
+
+function adjustColumnStyles() {
+    // Get all the year columns
+    const yearColumns = document.querySelectorAll('.year-column');
+
+    // Calculate the number of columns
+    const columnCount = yearColumns.length;
+
+    // Define your rules for adjusting width and font size based on column count
+    let columnWidth = '5.5%';  // default width
+    let fontSize = '0.7em';    // default font size
+
+    if (columnCount <= 12) {
+        columnWidth = '5.5%';
+        fontSize = '0.7em';
+    } else if (columnCount <= 18) {
+        columnWidth = '4.7%';
+        fontSize = '0.7em';
+    } else if (columnCount <= 22) {
+        columnWidth = '3.75%';
+        fontSize = '0.7em';
+    } else if (columnCount <= 24) {
+        columnWidth = '3.4%';
+        fontSize = '0.5em';
+    } else if (columnCount <= 26) {
+        columnWidth = '3.2%';
+        fontSize = '0.4em';
+    } else if (columnCount >= 28) {
+        columnWidth = '2.75%';
+        fontSize = '0.3em';
+    }
+
+    // Apply the styles to the year columns
+    yearColumns.forEach(column => {
+        column.style.width = columnWidth;
+        column.style.fontSize = fontSize;
+    });
+}
+
+
+function fetchPlayerData(playerName, csvFileName) {
+    Papa.parse(csvFileName, {
+        download: true,
+        header: true,
+        complete: function(data) {
+            $("#yearly-ranks").empty();
+
+            // Extracting start and end year
+            const years = $('#years-active').text().match(/\d{4}/g);
+            const startYear = parseInt(years[0]);
+            const endYear = parseInt(years[1]);
+
+            // Determine the last name to search for, considering the "Jr." scenario
+            let playerNameParts = playerName.split(" ");
+            let searchedLastName;
+            if (playerNameParts[playerNameParts.length - 1].toLowerCase() === "jr.") {
+                searchedLastName = playerNameParts[playerNameParts.length - 2].toLowerCase();
+            } else {
+                searchedLastName = playerNameParts[playerNameParts.length - 1].toLowerCase();
+            }
+
+            for(let year = startYear; year <= endYear; year++) {
+                const playersOfYear = data.data.filter(p => p.Year == year);
+                playersOfYear.sort((a, b) => parseFloat(b.WAR) - parseFloat(a.WAR));
+
+                const top30Players = playersOfYear.slice(0, 30).map(p => {
+                    let nameParts = p['Player Name'].split(' ');
+                    if (nameParts[nameParts.length - 1].toLowerCase() === "jr.") {
+                        return nameParts[nameParts.length - 2]; // Return the second-to-last word if the last word is "Jr."
+                    }
+                    return nameParts[nameParts.length - 1]; // Otherwise, return the last word
+                });
+
+                let columnHtml = `<div class="year-column">`;
+                let highlightFound = false;
+
+                for(const player of top30Players) {
+                    if (player.toLowerCase() === searchedLastName) {
+                        columnHtml += `<span class="highlighted-player">${player}</span><br>`;
+                        highlightFound = true;
+                    } else if (highlightFound) {
+                        columnHtml += `<span class="subsequent-player">${player}</span><br>`;
+                    } else {
+                        columnHtml += `<span class="player-name">${player}</span><br>`;
+                    }
+                }
+
+                columnHtml += `<strong>${year}</strong><br>`;
+                columnHtml += '</div>';
+                $("#yearly-ranks").append(columnHtml);
+            }
+
+            // Call the adjustColumnStyles function here, after the loop has completed
+            adjustColumnStyles();
+        }
+    });
+}
+
+
+
+function searchPlayer(localPlayerName) {
+
+    // Update the global 'playerName' variable
+    playerName = localPlayerName;
+
+    console.log("searchPlayer called with:", playerName);
+
+    Papa.parse('rankometer_files/all_players.csv', {
+        download: true,
+        header: true,
+        complete: function(allPlayersData) {
+            const playersWithName = allPlayersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase());
+
+            if (playersWithName.length > 0) {
+                playersWithName.sort((a, b) => {
+                    const aYears = a.Years.match(/\d{4}/g) || [];
+                    const bYears = b.Years.match(/\d{4}/g) || [];
+                    return (bYears[1] - bYears[0]) - (aYears[1] - aYears[0]);
+                });
+
+                const player = playersWithName[0];
+                $('#years-active').text(player.Years.replace('+ (', ''));
+                $('#rankometer-header').text(`Rankometer for ${playerName}`);
+
+                // Fetch data from both CSVs and determine which one to use based on the frequency of the player's name.
+                let pitcherCount = 0;
+                let hitterCount = 0;
+
+                Papa.parse('rankometer_files/baseball_pitchers_1900_2024.csv', {
+                    download: true,
+                    header: true,
+                    complete: function(pitchersData) {
+                        pitcherCount = pitchersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase()).length;
+
+                        Papa.parse('rankometer_files/baseball_hitters_1900_2024.csv', {
+                            download: true,
+                            header: true,
+                            complete: function(hittersData) {
+                                hitterCount = hittersData.data.filter(p => p['Player Name'] && p['Player Name'].toLowerCase() === playerName.toLowerCase()).length;
+
+                                // Choose the CSV where the player appears most frequently.
+                                if (pitcherCount >= hitterCount) {
+                                    fetchPlayerData(playerName, 'rankometer_files/baseball_pitchers_1900_2024.csv');
+                                } else {
+                                    fetchPlayerData(playerName, 'rankometer_files/baseball_hitters_1900_2024.csv');
+                                }
+                                // Check if we are in Paintomatic mode
+                                if (currentContentArea === "paintomatic") {
+                                    fetchPaintomaticData(playerName);
+                                }
+
+                            }
+                        });
+                    }
+                });
+            } else {
+                console.warn(`Player "${playerName}" not found in all_players.csv.`);
+            }
+        },
+        error: function(error) {
+            console.error('Error accessing all_players CSV:', error);
+        }
+    });
+}
+
+
+function fetchPaintomaticData(playerName) {
+    console.log("Attempting to fetch Paintomatic data for:", playerName);
+
+    const formattedPlayerName = playerName.replace(/\s+/g, '-');  // Replace spaces with hyphens
+    const csvFileName = `paintomatic_player_files/${formattedPlayerName}-Paintomatic.csv`;
+    console.log("Attempting to fetch CSV with filename:", csvFileName);
+
+    d3.csv(csvFileName).then(data => {
+        if (!data || !data.length) {
+            console.error("No data returned from CSV. Check if the file exists and is correctly formatted.");
+            alert(`No data found for ${playerName} in Paintomatic.`);
+            return;
+        }
+        console.log("Returned data:", data);  // This will log the actual data returned by d3.csv
+
+        // The rest of your Paintomatic visualization logic goes here.
+        // You might need to extract the existing logic that processes and visualizes
+        // the Paintomatic data from the Zach-Greinke-Paintomatic.csv file and place it here.
+
+    }).catch(error => {
+        console.error("Error fetching Paintomatic CSV:", error);
+    });
+}
+
+
+function searchPaintomatic(localPlayerName) {
+
+    // Update the global 'playerName' variable
+    playerName = localPlayerName;
+    console.log("searchPaintomatic called with:", playerName);
+
+    // Construct the filename based on the naming convention
+    const csvFileName = `paintomatic_player_files/${playerName.replace(/\s/g, '-')}-Paintomatic.csv`;
+
+    // Try fetching the file
+    Papa.parse(csvFileName, {
+        download: true,
+        header: true,
+        complete: function(data) {
+            console.log("Data fetched for Paintomatic:", data);
+            // Call your visualization function here
+            createPaintomaticVisualization(data, playerName);
+
+             // Update the title for the Paintomatic visualization
+             $('#paintomatic-header').text(`Paintomatic for ${playerName}`);
+
+        },
+        error: function(error) {
+            console.error(`Error accessing ${csvFileName}:`, error);
+           // alert(`No data found for ${playerName} in Paintomatic.`);
+        }
+    });
+}
+
+
+
+
+
+
+
+   
+$(document).ready(function() {
+    console.log("Page is loaded.");
+    searchPlayer('Babe Ruth');
+
+    console.log("jQuery version:", $.fn.jquery);
+
+    // Toggle dropdown menu on button click
+    $(".dropbtn").on("click", function() {
+        console.log("Menu button clicked!");  
+        $(".dropdown-content").toggle();
+    });
+
+    function getCurrentYear() {
+    const today = new Date();
+    return today.getFullYear();
+}
+
+
+    $(".dropdown-content a").on("click", function() {
+    console.log("Dropdown item clicked!");
+    currentContent = $(this).data("content");
+
+    $(".dropdown-content").hide();
+
+    // Initially hide all content areas
+    $("#rankometer-content-area, #paintomatic-content-area, #toolanalyzer-content-area").hide();
+
+    const contentToShow = $(this).data("content");
+    if (contentToShow === "rankometer") {
+        currentMode = "Rankometer";
+        // If it's the "RANKOMETER" option, show the player search functionality
+        $("#main-container, #rankometer-content-area").show();
+    } else if (contentToShow === "paintomatic") {
+        currentMode = "Paintomatic";
+        // Show the Paintomatic content area
+        $("#main-container, #paintomatic-content-area").show();
+        $('#player-names').attr('placeholder', `Enter ${getCurrentYear()} Pitcher Name`);  // Update to reflect the current year
+        // If it's Paintomatic, search for Zach Greinke by default
+        searchPaintomatic('Zach Greinke');
+
+    } else if (contentToShow === "5toolanalyzer") {
+        // For now, we don't change the mode for "5toolanalyzer"
+        $("#toolanalyzer-content-area").show();
+    }
+});
+
+
+
+    // Hide dropdown menu when clicking outside of it
+    $(document).on("click", function(event) {
+        if (!$(event.target).closest('.dropdown').length) {
+            $(".dropdown-content").hide();
+        }
+    });
+});
+
+
+
+// PAINTOMATIC SCRIPTS
+
+function createPaintomaticVisualization(data, playerName) {
+
+// Clear the previous SVG content
+d3.select("#chart").selectAll("*").remove();
+    d3.select("#new-chart").selectAll("*").remove();
+
+ // Constants
+ const width = 600;
+    const height = 600;
+    const circleRadius = 15;
+
+    // Select the new SVG and add a red border for visual clarity
+const newSvg = d3.select("#new-chart");
+newSvg.attr("width", "50%");
+newSvg.style("border", "0px solid red");
+
+
+    // Scale function to fit the data within the SVG dimensions
+    const xScale = d3.scaleLinear().domain([-15, 15]).range([0, width]);
+    const yScale = d3.scaleLinear().domain([-15, 15]).range([height, 0]);
+
+    let sanitizedPlayerName = playerName.split(' ').join('-'); // Replace spaces with hyphens
+    let csvFileName = `paintomatic_player_files/${sanitizedPlayerName}-Paintomatic.csv`;
+
+    d3.csv(csvFileName).then(data => {
+        console.log(data);
+
+    const filteredData = data.filter(d => +d['Usage'].replace('%', '') > 1);
+    console.log(filteredData);
+
+    const svg = d3.select("#chart");
+
+    const xAxis = d3.axisBottom(xScale)
+        .ticks(0)
+        .tickSize(0);
+
+    svg.append("g")
+        .attr("transform", `translate(0,${height / 2})`)
+        .call(xAxis)
+        .selectAll("path")
+        .attr("stroke", "#e6f5ff")
+        .attr("stroke-width", 2);
+
+    svg.selectAll(".tick text").remove();
+
+    const yAxis = d3.axisLeft(yScale)
+        .ticks(0)
+        .tickSize(0);
+
+    svg.append("g")
+        .attr("transform", `translate(${width / 2},0)`)
+        .call(yAxis)
+        .selectAll("path")
+        .attr("stroke", "#e6f5ff")
+        .attr("stroke-width", 8);
+
+    svg.selectAll(".domain")
+        .attr("stroke", "#e6f5ff")
+        .attr("stroke-width", 8);
+
+    svg.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height)
+        .attr("fill", "none")
+        .attr("stroke", "#e6f5ff")
+        .attr("stroke-width", 16);
+
+        const getColor = value => {
+        if (value <= -5.2) return "#1779a6";  
+        if (value <= -2.5) return "#258bad";  
+        if (value <= -1.45) return "#369db5"; 
+        if (value <= -0.3) return "#46b1bd";  
+        if (value <= 0.9) return "#5ac3c5";  
+        if (value <= 2.5) return "#aecf7b"; 
+        if (value <= 4.2) return "#fed242";  
+        if (value <= 6.9) return "#f9ab3d";  
+        if (value <= 13.3) return "#f67736";  
+        return "#f34130"; 
+    };
+
+    svg.selectAll("circle")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .attr("cx", d => xScale(d['X Axis']))
+        .attr("cy", d => yScale(d['Y Axis']))
+        .attr("r", circleRadius)
+        .attr("fill", d => getColor(+d['Value']));
+        console.log("Appended circles");
+
+
+
+
+
+    svg.selectAll(".line-to-center")
+        .data(filteredData)
+        .enter()
+        .append("line")
+        .attr("x1", d => xScale(d['X Axis']))
+        .attr("y1", d => yScale(d['Y Axis']))
+        .attr("x2", xScale(0))
+        .attr("y2", yScale(0))
+        .attr("stroke", d => getColor(+d['Value']))
+        .attr("stroke-width", circleRadius*2)
+        .attr("stroke-opacity", 0.8);
+
+        // Drawing a white circle at the center of the scatter plot
+svg.append("circle")
+    .attr("cx", xScale(0))  // Centered on the x-axis
+    .attr("cy", yScale(0))  // Centered on the y-axis
+    .attr("r", circleRadius)  // You can adjust the radius as needed
+    .attr("fill", "white");
+
+
+    const pitchNames = {
+        "FA": "Fourseam Fastball",
+        "FC": "Cutter",
+        "FS": "Splitter",
+        "SI": "Sinker curve",
+        "CH": "Changeup",
+        "SL": "Slider",
+        "CU": "Curveball",
+        "CS": "Slow curve",
+        "KN": "Knuckleball",
+        "SB": "Screwball"
+    };
+
+    svg.selectAll(".label")
+        .data(filteredData)
+        .enter()
+        .append("text")
+        .attr("x", d => xScale(d['X Axis']) + circleRadius + 5)
+        .attr("y", d => yScale(d['Y Axis']))
+        .text(d => pitchNames[d['Pitch']] || d['Pitch'])
+        .attr("font-size", "16px")
+        .attr("font-family", "Helvetica")
+        .attr("alignment-baseline", "middle")
+        .attr("fill", "#285979"); // Setting the color to #285979
+
+ 
+
+    const xVelocityScale = d3.scaleLinear()
+    .domain([40, 105])
+    .range([10, 960]);
+    
+
+    const velocityAxis = d3.axisBottom(xVelocityScale).tickValues([40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105]);
+
+    newSvg.append("g")
+    .attr("transform", `translate(0, ${height - 10})`)
+    .call(velocityAxis)
+    .selectAll(".tick text")  
+    .attr("font-size", "15px")  
+    .attr("font-family", "Helvetica");  
+
+
+    const svgHeight = 600;
+
+    const yPositionScale = d3.scaleBand()
+        .domain(filteredData.map(d => d['Pitch']))
+        .range([0, svgHeight])
+        .paddingInner(0.02)
+        .paddingOuter(0.1);
+
+  
+
+
+// Insert the line thickness scale here
+const lineThicknessScale = d3.scaleLinear()
+    .domain([1, 100]) // 1% to 100%
+    .range([5, 500]); // 10px to 1000px
+
+    const fixedGap = 20; // This value represents the gap in pixels between each line. Adjust as needed.
+
+
+
+const topPadding = 2;  // Adjust this value based on the space required below the header
+
+
+
+const totalLineThickness = filteredData.reduce((sum, d) => sum + lineThicknessScale(+d['Usage'].replace('%', '')), 0);
+const availableHeight = svgHeight - topPadding - totalLineThickness;
+const spaceBetweenLines = fixedGap;
+
+
+// Step 1: Create centerY array
+let accumulatedHeight = topPadding;
+const centerYPositions = filteredData.map(d => {
+    const centerY = accumulatedHeight + (lineThicknessScale(+d['Usage'].replace('%', '')) / 2);
+    accumulatedHeight += lineThicknessScale(+d['Usage'].replace('%', '')) + spaceBetweenLines;
+    return centerY;
+});
+
+// Step 2: Use the centerY array when drawing lines
+newSvg.selectAll(".velocity-line")
+    .data(filteredData)
+    .enter()
+    .append("line")
+    .attr("x1", 10)
+    .attr("y1", (d, i) => centerYPositions[i])
+    .attr("y2", (d, i) => centerYPositions[i])
+    .attr("stroke", d => getColor(+d['Value']))
+    .attr("stroke-opacity", 0.7) // 70% opacity
+    .attr("stroke-width", d => lineThicknessScale(+d['Usage'].replace('%', '')))
+    .attr("x2", d => {
+        const circleRadius = lineThicknessScale(+d['Usage'].replace('%', '')) / 2;
+        const calculatedX = xVelocityScale(+d['Velocity']) - circleRadius;
+        console.log("Velocity for line:", d['Velocity'], "X position:", calculatedX);
+        return calculatedX;
+    });
+
+
+// Reset accumulatedHeight for circles
+accumulatedHeight = topPadding;
+
+// Appending circles to the ends of the lines
+newSvg.selectAll(".velocity-circle")
+    .data(filteredData)
+    .enter()
+    .append("circle")
+    .attr("cx", d => {
+        const circleRadius = lineThicknessScale(+d['Usage'].replace('%', '')) / 2;
+        const xPos = xVelocityScale(+d['Velocity']) - circleRadius;
+        console.log("Velocity for circle:", d['Velocity'], "X position:", xPos);
+        return xPos;
+    })
+    .attr("cy", (d, i) => centerYPositions[i])
+    .attr("r", d => lineThicknessScale(+d['Usage'].replace('%', '')) / 2)
+    .attr("fill", d => getColor(+d['Value']))
+    .attr("fill-opacity", 1);  // 70% opacity
+
+
+    const textGap = 5;  // This is a small gap to ensure the text doesn't overlap with the line. Adjust as necessary.
+
+newSvg.selectAll(".pitch-name-label")
+    .data(filteredData)
+    .enter()
+    .append("text")
+    .attr("x", 15)  // This places the text a bit to the right of the y-axis. Adjust as necessary.
+    .attr("y", (d, i) => centerYPositions[i] + textGap)  // The textGap ensures the text is centered with the line.
+    .text(d => pitchNames[d['Pitch']] || d['Pitch'])  // This will use the full name if available, otherwise the abbreviation.
+    .attr("font-size", "16px")
+    .attr("font-family", "Helvetica")
+    .attr("alignment-baseline", "middle")
+    .attr("fill", "#285979");  // Adjust font color as needed
+
+
+
+// Reset accumulatedHeight for labels
+accumulatedHeight = topPadding;
+
+const gap = 5;  // Adjust this value as needed
+
+newSvg.selectAll(".velocity-label")
+    .data(filteredData)
+    .enter()
+    .append("text")
+    .attr("x", d => xVelocityScale(+d['Velocity']) + lineThicknessScale(+d['Usage'].replace('%', '')) / 10 + gap)
+    .attr("y", d => {
+        const centerY = accumulatedHeight + (lineThicknessScale(+d['Usage'].replace('%', '')) / 2);
+        accumulatedHeight += lineThicknessScale(+d['Usage'].replace('%', '')) + spaceBetweenLines;
+        return centerY;
+    })
+    .attr("alignment-baseline", "middle")
+    .text(d => `${Math.round(d['Velocity'])} MPH`)
+    .attr("font-size", "14px")
+    .attr("font-family", "Helvetica")
+    .attr("fill", "#4495ca");
+
+
+
+
+});
+
+
+}
+
+</script>
+
+
+<script>
+
+    document.getElementById('paintomatic-content-area').addEventListener('click', function() {
+        
+        var fileName2 = 'paintomatic-' + playerName + '.png';
+
+        html2canvas(document.getElementById('paintomatic-content-area')).then(function(canvas) {
+            var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            var link = document.createElement('a');
+            link.download = fileName2;
+            link.href = image;
+            link.click();
+        });
+    });
+
+</script>
+
+
+
+
+
+<footer>
+    <img src="icons/headshot.png" alt="Your Headshot" id="headshot">
+    <p>Kevin Dame is a writer and visual designer who brings sports information to life in new and meaningful ways. His work has been featured on espn.com, ESPN the Magazine, Fast Company, SB Nation, and The Hardball Times. 
+    </p>
+</footer>
+
+
+<script>
+    $(document).ready(function() {
+        var playerNames = [];  // Array to hold player names
+    
+        Papa.parse('rankometer_files/all_players.csv', {  // Adjust the path if needed
+            download: true,
+            header: true,
+            complete: function(results) {
+                results.data.forEach(function(player) {
+                    if (player['Player Name']) {
+                        playerNames.push(player['Player Name']);
+                    }
+                });
+
+                console.log("Rankometer Names:", playerNames);  // Add this line for debugging
+
+                // Initialize autocomplete
+                $("#player-names").autocomplete({
+                    source: playerNames,
+                    select: function(event, ui) {
+                        // Call searchPlayer function when a name is selected
+                        searchPlayer(ui.item.value);
+                    }
+                });
+            }
+        });
+    });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            var paintomaticPlayerNames = [];  // Array to hold player names for Paintomatic
+        
+            Papa.parse('paintomatic_player_files/paintomatic_players.csv', {
+                download: true,
+                header: true,  // Set to true if your CSV has a header row, else set to false
+                complete: function(results) {
+                    results.data.forEach(function(row) {
+                        if (row['Player Name']) {  // Adjust 'Player Name' based on your CSV column name
+                            paintomaticPlayerNames.push(row['Player Name']);
+                        }
+                    });
+
+                    console.log("Paintomatic Names:", paintomaticPlayerNames);  // Add this line for debugging
+
+                    // Initialize autocomplete for Paintomatic search box
+                    $("#paintomatic-search").autocomplete({
+                        source: paintomaticPlayerNames,
+                        select: function(event, ui) {
+                            // Call searchPaintomatic function when a name is selected
+                            searchPaintomatic(ui.item.value);
+                        }
+                    });
+                }
+            });
+        });
+        </script>
+        
+
+            
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+            <script>
+
+            document.getElementById('rankometer-content-area').addEventListener('click', function() {
+                console.log("Debug: Player name is - " + playerName);
+                var fileName = 'rankometer-' + playerName + '.png';
+
+                html2canvas(document.getElementById('rankometer-content-area')).then(function(canvas) {
+                    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                    var link = document.createElement('a');
+                    link.download = fileName;
+                    link.href = image;
+                    link.click();
+                });
+            });
+
+
+
+            </script>
+            </body>
+            </html>
+            
