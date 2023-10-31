@@ -840,7 +840,7 @@ function fetchPaintomaticData(playerName) {
     console.log("Attempting to fetch Paintomatic data for:", playerName);
 
     const formattedPlayerName = playerName.replace(/\s+/g, '-');  // Replace spaces with hyphens
-    const csvFileName = `paintomatic_player_files/${formattedPlayerName}-Paintomatic.csv`;
+    const csvFileName = `paintomatic_player_files/${formattedPlayerName}.csv`;
     console.log("Attempting to fetch CSV with filename:", csvFileName);
 
     d3.csv(csvFileName).then(data => {
@@ -853,7 +853,7 @@ function fetchPaintomaticData(playerName) {
 
         // The rest of your Paintomatic visualization logic goes here.
         // You might need to extract the existing logic that processes and visualizes
-        // the Paintomatic data from the Zach-Greinke-Paintomatic.csv file and place it here.
+        // the Paintomatic data from the Zach-Greinke.csv file and place it here.
 
     }).catch(error => {
         console.error("Error fetching Paintomatic CSV:", error);
@@ -868,7 +868,7 @@ function searchPaintomatic(localPlayerName) {
     console.log("searchPaintomatic called with:", playerName);
 
     // Construct the filename based on the naming convention
-    const csvFileName = `paintomatic_player_files/${playerName.replace(/\s/g, '-')}-Paintomatic.csv`;
+    const csvFileName = `paintomatic_player_files/${playerName.replace(/\s/g, '-')}.csv`;
 
     // Try fetching the file
     Papa.parse(csvFileName, {
@@ -910,40 +910,38 @@ $(document).ready(function() {
     });
 
     function getCurrentYear() {
-    const today = new Date();
-    return today.getFullYear();
-}
-
+        const today = new Date();
+        return today.getFullYear();
+    }
 
     $(".dropdown-content a").on("click", function() {
-    console.log("Dropdown item clicked!");
-    currentContent = $(this).data("content");
+        console.log("Dropdown item clicked!");
+        var currentContent = $(this).data("content");
 
-    $(".dropdown-content").hide();
+        $(".dropdown-content").hide();
 
-    // Initially hide all content areas
-    $("#rankometer-content-area, #paintomatic-content-area, #toolanalyzer-content-area").hide();
+        // Initially hide all content areas
+        $("#rankometer-content-area, #paintomatic-content-area, #toolanalyzer-content-area").hide();
 
-    const contentToShow = $(this).data("content");
-    if (contentToShow === "rankometer") {
-        currentMode = "Rankometer";
-        // If it's the "RANKOMETER" option, show the player search functionality
-        $("#main-container, #rankometer-content-area").show();
-    } else if (contentToShow === "paintomatic") {
-        currentMode = "Paintomatic";
-        // Show the Paintomatic content area
-        $("#main-container, #paintomatic-content-area").show();
-        $('#player-names').attr('placeholder', `Enter ${getCurrentYear()} Pitcher Name`);  // Update to reflect the current year
-        // If it's Paintomatic, search for Zach Greinke by default
-        searchPaintomatic('Zach Greinke');
-
-    } else if (contentToShow === "5toolanalyzer") {
-        // For now, we don't change the mode for "5toolanalyzer"
-        $("#toolanalyzer-content-area").show();
-    }
-});
-
-
+        const contentToShow = $(this).data("content");
+        if (contentToShow === "rankometer") {
+            currentMode = "Rankometer";
+            // If it's the "RANKOMETER" option, show the player search functionality
+            $("#main-container, #rankometer-content-area").show();
+        } else if (contentToShow === "paintomatic") {
+            currentMode = "Paintomatic";
+            // Show the Paintomatic content area
+            $("#main-container, #paintomatic-content-area").show();
+            $('#player-names').attr('placeholder', `Enter ${getCurrentYear()} Pitcher Name`);
+            // Load and initialize the autocomplete
+            initializePaintomaticAutocomplete();
+            // Default search for Zach Greinke
+            searchPaintomatic('Justin Verlander 2023');
+        } else if (contentToShow === "5toolanalyzer") {
+            // For now, we don't change the mode for "5toolanalyzer"
+            $("#toolanalyzer-content-area").show();
+        }
+    });
 
     // Hide dropdown menu when clicking outside of it
     $(document).on("click", function(event) {
@@ -952,6 +950,34 @@ $(document).ready(function() {
         }
     });
 });
+
+function initializePaintomaticAutocomplete() {
+    var paintomaticPlayerNames = []; // Array to hold player names for Paintomatic
+
+    Papa.parse('paintomatic_player_files/paintomatic_players.csv', {
+        download: true,
+        header: false, // No header row in your CSV
+        complete: function(results) {
+            results.data.forEach(function(row) {
+                var fullPlayerName = row[0]; // 'Rick Porcello 2018' as a single string
+                if (fullPlayerName) {
+                    paintomaticPlayerNames.push(fullPlayerName);
+                }
+            });
+
+            $("#paintomatic-search").autocomplete({
+                source: paintomaticPlayerNames,
+                select: function(event, ui) {
+                    searchPaintomatic(ui.item.value);
+                }
+            });
+        },
+        error: function(err) {
+            console.error("Error loading CSV:", err);
+        }
+    });
+}
+
 
 
 
@@ -979,7 +1005,7 @@ newSvg.style("border", "0px solid red");
     const yScale = d3.scaleLinear().domain([-15, 15]).range([height, 0]);
 
     let sanitizedPlayerName = playerName.split(' ').join('-'); // Replace spaces with hyphens
-    let csvFileName = `paintomatic_player_files/${sanitizedPlayerName}-Paintomatic.csv`;
+    let csvFileName = `paintomatic_player_files/${sanitizedPlayerName}.csv`;
 
     d3.csv(csvFileName).then(data => {
         console.log(data);
